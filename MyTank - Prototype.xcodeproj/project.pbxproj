@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				CEC3932F1EF9CC800081687F /* AppDelegate.swift */,
-				CEC393311EF9CC800081687F /* ViewController.swift */,
-				CEC393331EF9CC800081687F /* Main.storyboard */,
 				CEC393361EF9CC800081687F /* Assets.xcassets */,
-				CEC393381EF9CC800081687F /* LaunchScreen.storyboard */,
 				CEC3933B1EF9CC800081687F /* Info.plist */,
+				CEC3935F1EF9CC8B0081687F /* Model */,
+				CEC393601EF9CCA70081687F /* View */,
+				CEC393611EF9CCAD0081687F /* Controller */,
 			);
 			path = "MyTank - Prototype";
 			sourceTree = "<group>";
@@ -123,6 +123,30 @@
 				CEC393511EF9CC800081687F /* Info.plist */,
 			);
 			path = "MyTank - PrototypeUITests";
+			sourceTree = "<group>";
+		};
+		CEC3935F1EF9CC8B0081687F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CEC393601EF9CCA70081687F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC393331EF9CC800081687F /* Main.storyboard */,
+				CEC393381EF9CC800081687F /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CEC393611EF9CCAD0081687F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEC393311EF9CC800081687F /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
