@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEB30F361EFF47D0008033C2 /* CurrentVehicleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */; };
+		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
+		CEB30F3A1EFF6997008033C2 /* StartupDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F391EFF6997008033C2 /* StartupDataTests.swift */; };
 		CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3932F1EF9CC800081687F /* AppDelegate.swift */; };
 		CEC393321EF9CC800081687F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393311EF9CC800081687F /* ViewController.swift */; };
 		CEC393351EF9CC800081687F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC393331EF9CC800081687F /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentVehicleVC.swift; sourceTree = "<group>"; };
+		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
+		CEB30F391EFF6997008033C2 /* StartupDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartupDataTests.swift; path = "../MyTank - PrototypeUITests/StartupDataTests.swift"; sourceTree = "<group>"; };
 		CEC3932C1EF9CC800081687F /* MyTank - Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyTank - Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC3932F1EF9CC800081687F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC393311EF9CC800081687F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC393441EF9CC800081687F /* MyTank___PrototypeTests.swift */,
+				CEB30F391EFF6997008033C2 /* StartupDataTests.swift */,
 				CEC393461EF9CC800081687F /* Info.plist */,
 			);
 			path = "MyTank - PrototypeTests";
@@ -128,6 +135,7 @@
 		CEC3935F1EF9CC8B0081687F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC393311EF9CC800081687F /* ViewController.swift */,
+				CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -283,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB30F361EFF47D0008033C2 /* CurrentVehicleVC.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
+				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC393501EF9CC800081687F /* MyTank___PrototypeUITests.swift in Sources */,
+				CEB30F3A1EFF6997008033C2 /* StartupDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,24 +445,36 @@
 		CEC393551EF9CC800081687F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_TESTABILITY = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "MyTank - Prototype/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "cpt224.MyTank---Prototype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		CEC393561EF9CC800081687F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_TESTABILITY = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "MyTank - Prototype/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "cpt224.MyTank---Prototype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -527,6 +551,7 @@
 				CEC393561EF9CC800081687F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEC393571EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - PrototypeTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +560,7 @@
 				CEC393591EF9CC800081687F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEC3935A1EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - PrototypeUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +569,7 @@
 				CEC3935C1EF9CC800081687F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
