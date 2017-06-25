@@ -10,6 +10,7 @@
 		CEB30F361EFF47D0008033C2 /* CurrentVehicleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */; };
 		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
 		CEB30F3A1EFF6997008033C2 /* StartupDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F391EFF6997008033C2 /* StartupDataTests.swift */; };
+		CEB30F3E1EFF9D06008033C2 /* MyTankButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F3D1EFF9D06008033C2 /* MyTankButtons.swift */; };
 		CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3932F1EF9CC800081687F /* AppDelegate.swift */; };
 		CEC393321EF9CC800081687F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393311EF9CC800081687F /* ViewController.swift */; };
 		CEC393351EF9CC800081687F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC393331EF9CC800081687F /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentVehicleVC.swift; sourceTree = "<group>"; };
 		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
 		CEB30F391EFF6997008033C2 /* StartupDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartupDataTests.swift; path = "../MyTank - PrototypeUITests/StartupDataTests.swift"; sourceTree = "<group>"; };
+		CEB30F3D1EFF9D06008033C2 /* MyTankButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTankButtons.swift; sourceTree = "<group>"; };
 		CEC3932C1EF9CC800081687F /* MyTank - Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyTank - Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC3932F1EF9CC800081687F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC393311EF9CC800081687F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEB30F3F1EFF9E7B008033C2 /* IBDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				CEB30F3D1EFF9D06008033C2 /* MyTankButtons.swift */,
+			);
+			name = IBDesignable;
+			sourceTree = "<group>";
+		};
 		CEC393231EF9CC800081687F = {
 			isa = PBXGroup;
 			children = (
@@ -152,8 +162,9 @@
 		CEC393611EF9CCAD0081687F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEC393311EF9CC800081687F /* ViewController.swift */,
+				CEB30F3F1EFF9E7B008033C2 /* IBDesignable */,
 				CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */,
+				CEC393311EF9CC800081687F /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -295,6 +306,7 @@
 				CEB30F361EFF47D0008033C2 /* CurrentVehicleVC.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
+				CEB30F3E1EFF9D06008033C2 /* MyTankButtons.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +478,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "MyTank - Prototype/Info.plist";

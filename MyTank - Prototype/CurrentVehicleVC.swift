@@ -18,7 +18,7 @@ class CurrentVehicleVC : UIViewController
     @IBOutlet weak var vehicleConsumption: UILabel!
     
     // Headline messages to be displayed
-    let noVehicleMessage:String = "Test"
+    let noVehicleMessage:String = "No Vehicle Selected Yet"
     let hasVehicleMessage:String = "Current Vehicle"
     
     
