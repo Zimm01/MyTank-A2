@@ -20,12 +20,6 @@ class CurrentUserData
         //  As Data persistance is NR at this time, this function is a placeholder right now!!
     }
     
-    func hello()->Bool
-    {
-        return true;
-        
-    }
-    
     //  Return whether or not the user has any session data.
     //  Currently this will always be FALSE on load up
     static func UserHasData()->Bool
