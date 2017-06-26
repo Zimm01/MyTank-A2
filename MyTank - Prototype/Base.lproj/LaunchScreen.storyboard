@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo-NoText" translatesAutoresizingMaskIntoConstraints="NO" id="pFp-o3-GHs">
-                                <rect key="frame" x="98" y="79" width="218" height="218"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-NoText" translatesAutoresizingMaskIntoConstraints="NO" id="pFp-o3-GHs">
+                                <rect key="frame" x="104" y="50" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pFp-o3-GHs" secondAttribute="height" multiplier="185:185" id="9ih-j1-Q3y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pFp-o3-GHs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qeg-N4-aSW"/>
+                            <constraint firstItem="pFp-o3-GHs" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="sT9-mE-k26"/>
+                            <constraint firstItem="pFp-o3-GHs" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" multiplier="2" constant="50" id="vEQ-wm-nrY"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -34,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="373.76311844077964"/>
+            <point key="canvasLocation" x="50.724637681159422" y="373.36956521739131"/>
         </scene>
     </scenes>
     <resources>
