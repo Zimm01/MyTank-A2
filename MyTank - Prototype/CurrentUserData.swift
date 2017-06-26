@@ -5,6 +5,8 @@
 //  Created by Daniel Zimmerman on 25/06/2017.
 //  Copyright © 2017 CPT224. All rights reserved.
 //
+//  This file is used to store our user data to be used in the application (persistance NR for prototype!)
+
 import Foundation
 
 class CurrentUserData

@@ -5,6 +5,7 @@
 //  Created by Daniel Zimmerman on 26/06/2017.
 //  Copyright © 2017 CPT224. All rights reserved.
 //
+//  This file is used to store our Vehicle Dictionary and associated getter functions (mutators NR for prototype!)
 import Foundation
 
 class VehicleData
