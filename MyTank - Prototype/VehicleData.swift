@@ -20,13 +20,9 @@ class VehicleData
         return vehicleLibrary.count
     }
     
-    // Test Function! Return string representation of vehicle
-    func getWholeVehicleString(key: Int)->String
+    // Get a vehicle, by index position in the library
+    func getVehicleFromLibrary(key: Int)->Vehicle
     {
-        var buffer: String
-        
-        buffer = String(vehicleLibrary[key].year) + " " + vehicleLibrary[key].make + " " + vehicleLibrary[key].model + " " + vehicleLibrary[key].variant
-        
-        return buffer
+        return vehicleLibrary[key]
     }
 }

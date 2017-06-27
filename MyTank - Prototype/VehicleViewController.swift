@@ -28,7 +28,9 @@ class VehicleViewController: UITableViewController
     {
         let cell = UITableViewCell()
         
-        let makeModelString = vehicleData.getWholeVehicleString(key: indexPath.row)
+        let thisVehicle: Vehicle = vehicleData.getVehicleFromLibrary(key: indexPath.row)
+        
+        let makeModelString = String(thisVehicle.year) + " " + thisVehicle.make + " " + thisVehicle.model + " " + thisVehicle.variant
         
         cell.textLabel?.text = makeModelString
         
@@ -39,6 +41,17 @@ class VehicleViewController: UITableViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
+        let row = indexPath.row
+        
+        //  Attempt to store the vehicle in 'CurrentUserData' we will not advance the view if for some reson this fails, for app stability!
+        if CurrentUserData.UpdateUserVehicle(newVehicle: vehicleData.getVehicleFromLibrary(key: row))
+        {
+            self.performSegue(withIdentifier: "VehicleSelectionSegue", sender: self)
+        }
+        else
+        {
+            // TODO alert user the app has failed, somehow!
+        }
     }
     
     

@@ -18,7 +18,7 @@ class CurrentVehicleVC : UIViewController
     @IBOutlet weak var vehicleConsumption: UILabel!
     
     // Headline messages to be displayed
-    let noVehicleMessage:String = "No Vehicle Selected Yet"
+    let noVehicleMessage:String = "The Fuel Calculator"
     let hasVehicleMessage:String = "Current Vehicle"
     
     
@@ -26,6 +26,8 @@ class CurrentVehicleVC : UIViewController
     
     override func viewDidLoad()
     {
+        //  IF the user has not used the app yet, display a standard message
+        //  Otherwise we will display the name/attributes of their chosen vehicle
         if CurrentUserData.UserHasData() == false
         {
             vehicleHeadline.text = noVehicleMessage
@@ -35,6 +37,10 @@ class CurrentVehicleVC : UIViewController
         else
         {
             vehicleHeadline.text = hasVehicleMessage
+            
+            let currentVehicle:Vehicle = CurrentUserData.GetUserVehicle()
+            
+            vehicleName.text = currentVehicle.make
         }
     }
 }

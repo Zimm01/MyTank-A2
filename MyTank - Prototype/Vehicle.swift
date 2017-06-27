@@ -17,3 +17,13 @@ struct Vehicle
     let year: Int
     let litersPerKM: Double
 }
+
+//  This extension is used so that two Vehicle objects can be compared using the '==' operator
+extension Vehicle: Equatable
+{
+    static func ==(lhs: Vehicle, rhs: Vehicle)->Bool
+    {
+        // This will be more complex in the furture!
+        return lhs.model == rhs.model
+    }
+}

@@ -149,9 +149,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="gEt-ji-QeJ" kind="show" id="b7I-6V-2U6"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -159,6 +156,9 @@
                             <outlet property="delegate" destination="rvz-dt-66n" id="vgT-dD-FkU"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="gEt-ji-QeJ" kind="show" identifier="VehicleSelectionSegue" id="6Xx-XI-ivd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cou-Ca-JBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
