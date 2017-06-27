@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CEB30F361EFF47D0008033C2 /* CurrentVehicleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */; };
+		CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */; };
+		CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA494181F0277D200B132C3 /* HomeViewController.swift */; };
+		CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4941B1F02799100B132C3 /* RouteViewController.swift */; };
+		CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */; };
 		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
 		CEB30F3A1EFF6997008033C2 /* StartupDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F391EFF6997008033C2 /* StartupDataTests.swift */; };
 		CEC110D71F0136770007A646 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D61F0136770007A646 /* VehicleData.swift */; };
@@ -40,7 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentVehicleVC.swift; sourceTree = "<group>"; };
+		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		CEA494181F0277D200B132C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEA4941B1F02799100B132C3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentVehicleModuleVC.swift; sourceTree = "<group>"; };
 		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
 		CEB30F391EFF6997008033C2 /* StartupDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartupDataTests.swift; path = "../MyTank - PrototypeUITests/StartupDataTests.swift"; sourceTree = "<group>"; };
 		CEC110D61F0136770007A646 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
@@ -86,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEA4941A1F02794400B132C3 /* Module View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */,
+			);
+			name = "Module View Controllers";
+			sourceTree = "<group>";
+		};
 		CEC110DA1F0148880007A646 /* Data Structure */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,9 +182,12 @@
 		CEC393611EF9CCAD0081687F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CEC393311EF9CC800081687F /* ViewController.swift */,
+				CEA4941A1F02794400B132C3 /* Module View Controllers */,
+				CEA494181F0277D200B132C3 /* HomeViewController.swift */,
+				CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */,
+				CEA4941B1F02799100B132C3 /* RouteViewController.swift */,
 				CEC110D81F0137080007A646 /* VehicleViewController.swift */,
-				CEB30F351EFF47D0008033C2 /* CurrentVehicleVC.swift */,
+				CEC393311EF9CC800081687F /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -310,12 +327,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
-				CEB30F361EFF47D0008033C2 /* CurrentVehicleVC.swift in Sources */,
+				CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */,
 				CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,
+				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,
+				CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */,
+				CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,27 +17,28 @@ class VehicleViewController: UITableViewController
     //  This function is used to determine the table attributes as well as the number of rows to be used, based on the number of vehicles in the library
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        // Set the Background Colour
+        self.tableView.backgroundColor = UIColor(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)
         
-        
-        self.tableView.backgroundColor = UIColor.cyan
         return vehicleData.getNumVehicles()
     }
     
-    // Populates each individual table cell with the details of each vehicle!
+    //  Populates each individual table cell with the details of each vehicle!
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell()
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
         
         let thisVehicle: Vehicle = vehicleData.getVehicleFromLibrary(key: indexPath.row)
         
-        let makeModelString = String(thisVehicle.year) + " " + thisVehicle.make + " " + thisVehicle.model + " " + thisVehicle.variant
-        
-        cell.textLabel?.text = makeModelString
+        //  Our cell will contain a description of the car and the Consumption amount
+        cell.textLabel?.text = thisVehicle.description
+        cell.detailTextLabel?.text = thisVehicle.consumption
         
         return cell
     }
     
-    // Will be used to commit the vehicle to the UserData section and move to the next scene in the storyboard!
+    
+    //  Commit the vehicle to the UserData section and move to the next scene in the storyboard!
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
@@ -58,6 +59,14 @@ class VehicleViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    }
+    
+    //  Replaces the Back item with the word "BACK" in the preceding view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
     }
     
     

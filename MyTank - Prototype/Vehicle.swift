@@ -15,7 +15,18 @@ struct Vehicle
     let model: String
     let variant: String
     let year: Int
-    let litersPerKM: Double
+    let consumptionLitres: Double
+    
+    var description: String
+    {
+        return String(year) + " " + make + " " + model + " " + variant
+    }
+    
+    var consumption: String
+    {
+            
+        return String(consumptionLitres) + "L/100Km"
+    }
 }
 
 //  This extension is used so that two Vehicle objects can be compared using the '==' operator

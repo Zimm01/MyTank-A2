@@ -11,7 +11,7 @@ import Foundation
 class VehicleData
 {
     // Dictionary that contains the car valuse to be used in the program, for the protype, these values are hard-coded!
-    private var vehicleLibrary = [Vehicle(make: "Mitsubishi", model: "Lancer", variant: "Activ", year: 2012, litersPerKM: 6.7), Vehicle(make: "Mazda", model: "3", variant: "Touring", year: 2017, litersPerKM: 5.9)]
+    private var vehicleLibrary = [Vehicle(make: "Mitsubishi", model: "Lancer", variant: "Activ", year: 2012, consumptionLitres: 6.7), Vehicle(make: "Mazda", model: "3", variant: "Touring", year: 2017, consumptionLitres: 5.9)]
     
     
     // Return the number of Vehicles in the vehicleLibrary

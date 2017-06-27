@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrentVehicleVC : UIViewController
+class CurrentVehicleModuleVC : UIViewController
 {
     // Coonects to the headline label
     @IBOutlet weak var vehicleHeadline: UILabel!
@@ -21,9 +21,7 @@ class CurrentVehicleVC : UIViewController
     let noVehicleMessage:String = "The Fuel Calculator"
     let hasVehicleMessage:String = "Current Vehicle"
     
-    
-    
-    
+
     override func viewDidLoad()
     {
         //  IF the user has not used the app yet, display a standard message
@@ -31,16 +29,13 @@ class CurrentVehicleVC : UIViewController
         if CurrentUserData.UserHasData() == false
         {
             vehicleHeadline.text = noVehicleMessage
-            vehicleName.text = nil
-            vehicleConsumption.text = nil
+            vehicleName.text = "No Current Vehicle"
+            vehicleConsumption.text = "Get Started Below"
         }
         else
         {
             vehicleHeadline.text = hasVehicleMessage
-            
-            let currentVehicle:Vehicle = CurrentUserData.GetUserVehicle()
-            
-            vehicleName.text = currentVehicle.make
+
         }
     }
 }

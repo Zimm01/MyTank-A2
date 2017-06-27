@@ -24,7 +24,7 @@ class CurrentUserData
         //  As Data persistance is NR at this time, this function is a placeholder right now!!
     }
     
-    // ACCESSORS ---
+    // --- ACCESSORS ---
     
     //  Return whether or not the user has any session data.
     //  Currently this will always be FALSE on load up
@@ -38,7 +38,7 @@ class CurrentUserData
         return userVehicle!
     }
     
-    // MUTATORS ---
+    //  --- MUTATORS ---
     
     //  This call will update the current vehicle stored in the userdata object
     static func UpdateUserVehicle(newVehicle: Vehicle)->Bool
