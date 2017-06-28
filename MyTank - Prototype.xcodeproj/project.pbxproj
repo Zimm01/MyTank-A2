@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */; };
+		CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A6D1F03CEEE002F9DEE /* RouteData.swift */; };
+		CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */; };
 		CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA494181F0277D200B132C3 /* HomeViewController.swift */; };
 		CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4941B1F02799100B132C3 /* RouteViewController.swift */; };
 		CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		CE388A6D1F03CEEE002F9DEE /* RouteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteData.swift; sourceTree = "<group>"; };
+		CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripStatsModuleVC.swift; sourceTree = "<group>"; };
 		CEA494181F0277D200B132C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEA4941B1F02799100B132C3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentVehicleModuleVC.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */,
+				CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */,
 			);
 			name = "Module View Controllers";
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			children = (
 				CEC110DA1F0148880007A646 /* Data Structure */,
 				CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */,
+				CE388A6D1F03CEEE002F9DEE /* RouteData.swift */,
 				CEC110D61F0136770007A646 /* VehicleData.swift */,
 			);
 			name = Model;
@@ -334,8 +340,10 @@
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,
+				CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */,
 				CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */,
 				CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */,
+				CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
