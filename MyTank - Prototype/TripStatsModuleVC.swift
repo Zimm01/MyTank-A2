@@ -10,6 +10,7 @@ import UIKit
 
 class TripStatsModuleVC : UIViewController
 {
+    
     @IBOutlet weak var statsVehicleOutput: UILabel!
 
     @IBOutlet weak var statsConsumptionOutput: UILabel!

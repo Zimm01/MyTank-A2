@@ -10,17 +10,23 @@ import UIKit
 
 class ResultsViewController: UIViewController
 {
-    @IBOutlet weak var tempCarInfo: UILabel!
+    // This is our TOTAL COST label
+    @IBOutlet weak var resultTotalPrice: UILabel!
+
+    // This is our PRICE PER (L/G) label
+    @IBOutlet weak var resultPricePerUnit: UILabel!
+    
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+       
+        let finalCost:String = CurrentUserData.CalculateFinalCost()
         
-        let hello:Vehicle = CurrentUserData.GetUserVehicle()
-        
-        //tempCarInfo.text = hello.make + " " + hello.model
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        //  Finally, set the labels to show total cost and price per unit
+        resultTotalPrice.text = finalCost
+        resultPricePerUnit.text = CurrentUserData.GetCostPerUnit()
     }
     
     override func didReceiveMemoryWarning()
