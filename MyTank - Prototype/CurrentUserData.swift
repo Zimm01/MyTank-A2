@@ -23,6 +23,8 @@ class CurrentUserData
     // The currency being used for this implementation
     static private var currencyUnit:String = "$"
     
+    //  The current route object the user has selected
+    static private var routeSelection:Route?
     
     
     //  For the complete version, this function will load the users last session and populate the member variables.
@@ -50,6 +52,14 @@ class CurrentUserData
         return "@ " + formatAsCurrencyVal(inputValue: costPerLitre) + "/L"
     }
     
+    static func GetRouteSelection()->Route
+    {
+        return routeSelection!
+    }
+    
+    
+    
+    
     //  --- MUTATORS ---
     
     //  This call will update the current vehicle stored in the userdata object
@@ -74,17 +84,17 @@ class CurrentUserData
     static func CalculateFinalCost()->String
     {
         var grandTotal:Double = 0
-
+        
         //  If for some reason the vehicle was not initialised, this IF statement will prevent the application encountering an unexpected error
         if userHasVehicle
         {
             let consumptionPerKM:Double = ((userVehicle?.consumptionLitres)! / 100)
             
-            let totalDistance: Int = 877 //THIS IS WHERE WE PLUG IN OUR DISTANCE FROM THE 'ROUTE' OBJECT!!!!!!!
-        
+            let totalDistance: Int = (routeSelection?.distance)!
+            
             grandTotal = (consumptionPerKM * Double(totalDistance)) * costPerLitre
         }
-
+        
         // Return the toal as a Currency String
         return formatAsCurrencyVal(inputValue: grandTotal)
     }
