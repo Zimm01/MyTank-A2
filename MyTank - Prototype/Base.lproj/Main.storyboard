@@ -81,7 +81,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="gEt-ji-QeJ" kind="show" id="wcc-9N-wyU"/>
+                        <segue destination="gEt-ji-QeJ" kind="show" identifier="RouteSelectionSegue" id="wcc-9N-wyU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCj-pH-BXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,7 +91,7 @@
         <!--Calculate-->
         <scene sceneID="IrB-dI-jrb">
             <objects>
-                <viewController title="Route Selection" id="gEt-ji-QeJ" userLabel="Calculate" customClass="RouteViewController" customModule="MyTank___Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Route Selection" id="gEt-ji-QeJ" userLabel="Calculate" customClass="CalculateController" customModule="MyTank___Prototype" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oBF-8l-gG2"/>
                         <viewControllerLayoutGuide type="bottom" id="rhl-KE-SyQ"/>
@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q2-YI-JEd">
-                                <rect key="frame" x="53" y="643" width="308" height="53"/>
+                                <rect key="frame" x="53" y="642" width="308" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -112,13 +112,28 @@
                                     <segue destination="jc0-U6-jFW" kind="show" id="RPE-f2-fzY"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Logo-NoText" translatesAutoresizingMaskIntoConstraints="NO" id="Tjq-iT-p2j">
+                                <rect key="frame" x="145" y="140" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tjq-iT-p2j" secondAttribute="height" multiplier="185:185" id="5ez-na-Uht"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTm-cv-SFb">
+                                <rect key="frame" x="87" y="304" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tjq-iT-p2j" firstAttribute="width" secondItem="Tjq-iT-p2j" secondAttribute="height" multiplier="185:185" id="Eys-Hs-RdT"/>
+                            <constraint firstItem="Tjq-iT-p2j" firstAttribute="width" secondItem="Tjq-iT-p2j" secondAttribute="height" multiplier="185:185" id="ujR-uX-0mY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvR-s3-Awk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2661" y="33"/>
+            <point key="canvasLocation" x="2660.8695652173915" y="32.608695652173914"/>
         </scene>
         <!--Your Trip-->
         <scene sceneID="vNK-Va-adF">

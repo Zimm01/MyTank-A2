@@ -21,3 +21,13 @@ struct Route
     }
     
 }
+
+//  This extension is used so that two Route objects can be compared using the '==' operator
+extension Route: Equatable
+{
+    static func ==(lhs: Route, rhs: Route)->Bool
+    {
+        // This will be more complex in the furture!
+        return lhs.distance == rhs.distance
+    }
+}

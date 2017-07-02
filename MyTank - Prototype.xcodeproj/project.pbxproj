@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385D1F08DBDD003F3B87 /* Route.swift */; };
+		3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385F1F0902C8003F3B87 /* CalculateController.swift */; };
 		CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */; };
 		CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A6D1F03CEEE002F9DEE /* RouteData.swift */; };
 		CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		3EAA385D1F08DBDD003F3B87 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		3EAA385F1F0902C8003F3B87 /* CalculateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateController.swift; sourceTree = "<group>"; };
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CE388A6D1F03CEEE002F9DEE /* RouteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteData.swift; sourceTree = "<group>"; };
 		CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripStatsModuleVC.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				CEA4941A1F02794400B132C3 /* Module View Controllers */,
 				CEA494181F0277D200B132C3 /* HomeViewController.swift */,
+				3EAA385F1F0902C8003F3B87 /* CalculateController.swift */,
 				CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */,
 				CEA4941B1F02799100B132C3 /* RouteViewController.swift */,
 				CEC110D81F0137080007A646 /* VehicleViewController.swift */,
@@ -335,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */,
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
 				CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */,
 				CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */,

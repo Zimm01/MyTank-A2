@@ -14,6 +14,8 @@ class CurrentUserData
     //  Flag used to determine if session data exists or not!
     static private var userHasVehicle:Bool = false
     
+    static private var routeAlreadyChosen:Bool = false
+    
     //  The current vehicle object the user has selected
     static private var userVehicle:Vehicle?
     
@@ -73,6 +75,21 @@ class CurrentUserData
         if userVehicle == newVehicle
         {
             userHasVehicle = true
+            return true
+        }
+        
+        return false
+    }
+    
+    //  This call will update the current route stored in the userdata object
+    static func UpdateRouteSelection(newRoute: Route)->Bool
+    {
+        // Update the routeSelection object
+        self.routeSelection = newRoute
+        
+        if routeSelection == newRoute
+        {
+            routeAlreadyChosen = true
             return true
         }
         

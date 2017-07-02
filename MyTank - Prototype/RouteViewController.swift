@@ -38,7 +38,24 @@ class RouteViewController: UITableViewController
         return cell
     }
     
-           
+    //  Commit the route distance to the UserData section and move to the next scene in the storyboard!
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        let row = indexPath.row
+        
+        //  Attempt to store the route distance in 'CurrentUserData' we will not advance the view if for some reson this fails, for app stability!
+        if CurrentUserData.UpdateRouteSelection(newRoute: routeData.getRouteFromLibrary(key: row))
+        {
+            self.performSegue(withIdentifier: "RouteSelectionSegue", sender: self)
+        }
+        else
+        {
+            // TODO alert user the app has failed, somehow!
+        }
+    }
+
+              
     override func viewDidLoad()
     {
         super.viewDidLoad()
