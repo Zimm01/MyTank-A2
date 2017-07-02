@@ -20,6 +20,10 @@ struct Route
         return origin + " to " + destination + " is: "
     }
     
+    var tripKm: String
+    {
+        return String(distance)
+    }
 }
 
 //  This extension is used so that two Route objects can be compared using the '==' operator

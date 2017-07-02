@@ -11,6 +11,10 @@ import UIKit
 class TripStatsModuleVC : UIViewController
 {
     
+    @IBOutlet weak var destinationSelected: UILabel!
+    
+    @IBOutlet weak var kilometersTravelled: UILabel!
+    
     @IBOutlet weak var statsVehicleOutput: UILabel!
 
     @IBOutlet weak var statsConsumptionOutput: UILabel!
@@ -27,17 +31,22 @@ class TripStatsModuleVC : UIViewController
         {
             statsVehicleOutput.text = noDataMessage
             statsConsumptionOutput.text = noDataMessage
+            destinationSelected.text = noDataMessage
+            kilometersTravelled.text = noDataMessage
 
             //TODO: throw exeption
         }
         else
         {
             let userVehicle:Vehicle = CurrentUserData.GetUserVehicle()
+            let routeSelection:Route = CurrentUserData.GetRouteSelection()
+
             
             statsVehicleOutput.text = userVehicle.description
             statsConsumptionOutput.text = userVehicle.consumption
 
-            
+            destinationSelected.text = routeSelection.description
+            kilometersTravelled.text = String(routeSelection.tripKm)
         }
     }
 }

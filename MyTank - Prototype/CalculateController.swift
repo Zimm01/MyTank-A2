@@ -8,18 +8,23 @@
 
 import UIKit
 
-class CalculateController: UIViewController {
+class CalculateController: UIViewController
+{
+
+    // This will have a confirmation message that calls the chosen 
+    // vehicle and route in the final version of the app
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning()
+    //  Replaces the Back item with the word "BACK" in the preceding view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
     }
-    
+
 }
