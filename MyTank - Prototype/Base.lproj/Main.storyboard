@@ -234,7 +234,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="fOz-8h-M0Y" kind="show" id="8ef-J3-8cA"/>
+                        <segue destination="fOz-8h-M0Y" kind="show" identifier="VehicleSelectionSegue" id="8ef-J3-8cA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cou-Ca-JBY" userLabel="First Responder" sceneMemberID="firstResponder"/>

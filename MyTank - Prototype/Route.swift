@@ -17,7 +17,7 @@ struct Route
     
     var description: String
     {
-        return " Driving from " + origin + "to " + destination + " will take " + String(destination) + " kilometers"
+        return origin + " to " + destination + " is: "
     }
     
 }

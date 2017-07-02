@@ -33,22 +33,26 @@ class RouteViewController: UITableViewController
         
         //  Our cell will contain a description of the route and the distance in kilometers
         cell.textLabel?.text = thisRoute.description
-        cell.detailTextLabel?.text = String(thisRoute.distance)
+        cell.detailTextLabel?.text = String(thisRoute.distance) + " Kms "
         
         return cell
     }
-        
+    
+           
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning()
+    //  Replaces the Back item with the word "BACK" in the preceding view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
     }
+    
+    
     
 }
 
