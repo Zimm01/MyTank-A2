@@ -17,7 +17,7 @@ struct Route
     
     var description: String
     {
-        return origin + " to " + destination + " is: "
+        return origin + " to " + destination 
     }
     
     var tripKm: String
