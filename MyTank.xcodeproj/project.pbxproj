@@ -17,17 +17,16 @@
 		CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4941B1F02799100B132C3 /* RouteViewController.swift */; };
 		CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */; };
 		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
-		CEB30F3A1EFF6997008033C2 /* StartupDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F391EFF6997008033C2 /* StartupDataTests.swift */; };
 		CEC110D71F0136770007A646 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D61F0136770007A646 /* VehicleData.swift */; };
 		CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D81F0137080007A646 /* VehicleViewController.swift */; };
 		CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110DB1F0148D30007A646 /* Vehicle.swift */; };
+		CEC293A11F28CA900096C382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC2939F1F28CA900096C382 /* Main.storyboard */; };
+		CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC293A21F28CAA10096C382 /* LaunchScreen.storyboard */; };
 		CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3932F1EF9CC800081687F /* AppDelegate.swift */; };
 		CEC393321EF9CC800081687F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393311EF9CC800081687F /* ViewController.swift */; };
-		CEC393351EF9CC800081687F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC393331EF9CC800081687F /* Main.storyboard */; };
 		CEC393371EF9CC800081687F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC393361EF9CC800081687F /* Assets.xcassets */; };
-		CEC3933A1EF9CC800081687F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC393381EF9CC800081687F /* LaunchScreen.storyboard */; };
-		CEC393451EF9CC800081687F /* MyTank___PrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393441EF9CC800081687F /* MyTank___PrototypeTests.swift */; };
-		CEC393501EF9CC800081687F /* MyTank___PrototypeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3934F1EF9CC800081687F /* MyTank___PrototypeUITests.swift */; };
+		CEC393451EF9CC800081687F /* MyTankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393441EF9CC800081687F /* MyTankTests.swift */; };
+		CEC393501EF9CC800081687F /* MyTankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3934F1EF9CC800081687F /* MyTankUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,22 +57,21 @@
 		CEA4941B1F02799100B132C3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentVehicleModuleVC.swift; sourceTree = "<group>"; };
 		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
-		CEB30F391EFF6997008033C2 /* StartupDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartupDataTests.swift; path = "../MyTank - PrototypeUITests/StartupDataTests.swift"; sourceTree = "<group>"; };
 		CEC110D61F0136770007A646 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
 		CEC110D81F0137080007A646 /* VehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
 		CEC110DB1F0148D30007A646 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		CEC3932C1EF9CC800081687F /* MyTank - Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyTank - Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC293A01F28CA900096C382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEC293A31F28CAA10096C382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEC293A51F28CCF10096C382 /* MyTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC3932F1EF9CC800081687F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC393311EF9CC800081687F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEC393341EF9CC800081687F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEC393361EF9CC800081687F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CEC393391EF9CC800081687F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC3933B1EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC393401EF9CC800081687F /* MyTank - PrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyTank - PrototypeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC393441EF9CC800081687F /* MyTank___PrototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTank___PrototypeTests.swift"; sourceTree = "<group>"; };
+		CEC393401EF9CC800081687F /* MyTankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MyTankTests.xctest; path = "/Users/Zimmo/Documents/MyTank/build/Debug-iphoneos/MyTankTests.xctest"; sourceTree = "<absolute>"; };
+		CEC393441EF9CC800081687F /* MyTankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTankTests.swift; sourceTree = "<group>"; };
 		CEC393461EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC3934B1EF9CC800081687F /* MyTank - PrototypeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyTank - PrototypeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC3934F1EF9CC800081687F /* MyTank___PrototypeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTank___PrototypeUITests.swift"; sourceTree = "<group>"; };
+		CEC3934B1EF9CC800081687F /* MyTankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MyTankUITests.xctest; path = "/Users/Zimmo/Documents/MyTank/build/Debug-iphoneos/MyTankUITests.xctest"; sourceTree = "<absolute>"; };
+		CEC3934F1EF9CC800081687F /* MyTankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTankUITests.swift; sourceTree = "<group>"; };
 		CEC393511EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,24 +122,14 @@
 		CEC393231EF9CC800081687F = {
 			isa = PBXGroup;
 			children = (
-				CEC3932E1EF9CC800081687F /* MyTank - Prototype */,
-				CEC393431EF9CC800081687F /* MyTank - PrototypeTests */,
-				CEC3934E1EF9CC800081687F /* MyTank - PrototypeUITests */,
-				CEC3932D1EF9CC800081687F /* Products */,
+				CEC3932E1EF9CC800081687F /* MyTank */,
+				CEC393431EF9CC800081687F /* MyTankTests */,
+				CEC3934E1EF9CC800081687F /* MyTankUITests */,
+				CEC293A51F28CCF10096C382 /* MyTank.app */,
 			);
 			sourceTree = "<group>";
 		};
-		CEC3932D1EF9CC800081687F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CEC3932C1EF9CC800081687F /* MyTank - Prototype.app */,
-				CEC393401EF9CC800081687F /* MyTank - PrototypeTests.xctest */,
-				CEC3934B1EF9CC800081687F /* MyTank - PrototypeUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CEC3932E1EF9CC800081687F /* MyTank - Prototype */ = {
+		CEC3932E1EF9CC800081687F /* MyTank */ = {
 			isa = PBXGroup;
 			children = (
 				CEC3932F1EF9CC800081687F /* AppDelegate.swift */,
@@ -151,26 +139,25 @@
 				CEC393601EF9CCA70081687F /* View */,
 				CEC393611EF9CCAD0081687F /* Controller */,
 			);
-			path = "MyTank - Prototype";
+			path = MyTank;
 			sourceTree = "<group>";
 		};
-		CEC393431EF9CC800081687F /* MyTank - PrototypeTests */ = {
+		CEC393431EF9CC800081687F /* MyTankTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEC393441EF9CC800081687F /* MyTank___PrototypeTests.swift */,
-				CEB30F391EFF6997008033C2 /* StartupDataTests.swift */,
+				CEC393441EF9CC800081687F /* MyTankTests.swift */,
 				CEC393461EF9CC800081687F /* Info.plist */,
 			);
-			path = "MyTank - PrototypeTests";
+			path = MyTankTests;
 			sourceTree = "<group>";
 		};
-		CEC3934E1EF9CC800081687F /* MyTank - PrototypeUITests */ = {
+		CEC3934E1EF9CC800081687F /* MyTankUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CEC3934F1EF9CC800081687F /* MyTank___PrototypeUITests.swift */,
+				CEC3934F1EF9CC800081687F /* MyTankUITests.swift */,
 				CEC393511EF9CC800081687F /* Info.plist */,
 			);
-			path = "MyTank - PrototypeUITests";
+			path = MyTankUITests;
 			sourceTree = "<group>";
 		};
 		CEC3935F1EF9CC8B0081687F /* Model */ = {
@@ -187,8 +174,8 @@
 		CEC393601EF9CCA70081687F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CEC393331EF9CC800081687F /* Main.storyboard */,
-				CEC393381EF9CC800081687F /* LaunchScreen.storyboard */,
+				CEC293A21F28CAA10096C382 /* LaunchScreen.storyboard */,
+				CEC2939F1F28CA900096C382 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -210,9 +197,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEC3932B1EF9CC800081687F /* MyTank - Prototype */ = {
+		CEC3932B1EF9CC800081687F /* MyTank */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC393541EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - Prototype" */;
+			buildConfigurationList = CEC393541EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank" */;
 			buildPhases = (
 				CEC393281EF9CC800081687F /* Sources */,
 				CEC393291EF9CC800081687F /* Frameworks */,
@@ -222,14 +209,14 @@
 			);
 			dependencies = (
 			);
-			name = "MyTank - Prototype";
+			name = MyTank;
 			productName = "MyTank - Prototype";
-			productReference = CEC3932C1EF9CC800081687F /* MyTank - Prototype.app */;
+			productReference = CEC293A51F28CCF10096C382 /* MyTank.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CEC3933F1EF9CC800081687F /* MyTank - PrototypeTests */ = {
+		CEC3933F1EF9CC800081687F /* MyTankTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC393571EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - PrototypeTests" */;
+			buildConfigurationList = CEC393571EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTankTests" */;
 			buildPhases = (
 				CEC3933C1EF9CC800081687F /* Sources */,
 				CEC3933D1EF9CC800081687F /* Frameworks */,
@@ -240,14 +227,14 @@
 			dependencies = (
 				CEC393421EF9CC800081687F /* PBXTargetDependency */,
 			);
-			name = "MyTank - PrototypeTests";
+			name = MyTankTests;
 			productName = "MyTank - PrototypeTests";
-			productReference = CEC393401EF9CC800081687F /* MyTank - PrototypeTests.xctest */;
+			productReference = CEC393401EF9CC800081687F /* MyTankTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CEC3934A1EF9CC800081687F /* MyTank - PrototypeUITests */ = {
+		CEC3934A1EF9CC800081687F /* MyTankUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC3935A1EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - PrototypeUITests" */;
+			buildConfigurationList = CEC3935A1EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTankUITests" */;
 			buildPhases = (
 				CEC393471EF9CC800081687F /* Sources */,
 				CEC393481EF9CC800081687F /* Frameworks */,
@@ -258,9 +245,9 @@
 			dependencies = (
 				CEC3934D1EF9CC800081687F /* PBXTargetDependency */,
 			);
-			name = "MyTank - PrototypeUITests";
+			name = MyTankUITests;
 			productName = "MyTank - PrototypeUITests";
-			productReference = CEC3934B1EF9CC800081687F /* MyTank - PrototypeUITests.xctest */;
+			productReference = CEC3934B1EF9CC800081687F /* MyTankUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -289,7 +276,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEC393271EF9CC800081687F /* Build configuration list for PBXProject "MyTank - Prototype" */;
+			buildConfigurationList = CEC393271EF9CC800081687F /* Build configuration list for PBXProject "MyTank" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -298,13 +285,13 @@
 				Base,
 			);
 			mainGroup = CEC393231EF9CC800081687F;
-			productRefGroup = CEC3932D1EF9CC800081687F /* Products */;
+			productRefGroup = CEC393231EF9CC800081687F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEC3932B1EF9CC800081687F /* MyTank - Prototype */,
-				CEC3933F1EF9CC800081687F /* MyTank - PrototypeTests */,
-				CEC3934A1EF9CC800081687F /* MyTank - PrototypeUITests */,
+				CEC3932B1EF9CC800081687F /* MyTank */,
+				CEC3933F1EF9CC800081687F /* MyTankTests */,
+				CEC3934A1EF9CC800081687F /* MyTankUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,9 +301,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC3933A1EF9CC800081687F /* LaunchScreen.storyboard in Resources */,
+				CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */,
 				CEC393371EF9CC800081687F /* Assets.xcassets in Resources */,
-				CEC393351EF9CC800081687F /* Main.storyboard in Resources */,
+				CEC293A11F28CA900096C382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC393451EF9CC800081687F /* MyTank___PrototypeTests.swift in Sources */,
+				CEC393451EF9CC800081687F /* MyTankTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,8 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC393501EF9CC800081687F /* MyTank___PrototypeUITests.swift in Sources */,
-				CEB30F3A1EFF6997008033C2 /* StartupDataTests.swift in Sources */,
+				CEC393501EF9CC800081687F /* MyTankUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,29 +367,29 @@
 /* Begin PBXTargetDependency section */
 		CEC393421EF9CC800081687F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CEC3932B1EF9CC800081687F /* MyTank - Prototype */;
+			target = CEC3932B1EF9CC800081687F /* MyTank */;
 			targetProxy = CEC393411EF9CC800081687F /* PBXContainerItemProxy */;
 		};
 		CEC3934D1EF9CC800081687F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CEC3932B1EF9CC800081687F /* MyTank - Prototype */;
+			target = CEC3932B1EF9CC800081687F /* MyTank */;
 			targetProxy = CEC3934C1EF9CC800081687F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CEC393331EF9CC800081687F /* Main.storyboard */ = {
+		CEC2939F1F28CA900096C382 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CEC393341EF9CC800081687F /* Base */,
+				CEC293A01F28CA900096C382 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CEC393381EF9CC800081687F /* LaunchScreen.storyboard */ = {
+		CEC293A21F28CAA10096C382 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CEC393391EF9CC800081687F /* Base */,
+				CEC293A31F28CAA10096C382 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -510,10 +496,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				ENABLE_TESTABILITY = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = "MyTank - Prototype/Info.plist";
+				INFOPLIST_FILE = MyTank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "cpt224.MyTank---Prototype";
+				PRODUCT_BUNDLE_IDENTIFIER = cpt224.MyTank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -529,10 +515,10 @@
 				DEPLOYMENT_POSTPROCESSING = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INFOPLIST_FILE = "MyTank - Prototype/Info.plist";
+				INFOPLIST_FILE = MyTank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "cpt224.MyTank---Prototype";
+				PRODUCT_BUNDLE_IDENTIFIER = cpt224.MyTank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -549,7 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cpt224.MyTank---PrototypeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTank - Prototype.app/MyTank - Prototype";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTank.app/MyTank";
 			};
 			name = Debug;
 		};
@@ -563,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cpt224.MyTank---PrototypeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTank - Prototype.app/MyTank - Prototype";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTank.app/MyTank";
 			};
 			name = Release;
 		};
@@ -596,7 +582,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEC393271EF9CC800081687F /* Build configuration list for PBXProject "MyTank - Prototype" */ = {
+		CEC393271EF9CC800081687F /* Build configuration list for PBXProject "MyTank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC393521EF9CC800081687F /* Debug */,
@@ -605,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC393541EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - Prototype" */ = {
+		CEC393541EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC393551EF9CC800081687F /* Debug */,
@@ -614,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC393571EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - PrototypeTests" */ = {
+		CEC393571EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTankTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC393581EF9CC800081687F /* Debug */,
@@ -623,7 +609,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC3935A1EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank - PrototypeUITests" */ = {
+		CEC3935A1EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTankUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC3935B1EF9CC800081687F /* Debug */,

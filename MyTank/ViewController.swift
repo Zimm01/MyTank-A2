@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MyTank - Prototype
+//  MyTank
 //
 //  Created by Daniel Zimmerman on 21/06/2017.
 //  Copyright © 2017 CPT224. All rights reserved.

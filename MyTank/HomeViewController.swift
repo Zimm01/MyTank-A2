@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  MyTank - Prototype
+//  MyTank
 //
 //  Created by Daniel Zimmerman on 27/06/2017.
 //  Copyright © 2017 CPT224. All rights reserved.

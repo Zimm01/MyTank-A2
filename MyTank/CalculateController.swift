@@ -1,6 +1,6 @@
 //
 //  CalculateController.swift
-//  MyTank - Prototype
+//  MyTank
 //
 //  Created by Joachim McClain on 2/7/17.
 //  Copyright © 2017 CPT224. All rights reserved.

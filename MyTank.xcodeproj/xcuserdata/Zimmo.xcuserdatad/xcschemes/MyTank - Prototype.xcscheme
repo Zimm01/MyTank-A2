@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEC3932B1EF9CC800081687F"
-               BuildableName = "MyTank - Prototype.app"
-               BlueprintName = "MyTank - Prototype"
-               ReferencedContainer = "container:MyTank - Prototype.xcodeproj">
+               BuildableName = "MyTank.app"
+               BlueprintName = "MyTank"
+               ReferencedContainer = "container:MyTank.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEC3933F1EF9CC800081687F"
-               BuildableName = "MyTank - PrototypeTests.xctest"
-               BlueprintName = "MyTank - PrototypeTests"
-               ReferencedContainer = "container:MyTank - Prototype.xcodeproj">
+               BuildableName = "MyTankTests.xctest"
+               BlueprintName = "MyTankTests"
+               ReferencedContainer = "container:MyTank.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEC3934A1EF9CC800081687F"
-               BuildableName = "MyTank - PrototypeUITests.xctest"
-               BlueprintName = "MyTank - PrototypeUITests"
-               ReferencedContainer = "container:MyTank - Prototype.xcodeproj">
+               BuildableName = "MyTankUITests.xctest"
+               BlueprintName = "MyTankUITests"
+               ReferencedContainer = "container:MyTank.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEC3932B1EF9CC800081687F"
-            BuildableName = "MyTank - Prototype.app"
-            BlueprintName = "MyTank - Prototype"
-            ReferencedContainer = "container:MyTank - Prototype.xcodeproj">
+            BuildableName = "MyTank.app"
+            BlueprintName = "MyTank"
+            ReferencedContainer = "container:MyTank.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEC3932B1EF9CC800081687F"
-            BuildableName = "MyTank - Prototype.app"
-            BlueprintName = "MyTank - Prototype"
-            ReferencedContainer = "container:MyTank - Prototype.xcodeproj">
+            BuildableName = "MyTank.app"
+            BlueprintName = "MyTank"
+            ReferencedContainer = "container:MyTank.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEC3932B1EF9CC800081687F"
-            BuildableName = "MyTank - Prototype.app"
-            BlueprintName = "MyTank - Prototype"
-            ReferencedContainer = "container:MyTank - Prototype.xcodeproj">
+            BuildableName = "MyTank.app"
+            BlueprintName = "MyTank"
+            ReferencedContainer = "container:MyTank.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

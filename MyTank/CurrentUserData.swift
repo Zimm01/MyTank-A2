@@ -1,6 +1,6 @@
 //
 //  CurrentUserData.swift
-//  MyTank - Prototype
+//  MyTank
 //
 //  Created by Daniel Zimmerman on 25/06/2017.
 //  Copyright © 2017 CPT224. All rights reserved.
@@ -123,7 +123,7 @@ class CurrentUserData
     // This function takes a double value and returns it as a formatted currecny value, with 2 decimal places and a currency designator
     private static func formatAsCurrencyVal(inputValue: Double)->String
     {
-        var totalAsString = String(format: "%.2f", inputValue)
+        let totalAsString = String(format: "%.2f", inputValue)
         
         return currencyUnit + " " + totalAsString
     }
