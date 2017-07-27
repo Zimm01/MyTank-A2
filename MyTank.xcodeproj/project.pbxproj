@@ -27,6 +27,7 @@
 		CEC393371EF9CC800081687F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC393361EF9CC800081687F /* Assets.xcassets */; };
 		CEC393451EF9CC800081687F /* MyTankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393441EF9CC800081687F /* MyTankTests.swift */; };
 		CEC393501EF9CC800081687F /* MyTankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3934F1EF9CC800081687F /* MyTankUITests.swift */; };
+		CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE318831F2A1B000034147E /* StandardViewBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,12 +68,13 @@
 		CEC393311EF9CC800081687F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEC393361EF9CC800081687F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC3933B1EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC393401EF9CC800081687F /* MyTankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MyTankTests.xctest; path = "/Users/Zimmo/Documents/MyTank/build/Debug-iphoneos/MyTankTests.xctest"; sourceTree = "<absolute>"; };
 		CEC393441EF9CC800081687F /* MyTankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTankTests.swift; sourceTree = "<group>"; };
 		CEC393461EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC3934B1EF9CC800081687F /* MyTankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MyTankUITests.xctest; path = "/Users/Zimmo/Documents/MyTank/build/Debug-iphoneos/MyTankUITests.xctest"; sourceTree = "<absolute>"; };
 		CEC3934F1EF9CC800081687F /* MyTankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTankUITests.swift; sourceTree = "<group>"; };
 		CEC393511EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE318801F2A0DFB0034147E /* MyTankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE318811F2A0DFB0034147E /* MyTankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE318831F2A1B000034147E /* StandardViewBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardViewBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,8 @@
 				CEC393431EF9CC800081687F /* MyTankTests */,
 				CEC3934E1EF9CC800081687F /* MyTankUITests */,
 				CEC293A51F28CCF10096C382 /* MyTank.app */,
+				CEE318801F2A0DFB0034147E /* MyTankTests.xctest */,
+				CEE318811F2A0DFB0034147E /* MyTankUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +178,7 @@
 		CEC393601EF9CCA70081687F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CEE318821F2A1AD40034147E /* CustomUI */,
 				CEC293A21F28CAA10096C382 /* LaunchScreen.storyboard */,
 				CEC2939F1F28CA900096C382 /* Main.storyboard */,
 			);
@@ -192,6 +197,14 @@
 				CEC393311EF9CC800081687F /* ViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CEE318821F2A1AD40034147E /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				CEE318831F2A1B000034147E /* StandardViewBox.swift */,
+			);
+			name = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +242,7 @@
 			);
 			name = MyTankTests;
 			productName = "MyTank - PrototypeTests";
-			productReference = CEC393401EF9CC800081687F /* MyTankTests.xctest */;
+			productReference = CEE318801F2A0DFB0034147E /* MyTankTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CEC3934A1EF9CC800081687F /* MyTankUITests */ = {
@@ -247,7 +260,7 @@
 			);
 			name = MyTankUITests;
 			productName = "MyTank - PrototypeUITests";
-			productReference = CEC3934B1EF9CC800081687F /* MyTankUITests.xctest */;
+			productReference = CEE318811F2A0DFB0034147E /* MyTankUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -333,6 +346,7 @@
 				CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */,
 				3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */,
 				CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */,
+				CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,
