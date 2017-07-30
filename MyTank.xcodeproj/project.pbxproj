@@ -24,10 +24,10 @@
 		CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC293A21F28CAA10096C382 /* LaunchScreen.storyboard */; };
 		CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3932F1EF9CC800081687F /* AppDelegate.swift */; };
 		CEC393321EF9CC800081687F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393311EF9CC800081687F /* ViewController.swift */; };
-		CEC393371EF9CC800081687F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC393361EF9CC800081687F /* Assets.xcassets */; };
 		CEC393451EF9CC800081687F /* MyTankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393441EF9CC800081687F /* MyTankTests.swift */; };
 		CEC393501EF9CC800081687F /* MyTankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3934F1EF9CC800081687F /* MyTankUITests.swift */; };
 		CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE318831F2A1B000034147E /* StandardViewBox.swift */; };
+		CEEC3CCE1F2E3BCF005180BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEC3CCD1F2E3BCF005180BC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,6 @@
 		CEC293A51F28CCF10096C382 /* MyTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC3932F1EF9CC800081687F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC393311EF9CC800081687F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEC393361EF9CC800081687F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC3933B1EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC393441EF9CC800081687F /* MyTankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTankTests.swift; sourceTree = "<group>"; };
 		CEC393461EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		CEE318801F2A0DFB0034147E /* MyTankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE318811F2A0DFB0034147E /* MyTankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE318831F2A1B000034147E /* StandardViewBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardViewBox.swift; sourceTree = "<group>"; };
+		CEEC3CCD1F2E3BCF005180BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,8 +136,8 @@
 		CEC3932E1EF9CC800081687F /* MyTank */ = {
 			isa = PBXGroup;
 			children = (
+				CEEC3CCD1F2E3BCF005180BC /* Assets.xcassets */,
 				CEC3932F1EF9CC800081687F /* AppDelegate.swift */,
-				CEC393361EF9CC800081687F /* Assets.xcassets */,
 				CEC3933B1EF9CC800081687F /* Info.plist */,
 				CEC3935F1EF9CC8B0081687F /* Model */,
 				CEC393601EF9CCA70081687F /* View */,
@@ -315,7 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */,
-				CEC393371EF9CC800081687F /* Assets.xcassets in Resources */,
+				CEEC3CCE1F2E3BCF005180BC /* Assets.xcassets in Resources */,
 				CEC293A11F28CA900096C382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
