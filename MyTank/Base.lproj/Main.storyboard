@@ -23,7 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-Temp" translatesAutoresizingMaskIntoConstraints="NO" id="HFC-Cs-kXQ">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Ae7-q2-msg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-Image" translatesAutoresizingMaskIntoConstraints="NO" id="HFC-Cs-kXQ">
                                 <rect key="frame" x="0.0" y="526" width="414" height="210"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -62,14 +65,17 @@
                             <constraint firstItem="31e-SZ-lM3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.072" id="0k9-Fu-Mvl">
                                 <variation key="heightClass=compact" constant="20"/>
                             </constraint>
+                            <constraint firstItem="Ae7-q2-msg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="44X-WV-VkS"/>
                             <constraint firstItem="HFC-Cs-kXQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Mm-Ip-LYN">
                                 <variation key="heightClass=compact" constant="192"/>
                             </constraint>
+                            <constraint firstItem="Ae7-q2-msg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6R3-Yc-TIc"/>
                             <constraint firstItem="cWT-so-MOa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="7ah-aI-7zd"/>
                             <constraint firstItem="31e-SZ-lM3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.815" id="Krf-CR-3ef"/>
                             <constraint firstItem="cWT-so-MOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LUm-XK-R9a">
                                 <variation key="heightClass=compact" constant="-185"/>
                             </constraint>
+                            <constraint firstItem="Ae7-q2-msg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="OxH-9p-lJB"/>
                             <constraint firstItem="HFC-Cs-kXQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.286" id="Xe9-dr-mja">
                                 <variation key="heightClass=compact" constant="285"/>
                             </constraint>
@@ -102,6 +108,7 @@
                                 <variation key="heightClass=compact" constant="-150"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="-50"/>
                             </constraint>
+                            <constraint firstItem="Ae7-q2-msg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yaY-A6-YIO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uoj-sf-g2V"/>
@@ -307,14 +314,14 @@
                         <viewControllerLayoutGuide type="bottom" id="tYO-8E-SlN"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="jFU-s0-EMZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320.66666666666663" height="209.66666666666663"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBb-tA-zJt">
-                                <rect key="frame" x="0.0" y="0.0" width="321" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Vehicle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd7-ZP-URw">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" red="0.058823529411764705" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -335,7 +342,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-uk-pMA">
-                                <rect key="frame" x="167" y="61" width="147" height="61"/>
+                                <rect key="frame" x="167" y="60" width="147" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-gS-obB">
                                         <rect key="frame" x="0.0" y="0.0" width="147" height="61"/>
@@ -364,7 +371,7 @@
                                 <rect key="frame" x="7" y="60" width="149" height="133"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carOutline" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-DP-YJB">
-                                        <rect key="frame" x="6" y="6" width="138" height="122"/>
+                                        <rect key="frame" x="5" y="6" width="139" height="122"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
@@ -635,7 +642,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Home-Temp" width="933" height="400"/>
+        <image name="Background-Texture" width="533" height="906"/>
+        <image name="Home-Image" width="933" height="400"/>
         <image name="Logo-NoText" width="218" height="218"/>
         <image name="Logo-Text" width="218" height="288"/>
         <image name="carOutline" width="200" height="200"/>
