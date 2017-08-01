@@ -8,14 +8,17 @@
 
 import UIKit
 
-class CurrentVehicleModuleVC : UIViewController
+class HomeDisplayModuleVC : UIViewController
 {
     // Coonects to the headline label
     @IBOutlet weak var vehicleHeadline: UILabel!
     
+    @IBOutlet weak var iconLabel: UIImageView!
     // Connects to the car data labels
     @IBOutlet weak var vehicleName: UILabel!
     @IBOutlet weak var vehicleConsumption: UILabel!
+    
+    @IBOutlet weak var displayImage: UIImageView!
     
     // Headline messages to be displayed
     let noVehicleMessage:String = "The Fuel Calculator"
@@ -35,8 +38,17 @@ class CurrentVehicleModuleVC : UIViewController
         else
         {
             vehicleHeadline.text = hasVehicleMessage
-
+            
+            UIView.animate(withDuration: 1.5, animations:
+            {
+                self.vehicleHeadline.alpha = 0.0
+            
+            })
+            
         }
     }
+    
+    
+    
 }
 

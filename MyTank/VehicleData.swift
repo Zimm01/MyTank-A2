@@ -11,6 +11,11 @@ import Foundation
 
 class VehicleData
 {
+    //let dbInstance = MyTankDB()
+    //private let db: Connection?
+    
+    
+    
     // Dictionary that contains the car valuse to be used in the program, for the protype, these values are hard-coded!
     private var vehicleLibrary = [Vehicle(make: "Mitsubishi", model: "Lancer", variant: "Activ", year: 2012, consumptionLitres: 8.5), Vehicle(make: "Mazda", model: "3", variant: "Touring", year: 2017, consumptionLitres: 4.3)]
     

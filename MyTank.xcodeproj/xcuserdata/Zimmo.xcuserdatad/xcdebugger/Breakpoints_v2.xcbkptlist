@@ -95,5 +95,66 @@
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTank/MyTankDB.swift"
+            timestampString = "523285567.283837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTank.MyTankDB.__deallocating_deinit"
+                  moduleName = "MyTank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zimmo/Documents/MyTank/MyTank/MyTankDB.swift"
+                  timestampString = "523296420.207501"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTank.MyTankDB.init () -&gt; MyTank.MyTankDB"
+                  moduleName = "MyTank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zimmo/Documents/MyTank/MyTank/MyTankDB.swift"
+                  timestampString = "523296420.220799"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTank.MyTankDB.__allocating_init () -&gt; MyTank.MyTankDB"
+                  moduleName = "MyTank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zimmo/Documents/MyTank/MyTank/MyTankDB.swift"
+                  timestampString = "523296420.225532"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -10,9 +10,33 @@ import UIKit
 
 class VehicleViewController: UITableViewController
 {
+    //let context = (UIApplication.shared.delegate as! AppDelegate) .persistentContainer.viewContext
+    var vehicles: [Vehicle2] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //getData()
+        tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let vehicle = vehicles[indexPath.row]
+    
+        return cell
+    }
+}
+
+    
+    
+    /*
     // Our Current Vehicle Data Model
     var vehicleData: VehicleData! = VehicleData()
-    
     
     //  This function is used to determine the table attributes as well as the number of rows to be used, based on the number of vehicles in the library
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -69,5 +93,5 @@ class VehicleViewController: UITableViewController
         navigationItem.backBarButtonItem = backItem
     }
     
-    
-}
+    */
+

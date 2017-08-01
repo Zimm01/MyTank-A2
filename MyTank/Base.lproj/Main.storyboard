@@ -305,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="858" y="34"/>
         </scene>
-        <!--Current Vehicle ModuleVC-->
+        <!--Home Display ModuleVC-->
         <scene sceneID="fGM-cp-9D3">
             <objects>
-                <viewController id="QXM-UI-bO0" customClass="CurrentVehicleModuleVC" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QXM-UI-bO0" customClass="HomeDisplayModuleVC" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BYE-ng-aw6"/>
                         <viewControllerLayoutGuide type="bottom" id="tYO-8E-SlN"/>
@@ -329,13 +329,20 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRZ-V5-To8">
+                                        <rect key="frame" x="269" y="0.0" width="51" height="48"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="fd7-ZP-URw" firstAttribute="height" secondItem="nBb-tA-zJt" secondAttribute="height" id="3FR-dU-sS0"/>
                                     <constraint firstAttribute="bottom" secondItem="fd7-ZP-URw" secondAttribute="bottom" id="9W8-BQ-fu2"/>
                                     <constraint firstItem="fd7-ZP-URw" firstAttribute="width" secondItem="nBb-tA-zJt" secondAttribute="width" id="DjR-j8-M6b"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="width" secondItem="fd7-ZP-URw" secondAttribute="width" multiplier="0.16" id="Jbc-bg-a5J"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="centerY" secondItem="fd7-ZP-URw" secondAttribute="centerY" id="KWz-QZ-dhT"/>
                                     <constraint firstAttribute="trailing" secondItem="fd7-ZP-URw" secondAttribute="trailing" id="R95-EX-dVm"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="height" secondItem="fd7-ZP-URw" secondAttribute="height" id="d30-1p-bcx"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="trailing" secondItem="fd7-ZP-URw" secondAttribute="trailing" id="eNd-cG-0VU"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
@@ -429,6 +436,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="displayImage" destination="0mX-DP-YJB" id="aOe-ns-RJW"/>
+                        <outlet property="iconLabel" destination="HRZ-V5-To8" id="7Iz-oE-4tp"/>
                         <outlet property="vehicleConsumption" destination="qZe-c9-KPU" id="wW5-rX-19W"/>
                         <outlet property="vehicleHeadline" destination="fd7-ZP-URw" id="EId-bL-8fF"/>
                         <outlet property="vehicleName" destination="Kwh-gS-obB" id="bwi-K9-87b"/>

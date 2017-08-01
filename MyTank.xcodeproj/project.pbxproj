@@ -11,12 +11,15 @@
 		3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385F1F0902C8003F3B87 /* CalculateController.swift */; };
 		3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */; };
 		CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */; };
+		CE32C66B1F30AF5200459A0D /* MyTankDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32C66A1F30AF5200459A0D /* MyTankDB.swift */; };
+		CE32C6711F30B8CB00459A0D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */; };
+		CE32C6B31F30CC8B00459A0D /* VehicleList.json in Resources */ = {isa = PBXBuildFile; fileRef = CE32C6B21F30CC8B00459A0D /* VehicleList.json */; };
 		CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A6D1F03CEEE002F9DEE /* RouteData.swift */; };
 		CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */; };
 		CEA10B851F2F7080007335FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA10B841F2F7080007335FA /* libsqlite3.tbd */; };
 		CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA494181F0277D200B132C3 /* HomeViewController.swift */; };
 		CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4941B1F02799100B132C3 /* RouteViewController.swift */; };
-		CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */; };
+		CEB30F361EFF47D0008033C2 /* HomeDisplayModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */; };
 		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
 		CEC110D71F0136770007A646 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D61F0136770007A646 /* VehicleData.swift */; };
 		CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D81F0137080007A646 /* VehicleViewController.swift */; };
@@ -48,17 +51,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE32C66C1F30B03000459A0D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3EAA385D1F08DBDD003F3B87 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		3EAA385F1F0902C8003F3B87 /* CalculateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateController.swift; sourceTree = "<group>"; };
 		3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleVC.swift; sourceTree = "<group>"; };
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		CE32C66A1F30AF5200459A0D /* MyTankDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTankDB.swift; sourceTree = "<group>"; };
+		CE32C66E1F30B13300459A0D /* MyTank-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTank-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CE32C6B21F30CC8B00459A0D /* VehicleList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VehicleList.json; sourceTree = "<group>"; };
 		CE388A6D1F03CEEE002F9DEE /* RouteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteData.swift; sourceTree = "<group>"; };
 		CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripStatsModuleVC.swift; sourceTree = "<group>"; };
 		CEA10B841F2F7080007335FA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CEA494181F0277D200B132C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEA4941B1F02799100B132C3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
-		CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentVehicleModuleVC.swift; sourceTree = "<group>"; };
+		CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayModuleVC.swift; sourceTree = "<group>"; };
 		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
 		CEC110D61F0136770007A646 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
 		CEC110D81F0137080007A646 /* VehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE32C6B11F30CC4100459A0D /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				CE32C6B21F30CC8B00459A0D /* VehicleList.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 		CEA10B831F2F7080007335FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +143,7 @@
 		CEA4941A1F02794400B132C3 /* Module View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEB30F351EFF47D0008033C2 /* CurrentVehicleModuleVC.swift */,
+				CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */,
 				CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */,
 				3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */,
 			);
@@ -128,6 +155,7 @@
 			children = (
 				CEC110DB1F0148D30007A646 /* Vehicle.swift */,
 				3EAA385D1F08DBDD003F3B87 /* Route.swift */,
+				CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */,
 			);
 			name = "Data Structure";
 			sourceTree = "<group>";
@@ -148,9 +176,11 @@
 		CEC3932E1EF9CC800081687F /* MyTank */ = {
 			isa = PBXGroup;
 			children = (
+				CE32C6B11F30CC4100459A0D /* JSON */,
 				CEEC3CCD1F2E3BCF005180BC /* Assets.xcassets */,
 				CEC3932F1EF9CC800081687F /* AppDelegate.swift */,
 				CEC3933B1EF9CC800081687F /* Info.plist */,
+				CE32C66E1F30B13300459A0D /* MyTank-Bridging-Header.h */,
 				CEC3935F1EF9CC8B0081687F /* Model */,
 				CEC393601EF9CCA70081687F /* View */,
 				CEC393611EF9CCAD0081687F /* Controller */,
@@ -182,6 +212,7 @@
 				CEC110DA1F0148880007A646 /* Data Structure */,
 				CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */,
 				CE388A6D1F03CEEE002F9DEE /* RouteData.swift */,
+				CE32C66A1F30AF5200459A0D /* MyTankDB.swift */,
 				CEC110D61F0136770007A646 /* VehicleData.swift */,
 			);
 			name = Model;
@@ -229,6 +260,7 @@
 				CEC393281EF9CC800081687F /* Sources */,
 				CEC393291EF9CC800081687F /* Frameworks */,
 				CEC3932A1EF9CC800081687F /* Resources */,
+				CE32C66C1F30B03000459A0D /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -326,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE32C6B31F30CC8B00459A0D /* VehicleList.json in Resources */,
 				CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */,
 				CEEC3CCE1F2E3BCF005180BC /* Assets.xcassets in Resources */,
 				CEC293A11F28CA900096C382 /* Main.storyboard in Resources */,
@@ -355,15 +388,17 @@
 			files = (
 				3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */,
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
-				CEB30F361EFF47D0008033C2 /* CurrentVehicleModuleVC.swift in Sources */,
+				CEB30F361EFF47D0008033C2 /* HomeDisplayModuleVC.swift in Sources */,
 				3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */,
 				CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */,
+				CE32C6711F30B8CB00459A0D /* Model.xcdatamodeld in Sources */,
 				CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
+				CE32C66B1F30AF5200459A0D /* MyTankDB.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,
 				CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */,
 				CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */,
@@ -527,6 +562,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = cpt224.MyTank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -546,6 +582,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = cpt224.MyTank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -645,6 +682,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */,
+			);
+			currentVersion = CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CEC393241EF9CC800081687F /* Project object */;
 }
