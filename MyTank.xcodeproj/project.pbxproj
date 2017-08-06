@@ -69,7 +69,6 @@
 		3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleVC.swift; sourceTree = "<group>"; };
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CE32C66A1F30AF5200459A0D /* MyTankDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTankDB.swift; sourceTree = "<group>"; };
-		CE32C66E1F30B13300459A0D /* MyTank-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTank-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CE32C6B21F30CC8B00459A0D /* VehicleList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VehicleList.json; sourceTree = "<group>"; };
 		CE388A6D1F03CEEE002F9DEE /* RouteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteData.swift; sourceTree = "<group>"; };
@@ -132,6 +131,13 @@
 			name = JSON;
 			sourceTree = "<group>";
 		};
+		CE3DBE701F374D4A00C60A3C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Model";
+			sourceTree = "<group>";
+		};
 		CEA10B831F2F7080007335FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,14 +182,14 @@
 		CEC3932E1EF9CC800081687F /* MyTank */ = {
 			isa = PBXGroup;
 			children = (
-				CE32C6B11F30CC4100459A0D /* JSON */,
 				CEEC3CCD1F2E3BCF005180BC /* Assets.xcassets */,
 				CEC3932F1EF9CC800081687F /* AppDelegate.swift */,
 				CEC3933B1EF9CC800081687F /* Info.plist */,
-				CE32C66E1F30B13300459A0D /* MyTank-Bridging-Header.h */,
 				CEC3935F1EF9CC8B0081687F /* Model */,
+				CE3DBE701F374D4A00C60A3C /* View Model */,
+				CEC393611EF9CCAD0081687F /* View Controller */,
 				CEC393601EF9CCA70081687F /* View */,
-				CEC393611EF9CCAD0081687F /* Controller */,
+				CE32C6B11F30CC4100459A0D /* JSON */,
 			);
 			path = MyTank;
 			sourceTree = "<group>";
@@ -228,7 +234,7 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		CEC393611EF9CCAD0081687F /* Controller */ = {
+		CEC393611EF9CCAD0081687F /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CEA4941A1F02794400B132C3 /* Module View Controllers */,
@@ -239,7 +245,7 @@
 				CEC110D81F0137080007A646 /* VehicleViewController.swift */,
 				CEC393311EF9CC800081687F /* ViewController.swift */,
 			);
-			name = Controller;
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 		CEE318821F2A1AD40034147E /* CustomUI */ = {
