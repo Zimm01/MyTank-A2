@@ -1,10 +1,257 @@
 {
     "vehicles":
     [
-            {"make": "Mitsubishi", "model": "Lancer", "variant": "Activ", "type": "Sedan", "yearStart":2012, "yearEnd": 2014, "consumptionLitres": 8.5},
-            {"make": "Mitsubishi", "model": "Lancer", "variant": "LS", "type": "Sedan", "yearStart":2008, "yearEnd": 2017, "consumptionLitres": 8.5},
-            {"make": "Mitsubishi", "model": "Lancer", "variant": "VRX", "type": "Sedan", "yearStart":2008, "yearEnd": 2017, "consumptionLitres": 9.0},
-     
-            {"make": "BMW", "model": "Lancer", "variant": "VRX", "type": "Sedan", "yearStart":2008, "yearEnd": 2017, "consumptionLitres": 9.0}
-    ]
+     {
+     "make": "Mitsubishi",
+     "model": "ASX",
+     "variant": "LS",
+     "type": "SUV",
+     "yearStart": 2011,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.6
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "ASX",
+     "variant": "XLS",
+     "type": "SUV",
+     "yearStart": 2011,
+     "yearEnd": 2017,
+     "consumptionLitres": 5.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "ASX",
+     "variant": "XB",
+     "type": "SUV",
+     "yearStart": 2011,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.7
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "ASX",
+     "variant": "Activ",
+     "type": "SUV",
+     "yearStart": 2011,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.6
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Challenger",
+     "variant": "PC",
+     "type": "SUV",
+     "yearStart": 2009,
+     "yearEnd": 2015,
+     "consumptionLitres": 9.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Challenger",
+     "variant": "XLS",
+     "type": "SUV",
+     "yearStart": 2009,
+     "yearEnd": 2015,
+     "consumptionLitres": 9.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "Activ",
+     "type": "CAR-MD",
+     "yearStart": 2010,
+     "yearEnd": 2014,
+     "consumptionLitres": 7.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "ES",
+     "type": "CAR-MD",
+     "yearStart": 2008,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "LX",
+     "type": "CAR-MD",
+     "yearStart": 2008,
+     "yearEnd": 2014,
+     "consumptionLitres": 7.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "LS",
+     "type": "CAR-MD",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "VR-X",
+     "type": "CAR-MD",
+     "yearStart": 2008,
+     "yearEnd": 2014,
+     "consumptionLitres": 8.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "Ralliart",
+     "type": "CAR-MD",
+     "yearStart": 2010,
+     "yearEnd": 2014,
+     "consumptionLitres": 9.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "Evolution",
+     "type": "CAR-MD",
+     "yearStart": 2008,
+     "yearEnd": 2017,
+     "consumptionLitres": 10.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Lancer",
+     "variant": "Evolution MR",
+     "type": "CAR-MD",
+     "yearStart": 2008,
+     "yearEnd": 2014,
+     "consumptionLitres": 10.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Mirage",
+     "variant": "ES",
+     "type": "CAR-SM",
+     "yearStart": 2012,
+     "yearEnd": 2017,
+     "consumptionLitres": 4.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Mirage",
+     "variant": "Sport",
+     "type": "CAR-SM",
+     "yearStart": 2012,
+     "yearEnd": 2017,
+     "consumptionLitres": 4.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Outlander",
+     "variant": "LS",
+     "type": "SUV",
+     "yearStart": 2012,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Outlander",
+     "variant": "XLS",
+     "type": "SUV",
+     "yearStart": 2012,
+     "yearEnd": 2017,
+     "consumptionLitres": 6.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Pajero",
+     "variant": "GL-X",
+     "type": "SUV",
+     "yearStart": 2012,
+     "yearEnd": 2017,
+     "consumptionLitres": 9.8
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Triton",
+     "variant": "GL",
+     "type": "Utility",
+     "yearStart": 2012,
+     "yearEnd": 2015,
+     "consumptionLitres": 7.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Triton",
+     "variant": "GL",
+     "type": "Utility",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.6
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Triton",
+     "variant": "GL-X",
+     "type": "Utility",
+     "yearStart": 2012,
+     "yearEnd": 2015,
+     "consumptionLitres": 7.2
+     },
+     {
+     "make": "Mitsubishi",
+     "model": "Triton",
+     "variant": "GL-X",
+     "type": "Utility",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 7.6
+     },
+     {
+     "make": "Holden",
+     "model": "Commodore",
+     "variant": "SV6",
+     "type": "CAR-LG",
+     "yearStart": 2008,
+     "yearEnd": 2017,
+     "consumptionLitres": 9
+     },
+     {
+     "make": "Ford",
+     "model": "Falcon",
+     "variant": "XR6",
+     "type": "CAR-LG",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 12
+     },
+     {
+     "make": "Toyota",
+     "model": "Corolla",
+     "variant": "Levin",
+     "type": "CAR-SM",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 6.6
+     },
+     {
+     "make": "Volkswagen",
+     "model": "Amarok",
+     "variant": "TDI400",
+     "type": "Utility",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 8.3
+     },
+     {
+     "make": "BMW",
+     "model": "118D",
+     "variant": "LCI",
+     "type": "CAR-LG",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     }
+     ]
 }

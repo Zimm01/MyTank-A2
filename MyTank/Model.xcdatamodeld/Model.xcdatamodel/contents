@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="UserData2" representedClassName="UserData2" syncable="YES" codeGenerationType="class">
+        <attribute name="selectMake" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selectModel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="vehicleID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <entity name="Vehicle2" representedClassName="Vehicle2" syncable="YES" codeGenerationType="class">
         <attribute name="consumptionLitres" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -16,5 +22,6 @@
     <elements>
         <element name="Vehicle2" positionX="-63" positionY="-18" width="128" height="165"/>
         <element name="VehicleMakes" positionX="-63" positionY="45" width="128" height="60"/>
+        <element name="UserData2" positionX="-63" positionY="45" width="128" height="105"/>
     </elements>
 </model>

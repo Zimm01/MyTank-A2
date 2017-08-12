@@ -114,7 +114,7 @@ class VehicleViewController: UITableViewController
     
     
         // Fetch Vehicle
-        let vehicle = vehicleResultsController.object(at: indexPath)
+        //let vehicle = vehicleResultsController.object(at: indexPath)
     
         // Setup cell
         //cell.textLabel?.text = vehicle.make

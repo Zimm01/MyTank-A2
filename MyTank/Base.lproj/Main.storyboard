@@ -141,7 +141,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="rvz-dt-66n" kind="show" identifier="TEMPSEGUE" id="Lwo-r1-ITi"/>
+                        <segue destination="rvz-dt-66n" kind="show" identifier="MakeToModelSegue" id="Lwo-r1-ITi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByB-Ep-HRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,10 +315,10 @@
             </objects>
             <point key="canvasLocation" x="22" y="-690"/>
         </scene>
-        <!--Vehicle Selection-->
+        <!--Select Vehicle Model-->
         <scene sceneID="F41-AV-z1i">
             <objects>
-                <tableViewController title="Vehicle Selection" id="rvz-dt-66n" customClass="VehicleViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Select Vehicle Model" id="rvz-dt-66n" customClass="VehicleModelViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UUE-60-JWs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,17 +408,16 @@
                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wrr-LT-UQG">
                                 <rect key="frame" x="7" y="60" width="149" height="133"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carOutline" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-DP-YJB">
-                                        <rect key="frame" x="5" y="6" width="139" height="122"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-DP-YJB">
+                                        <rect key="frame" x="12" y="5" width="125" height="124"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="0mX-DP-YJB" firstAttribute="centerY" secondItem="Wrr-LT-UQG" secondAttribute="centerY" id="EeD-yS-PUW"/>
-                                    <constraint firstItem="0mX-DP-YJB" firstAttribute="height" secondItem="Wrr-LT-UQG" secondAttribute="height" multiplier="0.92" id="Evv-TJ-smE"/>
+                                    <constraint firstItem="0mX-DP-YJB" firstAttribute="height" secondItem="Wrr-LT-UQG" secondAttribute="height" multiplier="0.925" id="Evv-TJ-smE"/>
                                     <constraint firstItem="0mX-DP-YJB" firstAttribute="centerX" secondItem="Wrr-LT-UQG" secondAttribute="centerX" id="TXB-G8-Ya5"/>
-                                    <constraint firstItem="0mX-DP-YJB" firstAttribute="width" secondItem="Wrr-LT-UQG" secondAttribute="width" multiplier="0.93" id="VS9-wH-IrK"/>
+                                    <constraint firstItem="0mX-DP-YJB" firstAttribute="width" secondItem="Wrr-LT-UQG" secondAttribute="width" multiplier="0.845" id="VS9-wH-IrK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
@@ -686,6 +685,6 @@
         <image name="Home-Image" width="933" height="400"/>
         <image name="Logo-NoText" width="218" height="218"/>
         <image name="Logo-Text" width="218" height="288"/>
-        <image name="carOutline" width="200" height="200"/>
+        <image name="default" width="266" height="266"/>
     </resources>
 </document>

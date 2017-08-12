@@ -5,22 +5,26 @@
 //  Created by Daniel Zimmerman on 6/08/2017.
 //  Copyright © 2017 CPT224. All rights reserved.
 //
-
 import CoreData
 
-class VehicleMakeViewModel : NSObject
+class VehicleMakeViewModel
 {
     // Our persistant container from the CoreData Model
     private var persistentContainer = NSPersistentContainer(name: "Model")
     
     // Our Request to fetch the Make Model from Object Context
-    private var fetchRequest : NSFetchRequest<VehicleMakes> = NSFetchRequest(entityName: "VehicleMakes")
+    private var makeFetchRequest : NSFetchRequest<VehicleMakes> = NSFetchRequest(entityName: "VehicleMakes")
+    
+    // Our Request to fetch the Make Model from Object Context
+    private var userDataFetchRequest : NSFetchRequest<UserData2> = NSFetchRequest(entityName: "UserData2")
     
     // Our array of Vehicle Makes
     private var makes = [VehicleMakes]()
     
+    private let firstUserObject = 1
     
-    override init()
+    // We want to load our persistant container and then place the values in an array to be used by displayed as in the view
+    init()
     {
         persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
             if let error = error {
@@ -38,7 +42,7 @@ class VehicleMakeViewModel : NSObject
         
         do
         {
-            try makes = objectContext.fetch(fetchRequest) as [VehicleMakes]
+            try makes = objectContext.fetch(makeFetchRequest) as [VehicleMakes]
         }
         catch
         {
@@ -46,19 +50,55 @@ class VehicleMakeViewModel : NSObject
             print("Unable to Perform Fetch Request")
             print("\(fetchError), \(fetchError.localizedDescription)")
         }
-
-        print(makes.count)
     }
 
-    
+    // Return the number of objects in this Entity
     func getNumObjects() -> Int
     {
         
         return makes.count
     }
     
-    /*func getResultController() -> NSFetchedResultsController<Vehicle2>
+    // Get the name specified at the selected Index Path
+    func getRowDescription(index: Int) -> String
     {
-        //return vehicleResultsController
-    }*/
+        return makes[index].name!
+    }
+    
+    func commitSelectedMake(index: Int) -> Bool
+    {
+        // Our persistant container from the CoreData Model
+        let objectContext = persistentContainer.viewContext
+        
+        //let userDataEntity = NSEntityDescription.entity(forEntityName: "UserData2", in: objectContext)
+        
+        do
+        {
+            let userDataObject = try objectContext.fetch(userDataFetchRequest)
+            let makeDataObject = try objectContext.fetch(makeFetchRequest)
+            
+            if let userData = userDataObject.first
+            {
+                print(makeDataObject[index].name!)
+                userData.setValue(makeDataObject[index].name, forKey: "selectMake")
+            }
+            else
+            {
+                throw NSError()
+            }
+            
+            try objectContext.save()
+        }
+        catch
+        {
+            let fetchError = error as NSError
+            print("Unable to Perform Fetch Request")
+            print("\(fetchError), \(fetchError.localizedDescription)")
+            return false
+        }
+
+        
+        
+        return true
+    }
 }

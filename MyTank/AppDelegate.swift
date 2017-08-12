@@ -35,44 +35,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // First, check the CURRENT JSON data has not previously been loaded into the database
         // if it has we can skip preloading this information
-        //if !startupLoadCheck()
-       // {
-            // Our tests have failed, so we will wipe and re-load the vehicle database
-            wipeVehicleData()
-            wipeMakeData()
-            preloadVehicleData()
-            // TODO function that removes user vehicle!
-       // }
-        return true
-    }
-    
-    // This function tests to see if the most recent JSON datafile has been loaded into CoreData and returns true only if this is the case.
-    func startupLoadCheck() -> Bool
-    {
-        // First, if the database is NOT preloaded, or the size of the file previously used is non existant return false straight away
-        if !defaults.bool(forKey: UserKeys.preLoaded.rawValue) || defaults.double(forKey: UserKeys.vehicleFileSize.rawValue) == 0{
-            return false
-        }
-        
-        
-        // If the database has been preloaded, we want to check the size of the file used to do so
-        // If it is a different size, it will contain different data
-        if let file = JSONFile
+        if !startupLoadCheck()
         {
-            do{
-                let filesize = try FileManager.default.attributesOfItem(atPath: file.path)[FileAttributeKey.size] as! Double
-                
-                if filesize != defaults.double(forKey: UserKeys.vehicleFileSize.rawValue){
-                    return false
-                }
-            }
-            catch{
-                print(error.localizedDescription)
-            }
+            // Our tests have failed, so we will wipe and re-load the vehicle database and user data!
+            wipeData(fetchRequest: NSFetchRequest<Vehicle2>(entityName: "Vehicle2") as! NSFetchRequest<NSFetchRequestResult>)
+            wipeData(fetchRequest: NSFetchRequest<VehicleMakes>(entityName: "VehicleMakes") as! NSFetchRequest<NSFetchRequestResult>)
+            wipeData(fetchRequest: NSFetchRequest<UserData2>(entityName: "UserData2") as! NSFetchRequest<NSFetchRequestResult>)
+            preloadVehicleData()
+
+            // TODO function that removes user vehicle!
         }
+        userDataValidate()
+        
         return true
     }
-    
     
     func applicationWillResignActive(_ application: UIApplication)
     {
@@ -102,9 +78,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
        // self.saveContext()
     }
-  
+    
+    // This function tests to see if the most recent JSON datafile has been loaded into CoreData and returns true only if this is the case.
+    private func startupLoadCheck() -> Bool
+    {
+        // First, if the database is NOT preloaded, or the size of the file previously used is non existant return false straight away
+        if !defaults.bool(forKey: UserKeys.preLoaded.rawValue) || defaults.double(forKey: UserKeys.vehicleFileSize.rawValue) == 0{
+            return false
+        }
+        
+        // If the database has been preloaded, we want to check the size of the file used to do so
+        // If it is a different size, it will contain different data
+        if let file = JSONFile
+        {
+            do{
+                let filesize = try FileManager.default.attributesOfItem(atPath: file.path)[FileAttributeKey.size] as! Double
+                
+                if filesize != defaults.double(forKey: UserKeys.vehicleFileSize.rawValue){
+                    return false
+                }
+            }
+            catch{
+                print(error.localizedDescription)
+            }
+        }
+        return true
+    }
+
     // This funtion takes a Vehicle JSON file and adds it to CoreData
-    func preloadVehicleData()
+    private func preloadVehicleData()
     {
         // Open the object context and prepare a path to insert data
         let managedObjectContex = persistentContainer.viewContext
@@ -144,10 +146,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                         // We will now add the make to the list, if it is new.
                         addToList(makeToAdd: dictionary["make"] as! String, makeList: &makeList)
-
-                        
-                        //addMakeToList(makeToAdd: dictionary["make"] as! String, context: &managedObjectContex, makeList: &makeData)
-                    
                         dynamicId += 1
                     }
 
@@ -175,47 +173,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             else{
                 print("No file")
             }
-            
             // Save the context here, the parsing is complete!
             try managedObjectContex.save()
         }
-        catch
-        {
+        catch{
             print(error.localizedDescription + " AT ROW: " + String(dynamicId))
         }
     }
     
-    // This function deletes all entries under our Vehicle Entity in the database
-    private func wipeVehicleData()
+    // Commit a list of makes to the VehicleMake Object
+    private func commitMakeData(make: String, makeData: inout VehicleMakes)
     {
-        let fetchRequest = NSFetchRequest<Vehicle2>(entityName: "Vehicle2")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
-        
-        let db = persistentContainer.viewContext
-        do{
-            try db.execute(deleteRequest)
-            UserDefaults.standard.setValue(false, forKey: UserKeys.preLoaded.rawValue)
-        }
-        catch
-        {
-            print(error.localizedDescription)
-        }
+        makeData.setValue(make, forKey: "name")
     }
     
-    // This function deletes all entries under our Make Entity in the database
-    private func wipeMakeData()
+    // Validate the user data to ensure we have a user data object at all, and only one
+    private func userDataValidate()
     {
-        let fetchRequest = NSFetchRequest<VehicleMakes>(entityName: "VehicleMakes")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        let fetchRequest = NSFetchRequest<UserData2>(entityName: "UserData2")
         
-        let db = persistentContainer.viewContext
-        do{
-            try db.execute(deleteRequest)
-            UserDefaults.standard.setValue(false, forKey: UserKeys.preLoaded.rawValue)
+        let context = persistentContainer.viewContext
+        
+        let makeListDesc = NSEntityDescription.entity(forEntityName: "UserData2", in: context)
+        
+        do
+        {
+            let userDataObject = try context.fetch(fetchRequest)
+            
+            if userDataObject.first == nil {
+                
+                let userData = UserData2(entity: makeListDesc! , insertInto: context)
+                userData.setValue(1, forKey: "userID")
+            }
+            
+            try context.save()
         }
         catch
         {
-            print(error.localizedDescription)
+            
         }
     }
     
@@ -228,11 +223,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             makeList.sort()
         }
     }
-    
-    // Commit a list of makes to the VehicleMake Object
-    private func commitMakeData(make: String, makeData: inout VehicleMakes)
+
+    // This function clears the data from a selected entity, given by fetchRequest
+    func wipeData(fetchRequest: NSFetchRequest<NSFetchRequestResult>)
     {
-        makeData.setValue(make, forKey: "name")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        let context = persistentContainer.viewContext
+        do{
+            try context.execute(deleteRequest)
+            UserDefaults.standard.setValue(false, forKey: UserKeys.preLoaded.rawValue)
+        }
+        catch
+        {
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Core Data stack
