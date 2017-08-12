@@ -17,13 +17,31 @@ class VehicleViewController: UITableViewController
     // Our persistant container from the CoreData Model
     private let persistentContainer = NSPersistentContainer(name: "Model")
     
+    private var selectedIndex = -1
+    
     // This variable is used to fetch data from the Data Model
-    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Vehicle2> = {
+    fileprivate lazy var vehicleResultsController: NSFetchedResultsController<Vehicle2> = {
         // Create Fetch Request
         let fetchRequest: NSFetchRequest<Vehicle2> = Vehicle2.fetchRequest()
         
         // Configure Fetch Request
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+        
+        // Create Fetched Results Controller
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
+    
+    // This variable is used to fetch data from the Data Model
+    fileprivate lazy var makeListResultsController: NSFetchedResultsController<VehicleMakes> = {
+        // Create Fetch Request
+        let fetchRequest: NSFetchRequest<VehicleMakes> = VehicleMakes.fetchRequest()
+        
+        // Configure Fetch Request
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "make", ascending: true)]
         
         // Create Fetched Results Controller
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
@@ -48,7 +66,7 @@ class VehicleViewController: UITableViewController
                 self.setupView()
                 
                 do {
-                    try self.fetchedResultsController.performFetch()
+                    try self.vehicleResultsController.performFetch()
                 } catch {
                     let fetchError = error as NSError
                     print("Unable to Perform Fetch Request")
@@ -65,14 +83,25 @@ class VehicleViewController: UITableViewController
         tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if selectedIndex == indexPath.row{
+            return 100
+        }
+        return 50
+    }
+    
     //  This function is used to determine the table attributes as well as the number of rows to be used, based on the number of vehicles in the library
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // Set the Background Colour
         self.tableView.backgroundColor = UIColor(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)
         
-        
-        if let vehicles = fetchedResultsController.fetchedObjects{
+        if let hh = makeListResultsController.fetchedObjects{
+            
+            print(String(hh.count) + "i")
+        }
+        if let vehicles = vehicleResultsController.fetchedObjects{
          
             print(vehicles.count)
             return vehicles.count
@@ -80,26 +109,40 @@ class VehicleViewController: UITableViewController
         return 0
     }
     
-    
-    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")
+    
     
         // Fetch Vehicle
-        let vehicle = fetchedResultsController.object(at: indexPath)
+        let vehicle = vehicleResultsController.object(at: indexPath)
     
         // Setup cell
-        cell.textLabel?.text = vehicle.make
-        cell.detailTextLabel?.text = String(vehicle.consumptionLitres)
+        //cell.textLabel?.text = vehicle.make
+       // cell.detailTextLabel?.text = String(vehicle.consumptionLitres)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if selectedIndex == indexPath.row{
+            selectedIndex = -1
+        }
+        else
+        {
+            selectedIndex = indexPath.row
+        }
+        
+        self.tableView.beginUpdates()
+        
+        self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        self.tableView.endUpdates()
     }
     
     private func updateView(){
         
         var hasQuotes = false
         
-        if let quotes = fetchedResultsController.fetchedObjects {
+        if let quotes = vehicleResultsController.fetchedObjects {
             hasQuotes = quotes.count > 0
         }
         

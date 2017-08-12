@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // User defaults constant
     let defaults = UserDefaults.standard
     
+    // OUR VEHICLE JSON FILE!
     let JSONFile = Bundle.main.url(forResource: "VehicleList", withExtension: "json")
     
     
@@ -34,13 +35,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // First, check the CURRENT JSON data has not previously been loaded into the database
         // if it has we can skip preloading this information
-        if !startupLoadCheck()
-        {
+        //if !startupLoadCheck()
+       // {
             // Our tests have failed, so we will wipe and re-load the vehicle database
             wipeVehicleData()
+            wipeMakeData()
             preloadVehicleData()
             // TODO function that removes user vehicle!
-        }
+       // }
         return true
     }
     
@@ -107,6 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Open the object context and prepare a path to insert data
         let managedObjectContex = persistentContainer.viewContext
         let vehicleEntityDesc = NSEntityDescription.entity(forEntityName: "Vehicle2", in: managedObjectContex)
+        let makeListDesc = NSEntityDescription.entity(forEntityName: "VehicleMakes", in: managedObjectContex)
         
         // Our dynamic ID will be used as a "key" for DB interaction
         var dynamicId:Int32 = 0
@@ -122,6 +125,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // Parse the file as dictionary of objects
                 if let serializedData = parsedData?["vehicles"] as? [[String:Any]]
                 {
+                    // This List will hold our make data for the time being
+                    var makeList: [String] = []
                     
                     // FOR EACH entry in the file, we will parse it into a Vehicle Entity
                     for dictionary in serializedData
@@ -137,13 +142,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         vehicleData.setValue(dictionary["yearEnd"], forKey: "yearEnd")
                         vehicleData.setValue(dictionary["consumptionLitres"], forKey: "consumptionLitres")
                         
+                        // We will now add the make to the list, if it is new.
+                        addToList(makeToAdd: dictionary["make"] as! String, makeList: &makeList)
+
+                        
+                        //addMakeToList(makeToAdd: dictionary["make"] as! String, context: &managedObjectContex, makeList: &makeData)
+                    
                         dynamicId += 1
                     }
 
+                    // We will now copy the make list into our dictionary
+                    for makeToAdd in makeList
+                    {
+                        var makeData = VehicleMakes(entity: makeListDesc! , insertInto: managedObjectContex)
+                        
+                        commitMakeData(make: makeToAdd, makeData: &makeData)
+                    }
+                    
                     // Finally we will set the file size and the "PreLoaded" flag into the default user
                     // data for next startup!
                     let filesize = try FileManager.default.attributesOfItem(atPath: (JSONFile?.path)!)[FileAttributeKey.size] as! Double
-                    print("0" + String(filesize))
                     
                     // Commit the values here!
                     UserDefaults.standard.setValue(true, forKey: UserKeys.preLoaded.rawValue)
@@ -168,7 +186,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // This function deletes all entries under our Vehicle Entity in the database
-    func wipeVehicleData()
+    private func wipeVehicleData()
     {
         let fetchRequest = NSFetchRequest<Vehicle2>(entityName: "Vehicle2")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
@@ -182,6 +200,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             print(error.localizedDescription)
         }
+    }
+    
+    // This function deletes all entries under our Make Entity in the database
+    private func wipeMakeData()
+    {
+        let fetchRequest = NSFetchRequest<VehicleMakes>(entityName: "VehicleMakes")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        
+        let db = persistentContainer.viewContext
+        do{
+            try db.execute(deleteRequest)
+            UserDefaults.standard.setValue(false, forKey: UserKeys.preLoaded.rawValue)
+        }
+        catch
+        {
+            print(error.localizedDescription)
+        }
+    }
+    
+    // Add a string to a list, if it dosent already exist and then sort that list
+    private func addToList(makeToAdd: String, makeList: inout [String])
+    {
+        if !makeList.contains(makeToAdd)
+        {
+            makeList.append(makeToAdd)
+            makeList.sort()
+        }
+    }
+    
+    // Commit a list of makes to the VehicleMake Object
+    private func commitMakeData(make: String, makeData: inout VehicleMakes)
+    {
+        makeData.setValue(make, forKey: "name")
     }
     
     // MARK: - Core Data stack

@@ -3,6 +3,8 @@
     [
             {"make": "Mitsubishi", "model": "Lancer", "variant": "Activ", "type": "Sedan", "yearStart":2012, "yearEnd": 2014, "consumptionLitres": 8.5},
             {"make": "Mitsubishi", "model": "Lancer", "variant": "LS", "type": "Sedan", "yearStart":2008, "yearEnd": 2017, "consumptionLitres": 8.5},
-            {"make": "Mitsubishi", "model": "Lancer", "variant": "VRX", "type": "Sedan", "yearStart":2008, "yearEnd": 2017, "consumptionLitres": 9.0}
+            {"make": "Mitsubishi", "model": "Lancer", "variant": "VRX", "type": "Sedan", "yearStart":2008, "yearEnd": 2017, "consumptionLitres": 9.0},
+     
+            {"make": "BMW", "model": "Lancer", "variant": "VRX", "type": "Sedan", "yearStart":2008, "yearEnd": 2017, "consumptionLitres": 9.0}
     ]
 }
