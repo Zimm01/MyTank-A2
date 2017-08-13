@@ -149,11 +149,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         dynamicId += 1
                     }
 
-                    // We will now copy the make list into our dictionary
+                    // We want to add this array to CoreData as a VehicleMakes Object
                     for makeToAdd in makeList
                     {
                         var makeData = VehicleMakes(entity: makeListDesc! , insertInto: managedObjectContex)
-                        
+                        print(makeToAdd)
                         commitMakeData(make: makeToAdd, makeData: &makeData)
                     }
                     
@@ -220,7 +220,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !makeList.contains(makeToAdd)
         {
             makeList.append(makeToAdd)
-            makeList.sort()
         }
     }
 

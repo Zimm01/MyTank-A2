@@ -21,8 +21,12 @@ class VehicleMakeViewController: VehicleTableViewController
     }
     
     //  This function returns a cell with custom data
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        // Create the cell, every second cell will be recoloured
+        var cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cellColor(cell: &cell, index: indexPath.row)
+        
         let make:String = makeDataView.getRowDescription(index: indexPath.row)
         
         cell.textLabel?.text = make

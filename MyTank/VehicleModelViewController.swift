@@ -28,12 +28,14 @@ class VehicleModelViewController: VehicleTableViewController
     }
     
     //  This function returns a cell with custom data
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        var cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cellColor(cell: &cell, index: indexPath.row)
         
         cell.textLabel?.text = modelDataView.getRowDescription(index: indexPath.row)
         cell.accessoryType = .disclosureIndicator
-        //cell.imageView?.image = UIImage(named: modelDataView.getBodyType(index: indexPath.row))
+        cell.imageView?.image = UIImage(named: modelDataView.getBodyType(index: indexPath.row))
         
         return cell
     }
@@ -41,7 +43,15 @@ class VehicleModelViewController: VehicleTableViewController
     // Function used to Segue to the next view and save the user's selected vehicle
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        
-        
+        //  Attempt to store the make selected in the user data object we will not advance the view if for some reson this fails, for app stability!
+        if modelDataView.commitSelectedMake(index: indexPath.row)
+        {
+            self.performSegue(withIdentifier: "CustomiseVehicleSegue", sender: self)
+        }
+        else
+        {
+            print("There was an error selecting " + (tableView.cellForRow(at: indexPath)?.textLabel?.text)!)
+            _ = self.navigationController?.popToRootViewController(animated: false)
+        }
     }
 }

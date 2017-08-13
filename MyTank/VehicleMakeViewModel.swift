@@ -43,6 +43,7 @@ class VehicleMakeViewModel
         do
         {
             try makes = objectContext.fetch(makeFetchRequest) as [VehicleMakes]
+            makes.sort{$0.name! < $1.name!}
         }
         catch
         {
@@ -65,22 +66,21 @@ class VehicleMakeViewModel
         return makes[index].name!
     }
     
+    // Select the MAKE and commit it to the USERDATA object in COREDATA
     func commitSelectedMake(index: Int) -> Bool
     {
         // Our persistant container from the CoreData Model
         let objectContext = persistentContainer.viewContext
         
-        //let userDataEntity = NSEntityDescription.entity(forEntityName: "UserData2", in: objectContext)
-        
         do
         {
             let userDataObject = try objectContext.fetch(userDataFetchRequest)
-            let makeDataObject = try objectContext.fetch(makeFetchRequest)
+            //let makeDataObject = try objectContext.fetch(makeFetchRequest)
             
             if let userData = userDataObject.first
             {
-                print(makeDataObject[index].name!)
-                userData.setValue(makeDataObject[index].name, forKey: "selectMake")
+                print(makes[index].name!)
+                userData.setValue(makes[index].name, forKey: "selectMake")
             }
             else
             {
@@ -96,9 +96,6 @@ class VehicleMakeViewModel
             print("\(fetchError), \(fetchError.localizedDescription)")
             return false
         }
-
-        
-        
         return true
     }
 }

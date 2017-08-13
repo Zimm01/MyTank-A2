@@ -10,6 +10,7 @@
 		3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385D1F08DBDD003F3B87 /* Route.swift */; };
 		3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385F1F0902C8003F3B87 /* CalculateController.swift */; };
 		3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */; };
+		CE2DE8431F3FEC2B00DDE20A /* EnumCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */; };
 		CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */; };
 		CE32C6711F30B8CB00459A0D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */; };
 		CE32C6B31F30CC8B00459A0D /* VehicleList.json in Resources */ = {isa = PBXBuildFile; fileRef = CE32C6B21F30CC8B00459A0D /* VehicleList.json */; };
@@ -72,6 +73,7 @@
 		3EAA385D1F08DBDD003F3B87 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		3EAA385F1F0902C8003F3B87 /* CalculateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateController.swift; sourceTree = "<group>"; };
 		3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleVC.swift; sourceTree = "<group>"; };
+		CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCommon.swift; sourceTree = "<group>"; };
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CE32C6B21F30CC8B00459A0D /* VehicleList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VehicleList.json; sourceTree = "<group>"; };
@@ -210,7 +212,7 @@
 				CEC3935F1EF9CC8B0081687F /* Model */,
 				CE3DBE701F374D4A00C60A3C /* View Model */,
 				CE7018A91F3EEFF0009798BC /* View Controller (New) */,
-				CEC393611EF9CCAD0081687F /* View Controller */,
+				CEC393611EF9CCAD0081687F /* View Controller (TO Remove) */,
 				CEC393601EF9CCA70081687F /* View */,
 				CE32C6B11F30CC4100459A0D /* JSON */,
 			);
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */,
+				CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */,
 				CEC110DA1F0148880007A646 /* Data Structure (TBR!) */,
 				CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */,
 				CE388A6D1F03CEEE002F9DEE /* RouteData.swift */,
@@ -257,7 +260,7 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		CEC393611EF9CCAD0081687F /* View Controller */ = {
+		CEC393611EF9CCAD0081687F /* View Controller (TO Remove) */ = {
 			isa = PBXGroup;
 			children = (
 				CEA4941A1F02794400B132C3 /* Module View Controllers */,
@@ -268,7 +271,7 @@
 				CEC393311EF9CC800081687F /* ViewController.swift */,
 				CEC110D81F0137080007A646 /* VehicleViewController.swift */,
 			);
-			name = "View Controller";
+			name = "View Controller (TO Remove)";
 			sourceTree = "<group>";
 		};
 		CEE318821F2A1AD40034147E /* CustomUI */ = {
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */,
+				CE2DE8431F3FEC2B00DDE20A /* EnumCommon.swift in Sources */,
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
 				CE3DBE721F374E7000C60A3C /* VehicleMakeViewModel.swift in Sources */,
 				CE7018AF1F3EF2A2009798BC /* VehicleModelViewModel.swift in Sources */,

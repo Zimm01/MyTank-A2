@@ -167,7 +167,7 @@
      "make": "Mitsubishi",
      "model": "Pajero",
      "variant": "GL-X",
-     "type": "SUV",
+     "type": "FWD",
      "yearStart": 2012,
      "yearEnd": 2017,
      "consumptionLitres": 9.8
@@ -176,7 +176,7 @@
      "make": "Mitsubishi",
      "model": "Triton",
      "variant": "GL",
-     "type": "Utility",
+     "type": "UTE",
      "yearStart": 2012,
      "yearEnd": 2015,
      "consumptionLitres": 7.2
@@ -185,7 +185,7 @@
      "make": "Mitsubishi",
      "model": "Triton",
      "variant": "GL",
-     "type": "Utility",
+     "type": "UTE",
      "yearStart": 2015,
      "yearEnd": 2017,
      "consumptionLitres": 7.6
@@ -194,7 +194,7 @@
      "make": "Mitsubishi",
      "model": "Triton",
      "variant": "GL-X",
-     "type": "Utility",
+     "type": "UTE",
      "yearStart": 2012,
      "yearEnd": 2015,
      "consumptionLitres": 7.2
@@ -203,7 +203,7 @@
      "make": "Mitsubishi",
      "model": "Triton",
      "variant": "GL-X",
-     "type": "Utility",
+     "type": "UTE",
      "yearStart": 2015,
      "yearEnd": 2017,
      "consumptionLitres": 7.6
@@ -239,7 +239,7 @@
      "make": "Volkswagen",
      "model": "Amarok",
      "variant": "TDI400",
-     "type": "Utility",
+     "type": "UTE",
      "yearStart": 2015,
      "yearEnd": 2017,
      "consumptionLitres": 8.3
@@ -249,6 +249,69 @@
      "model": "118D",
      "variant": "LCI",
      "type": "CAR-LG",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     },
+     {
+     "make": "Audi",
+     "model": "Test",
+     "variant": "tt",
+     "type": "test",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     },
+     {
+     "make": "Hyundai",
+     "model": "Test",
+     "variant": "tt",
+     "type": "test",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     },
+     {
+     "make": "Mazda",
+     "model": "Test",
+     "variant": "tt",
+     "type": "test",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     },
+     {
+     "make": "Kia",
+     "model": "Test",
+     "variant": "tt",
+     "type": "test",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     },
+     {
+     "make": "Nissan",
+     "model": "Test",
+     "variant": "tt",
+     "type": "test",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     },
+     {
+     "make": "Tesla",
+     "model": "Test",
+     "variant": "tt",
+     "type": "test",
+     "yearStart": 2015,
+     "yearEnd": 2017,
+     "consumptionLitres": 4
+     },
+     {
+     "make": "Subaru",
+     "model": "Test",
+     "variant": "tt",
+     "type": "test",
      "yearStart": 2015,
      "yearEnd": 2017,
      "consumptionLitres": 4
