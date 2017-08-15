@@ -763,6 +763,9 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BMW" translatesAutoresizingMaskIntoConstraints="NO" id="saD-pa-OXs">
+                                                <rect key="frame" x="272" y="4" width="40" height="40"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -770,10 +773,14 @@
                                             <constraint firstItem="l5L-k8-dR8" firstAttribute="width" secondItem="Rh4-NG-gmo" secondAttribute="width" multiplier="0.665" id="1aa-7z-ftx"/>
                                             <constraint firstItem="2tP-Mr-yhR" firstAttribute="height" secondItem="Rh4-NG-gmo" secondAttribute="height" multiplier="0.85" id="5Ye-4B-D4H"/>
                                             <constraint firstItem="2tP-Mr-yhR" firstAttribute="centerX" secondItem="Rh4-NG-gmo" secondAttribute="centerX" multiplier="0.175" id="9pZ-94-CSN"/>
+                                            <constraint firstItem="saD-pa-OXs" firstAttribute="width" secondItem="Rh4-NG-gmo" secondAttribute="width" multiplier="0.125" id="Beh-Rw-01t"/>
+                                            <constraint firstItem="saD-pa-OXs" firstAttribute="centerX" secondItem="Rh4-NG-gmo" secondAttribute="centerX" multiplier="1.83" id="ErT-de-Awp"/>
                                             <constraint firstItem="2tP-Mr-yhR" firstAttribute="centerY" secondItem="Rh4-NG-gmo" secondAttribute="centerY" id="RVz-Ls-4wN"/>
+                                            <constraint firstItem="saD-pa-OXs" firstAttribute="height" secondItem="Rh4-NG-gmo" secondAttribute="height" multiplier="0.82" id="g0v-OW-loa"/>
                                             <constraint firstItem="2tP-Mr-yhR" firstAttribute="width" secondItem="Rh4-NG-gmo" secondAttribute="width" multiplier="0.125" id="hQB-xa-DBc"/>
                                             <constraint firstItem="l5L-k8-dR8" firstAttribute="centerY" secondItem="Rh4-NG-gmo" secondAttribute="centerY" id="ruU-Ql-OH8"/>
                                             <constraint firstItem="l5L-k8-dR8" firstAttribute="height" secondItem="Rh4-NG-gmo" secondAttribute="height" id="tyB-0B-SKs"/>
+                                            <constraint firstItem="saD-pa-OXs" firstAttribute="centerY" secondItem="Rh4-NG-gmo" secondAttribute="centerY" id="v2j-0q-tGL"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
@@ -848,8 +855,8 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iU-xj-Vsg">
                                                 <rect key="frame" x="54" y="0.0" width="213" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <color key="textColor" red="0.058823529409999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
@@ -998,7 +1005,8 @@
                     <connections>
                         <outlet property="consumptionDisplay" destination="GPT-bZ-dN0" id="bzA-Rc-2uW"/>
                         <outlet property="currVehicleHeadline" destination="l5L-k8-dR8" id="6VD-fB-gKT"/>
-                        <outlet property="currVehicleLogo" destination="2tP-Mr-yhR" id="nlp-e2-epR"/>
+                        <outlet property="currVehicleLogo1" destination="2tP-Mr-yhR" id="Df6-Xu-MOo"/>
+                        <outlet property="currVehicleLogo2" destination="saD-pa-OXs" id="MYL-Q5-W85"/>
                         <outlet property="engineSizeDisplay" destination="fVg-ap-iZb" id="EPY-gh-HGG"/>
                         <outlet property="modelYearDisplay" destination="uLf-Uo-4v2" id="JAE-11-25t"/>
                         <outlet property="vehiclePicker" destination="FRE-wE-5rS" id="Kkr-a4-K4T"/>

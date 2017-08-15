@@ -15,7 +15,8 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
     
     // VEHICLE HEADLINE / LOGO
     @IBOutlet weak var currVehicleHeadline: UILabel!
-    @IBOutlet weak var currVehicleLogo: UIImageView!
+    @IBOutlet weak var currVehicleLogo1: UIImageView!
+    @IBOutlet weak var currVehicleLogo2: UIImageView!
     
     // MAKE/MODEL PICKER
     @IBOutlet weak var vehiclePicker: UIPickerView!
@@ -26,8 +27,12 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
     @IBOutlet weak var engineSizeDisplay: UILabel!
     
     // Our View Model for this moduel
-    let selectorViewModel = CustomSelectorModuleViewModel()
+    internal let selectorViewModel = CustomSelectorModuleViewModel()
     
+    // Number of sections in our picker
+    internal let numberOfPickerSections = 2
+    
+    // On View Load..
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -49,25 +54,25 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
     
     var testVal = [""]
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+    internal func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return numberOfPickerSections
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    internal func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0{
             return test.count
         }
         return testVal.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    internal func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0{
             return test[row]
         }
         return testVal[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    internal func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0{
             let thisSelection = test[row]
             if thisSelection == "Red"
@@ -86,7 +91,9 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
     private func setUpHeadline()
     {
         currVehicleHeadline.text = selectorViewModel.getMakeModelString()
-        currVehicleLogo.image = UIImage(contentsOfFile: selectorViewModel.getVehicleMake())
+        
+        currVehicleLogo1.image = UIImage(named: selectorViewModel.getMakeString())
+        currVehicleLogo2.image = UIImage(named: selectorViewModel.getMakeString())
     }
 
 }

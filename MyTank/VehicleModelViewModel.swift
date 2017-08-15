@@ -11,10 +11,9 @@ class VehicleModelViewModel: MyTankViewModel
 {
     // Our Request to fetch the Models from Object Context
     private var fetchModelsRequest : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
-    private var fetchUserRequest : NSFetchRequest<UserData2> = NSFetchRequest(entityName: "UserData2")
     
     // Our array of Vehicle Makes
-    private var models = [Vehicle2]()
+    private var modelList = [Vehicle2]()
     
     private var makeName:String = ""
     
@@ -29,11 +28,11 @@ class VehicleModelViewModel: MyTankViewModel
         do
         {
             // Get the make name selected previously by the user
-            self.makeName = try getMakeName(context: &objectContext)
+            self.makeName = try super.getUncommitedMake(context: &objectContext)
 
             // This is where we perform the predicate fetch and assign the results to 'models'
             fetchModelsRequest.predicate = NSPredicate(format: "make == %@", makeName)
-            try models = objectContext.fetch(fetchModelsRequest) as [Vehicle2]
+            try modelList = objectContext.fetch(fetchModelsRequest) as [Vehicle2]
         }
         catch
         {
@@ -44,58 +43,25 @@ class VehicleModelViewModel: MyTankViewModel
         
         // Our fetch was a great success, we now want to sort the models so that the list only
         // Displays individual models, rather than multiples of the same
-        makeModelsSingular()
-    }
-    
-    // Returns the make name that the user had selected at the 'Select Make' stage, held in CoreData
-    private func getMakeName(context: inout NSManagedObjectContext) throws -> String
-    {
-        let userData = try context.fetch(fetchUserRequest)
-        
-        return (userData.first?.selectMake)!
-    }
-    
-    // Takes a list of vehicles and sorts them to be singular occurences, based on model name only
-    private func makeModelsSingular()
-    {
-        var newModels = [Vehicle2]()
-        
-        for thisVehicle in models
-        {
-            //Firstly, if this is our initial run, we will automatically add the first model
-            if newModels.count == 0
-            {
-                newModels.append(thisVehicle)
-                continue
-            }
-            else if (newModels.lazy.first(where: {$0.model == thisVehicle.model})) == nil
-            {
-                newModels.append(thisVehicle)
-            }
-        }
-
-        newModels.sort{$0.model! < $1.model!}
-        
-        // We have successfully compiled a singular list of models, now we can overwite the 'models' array so that we have a simplifed list to hand to the view
-        models = newModels
+        super.makeVehicleListSingletons(vehList: &modelList, byModel:  true)
     }
     
     // Return the number of objects in this Entity
     func getNumObjects() -> Int
     {
-        return models.count
+        return modelList.count
     }
     
     // Return the model at each index point
     func getRowDescription(index: Int) -> String
     {
-        return models[index].model!
+        return modelList[index].model!
     }
     
     // Return the body type, perform a check first to ensure the body type actually exists!
     func getBodyType(index: Int) -> String
     {
-        var bodyType = models[index].type!
+        var bodyType = modelList[index].type!
         
         // TODO: find a more eloquant way to express this!
         switch bodyType{
@@ -129,13 +95,13 @@ class VehicleModelViewModel: MyTankViewModel
         
         do
         {
-            let userDataObject = try objectContext.fetch(fetchUserRequest)
+            let userDataObject = try objectContext.fetch(userDataFetchRequest)
             //let makeDataObject = try objectContext.fetch(makeFetchRequest)
             
             if let userData = userDataObject.first
             {
-                print(models[index].model!)
-                userData.setValue(models[index].model, forKey: "selectModel")
+                print(modelList[index].model!)
+                userData.setValue(modelList[index].model, forKey: "selectModel")
             }
             else
             {

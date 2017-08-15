@@ -12,11 +12,8 @@ class VehicleMakeViewModel: MyTankViewModel
     // Our Request to fetch the Make Model from Object Context
     private var makeFetchRequest : NSFetchRequest<VehicleMakes> = NSFetchRequest(entityName: "VehicleMakes")
     
-    // Our Request to fetch the Make Model from Object Context
-    private var userDataFetchRequest : NSFetchRequest<UserData2> = NSFetchRequest(entityName: "UserData2")
-    
     // Our array of Vehicle Makes
-    private var makes = [VehicleMakes]()
+    private var makeList = [VehicleMakes]()
     
     private let firstUserObject = 1
     
@@ -30,8 +27,8 @@ class VehicleMakeViewModel: MyTankViewModel
         
         do
         {
-            try makes = objectContext.fetch(makeFetchRequest) as [VehicleMakes]
-            makes.sort{$0.name! < $1.name!}
+            try makeList = objectContext.fetch(makeFetchRequest) as [VehicleMakes]
+            makeList.sort{$0.name! < $1.name!}
         }
         catch
         {
@@ -45,13 +42,13 @@ class VehicleMakeViewModel: MyTankViewModel
     func getNumObjects() -> Int
     {
         
-        return makes.count
+        return makeList.count
     }
     
     // Get the name specified at the selected Index Path
     func getRowDescription(index: Int) -> String
     {
-        return makes[index].name!
+        return makeList[index].name!
     }
     
     // Select the MAKE and commit it to the USERDATA object in COREDATA
@@ -67,8 +64,8 @@ class VehicleMakeViewModel: MyTankViewModel
             
             if let userData = userDataObject.first
             {
-                print(makes[index].name!)
-                userData.setValue(makes[index].name, forKey: "selectMake")
+                print(makeList[index].name!)
+                userData.setValue(makeList[index].name, forKey: "selectMake")
             }
             else
             {
