@@ -18,6 +18,9 @@
 		CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */; };
 		CE3DBE721F374E7000C60A3C /* VehicleMakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DBE711F374E7000C60A3C /* VehicleMakeViewModel.swift */; };
 		CE3DD9641F41C70000F5CB95 /* CustomiseVehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD9631F41C70000F5CB95 /* CustomiseVehicleViewController.swift */; };
+		CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */; };
+		CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */; };
+		CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */; };
 		CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A51F3EB73A009798BC /* DropdownCell.swift */; };
 		CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */; };
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
@@ -82,6 +85,9 @@
 		CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripStatsModuleVC.swift; sourceTree = "<group>"; };
 		CE3DBE711F374E7000C60A3C /* VehicleMakeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewModel.swift; sourceTree = "<group>"; };
 		CE3DD9631F41C70000F5CB95 /* CustomiseVehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomiseVehicleViewController.swift; sourceTree = "<group>"; };
+		CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewController.swift; sourceTree = "<group>"; };
+		CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomiseVehicleViewModel.swift; sourceTree = "<group>"; };
+		CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewModel.swift; sourceTree = "<group>"; };
 		CE7018A51F3EB73A009798BC /* DropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
 		CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewController.swift; sourceTree = "<group>"; };
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
@@ -148,27 +154,54 @@
 		CE3DBE701F374D4A00C60A3C /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE3DBE711F374E7000C60A3C /* VehicleMakeViewModel.swift */,
-				CE7018AE1F3EF2A2009798BC /* VehicleModelViewModel.swift */,
+				CE3DD9681F41D7DC00F5CB95 /* VehicleCustomiser */,
+				CE3DD9661F41D78D00F5CB95 /* VehicleTableView */,
 			);
 			name = "View Model";
 			sourceTree = "<group>";
 		};
-		CE3DD9621F41C6CD00F5CB95 /* Child View Controllers */ = {
+		CE3DD9651F41D77600F5CB95 /* VehicleTableView */ = {
 			isa = PBXGroup;
 			children = (
+				CE7018AC1F3EF166009798BC /* VehicleTableViewController.swift */,
+				CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */,
+				CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */,
 			);
-			name = "Child View Controllers";
+			name = VehicleTableView;
+			sourceTree = "<group>";
+		};
+		CE3DD9661F41D78D00F5CB95 /* VehicleTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CE3DBE711F374E7000C60A3C /* VehicleMakeViewModel.swift */,
+				CE7018AE1F3EF2A2009798BC /* VehicleModelViewModel.swift */,
+			);
+			name = VehicleTableView;
+			sourceTree = "<group>";
+		};
+		CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */ = {
+			isa = PBXGroup;
+			children = (
+				CE3DD9631F41C70000F5CB95 /* CustomiseVehicleViewController.swift */,
+				CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */,
+			);
+			name = VehicleCustomiser;
+			sourceTree = "<group>";
+		};
+		CE3DD9681F41D7DC00F5CB95 /* VehicleCustomiser */ = {
+			isa = PBXGroup;
+			children = (
+				CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */,
+				CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */,
+			);
+			name = VehicleCustomiser;
 			sourceTree = "<group>";
 		};
 		CE7018A91F3EEFF0009798BC /* View Controller (New) */ = {
 			isa = PBXGroup;
 			children = (
-				CE3DD9621F41C6CD00F5CB95 /* Child View Controllers */,
-				CE3DD9631F41C70000F5CB95 /* CustomiseVehicleViewController.swift */,
-				CE7018AC1F3EF166009798BC /* VehicleTableViewController.swift */,
-				CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */,
-				CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */,
+				CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */,
+				CE3DD9651F41D77600F5CB95 /* VehicleTableView */,
 			);
 			name = "View Controller (New)";
 			sourceTree = "<group>";
@@ -431,6 +464,8 @@
 			files = (
 				3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */,
 				CE2DE8431F3FEC2B00DDE20A /* EnumCommon.swift in Sources */,
+				CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */,
+				CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */,
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
 				CE3DBE721F374E7000C60A3C /* VehicleMakeViewModel.swift in Sources */,
 				CE7018AF1F3EF2A2009798BC /* VehicleModelViewModel.swift in Sources */,
@@ -442,6 +477,7 @@
 				CE32C6711F30B8CB00459A0D /* Model.xcdatamodeld in Sources */,
 				CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
+				CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */,
 				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,

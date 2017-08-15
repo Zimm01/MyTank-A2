@@ -8,8 +8,18 @@
 import UIKit
 import CoreData
 
+/*protocol ChangeVehicleDetailsDelegate {
+    func passMessage(string: String)
+}*/
+
 // Contains Common Functions for all Vehicle Table View Components of MYTank!!
 class CustomiseVehicleViewController: UIViewController
 {
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
     
+    
+
 }
