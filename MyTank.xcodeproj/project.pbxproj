@@ -26,6 +26,7 @@
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
 		CE7018AD1F3EF166009798BC /* VehicleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AC1F3EF166009798BC /* VehicleTableViewController.swift */; };
 		CE7018AF1F3EF2A2009798BC /* VehicleModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AE1F3EF2A2009798BC /* VehicleModelViewModel.swift */; };
+		CE80426B1F43211E000D9FF0 /* MyTankViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80426A1F43211E000D9FF0 /* MyTankViewModel.swift */; };
 		CEA10B851F2F7080007335FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA10B841F2F7080007335FA /* libsqlite3.tbd */; };
 		CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA494181F0277D200B132C3 /* HomeViewController.swift */; };
 		CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4941B1F02799100B132C3 /* RouteViewController.swift */; };
@@ -93,6 +94,7 @@
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
 		CE7018AC1F3EF166009798BC /* VehicleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewController.swift; sourceTree = "<group>"; };
 		CE7018AE1F3EF2A2009798BC /* VehicleModelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewModel.swift; sourceTree = "<group>"; };
+		CE80426A1F43211E000D9FF0 /* MyTankViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTankViewModel.swift; sourceTree = "<group>"; };
 		CEA10B841F2F7080007335FA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CEA494181F0277D200B132C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEA4941B1F02799100B132C3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		CE3DBE701F374D4A00C60A3C /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE80426A1F43211E000D9FF0 /* MyTankViewModel.swift */,
 				CE3DD9681F41D7DC00F5CB95 /* VehicleCustomiser */,
 				CE3DD9661F41D78D00F5CB95 /* VehicleTableView */,
 			);
@@ -483,6 +486,7 @@
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
 				CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
+				CE80426B1F43211E000D9FF0 /* MyTankViewModel.swift in Sources */,
 				CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */,
 				CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,

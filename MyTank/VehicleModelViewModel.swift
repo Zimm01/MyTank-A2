@@ -7,7 +7,7 @@
 //
 import CoreData
 
-class VehicleModelViewModel
+class VehicleModelViewModel//:MyTankViewModel
 {
     // Our persistant container from the CoreData Model
     private var persistentContainer = NSPersistentContainer(name: "Model")
@@ -42,7 +42,7 @@ class VehicleModelViewModel
         {
             // Get the make name selected previously by the user
             self.makeName = try getMakeName(context: &objectContext)
-    print(makeName + "gg")
+
             // This is where we perform the predicate fetch and assign the results to 'models'
             fetchModelsRequest.predicate = NSPredicate(format: "make == %@", makeName)
             try models = objectContext.fetch(fetchModelsRequest) as [Vehicle2]

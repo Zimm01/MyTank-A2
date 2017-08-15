@@ -13,7 +13,6 @@ class VehicleMakeViewController: VehicleTableViewController
     // This connects the View Controller to the View Model
     let makeDataView = VehicleMakeViewModel()
 
-
     //  This function is used to determine the table attributes as well as the number of rows to be used, based on the number of vehicles in the library
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {

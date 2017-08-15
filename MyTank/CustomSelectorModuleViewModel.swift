@@ -5,5 +5,19 @@
 //  Created by Daniel Zimmerman on 14/08/2017.
 //  Copyright © 2017 CPT224. All rights reserved.
 //
+import CoreData
 
-import Foundation
+class CustomSelectorModuleViewModel
+{
+    
+    func getMakeModelString() -> String
+    {
+        return "Mitsubishi Lancer"
+    }
+    
+    func getVehicleMake() -> String
+    {
+        return "Mitsubishi"
+    }
+    
+}
