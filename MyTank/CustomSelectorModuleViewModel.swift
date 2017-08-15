@@ -7,8 +7,13 @@
 //
 import CoreData
 
-class CustomSelectorModuleViewModel
+class CustomSelectorModuleViewModel: MyTankViewModel
 {
+    // We want to place the values in an array to be used by displayed as in the view
+    override init()
+    {
+        super.init()
+    }
     
     func getMakeModelString() -> String
     {

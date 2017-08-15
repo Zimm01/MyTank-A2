@@ -7,11 +7,8 @@
 //
 import CoreData
 
-class VehicleMakeViewModel
-{
-    // Our persistant container from the CoreData Model
-    private var persistentContainer = NSPersistentContainer(name: "Model")
-    
+class VehicleMakeViewModel: MyTankViewModel
+{    
     // Our Request to fetch the Make Model from Object Context
     private var makeFetchRequest : NSFetchRequest<VehicleMakes> = NSFetchRequest(entityName: "VehicleMakes")
     
@@ -23,19 +20,10 @@ class VehicleMakeViewModel
     
     private let firstUserObject = 1
     
-    // We want to load our persistant container and then place the values in an array to be used by displayed as in the view
-    init()
+    // We want to place the values in an array to be used by displayed as in the view
+    override init()
     {
-        persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
-            if let error = error {
-                print("Unable to Load Persistent Store")
-                print("\(error), \(error.localizedDescription)")
-            }
-            else
-            {
-                
-            }
-        }
+        super.init()
         
         // Our persistant container from the CoreData Model
         let objectContext = persistentContainer.viewContext
