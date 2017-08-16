@@ -18,9 +18,17 @@ class CustomSelectorModuleViewModel: MyTankViewModel
     
     private var modelVehicleList = [Vehicle2]()
     
-    // Our variant and series Containers
+    // Our variant container
     private var seriesList = [String]()
     private var variantList = [String]()
+    
+    // Our Currently Selected Vehicle specifics
+    private var currentSeriesName: String = ""
+    private var currentVariantName: String = ""
+    
+    // The special year values
+    private var specialYearVal: Int16 = 1
+    
     
     // We want to place the values in an array to be used by displayed as in the view
     override init()
@@ -49,17 +57,46 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         }
         
         // We want to populate the series and variant list here
-        populateInitialLists(context: &objectContext)
+        populateInitialLists()
 
     }
     
-    private func populateInitialLists(context: inout NSManagedObjectContext)
+    // Setup the Vehicle list and the subsequent variant list, which changes from series to series
+    private func populateInitialLists()
     {
-        super.makeVehicleListSingletons(vehList: &modelVehicleList, byModel: false)
+        var tempList = modelVehicleList
         
-        for mod in modelVehicleList
+        // Create a list of single series entries and then place those series names into a string array
+        super.makeVehicleListSingletons(vehList: &tempList, sortBy: VehicleSortProperties.series)
+        for thisVehicle in tempList
         {
-            print(mod.variant!)
+            seriesList.append(thisVehicle.series!)
+        }
+        
+        // Set our current series as the first entry
+        currentSeriesName = seriesList[0]
+        
+        // Finally we will populate the list of variants
+        populateVariantListFromSeries(thisSeriesStr: modelVehicleList[0].series!, firstRun: true)
+    }
+    
+    //
+    private func populateVariantListFromSeries(thisSeriesStr: String, firstRun: Bool = false)
+    {
+        variantList.removeAll()
+        
+        // Create a list of variants based on the currently selected series
+        for thisVehicle in modelVehicleList
+        {
+            if thisSeriesStr == thisVehicle.series!
+            {
+                variantList.append(thisVehicle.variant!)
+            }
+        }
+        
+        // IF this our first run, we want to set our selected variant to the first entry on the list
+        if (firstRun){
+        currentVariantName = variantList[0]
         }
     }
     
@@ -75,4 +112,67 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         return unconfirmedMake
     }
     
+    // Return the string for a row given by the Index
+    func getStringForRow(index: Int, forVar: VehicleSortProperties) -> String
+    {
+        return forVar == VehicleSortProperties.series ? seriesList[index] : variantList[index]
+    }
+    
+    // Return the number of rows in either array
+    func getNumOfRows(forVar: VehicleSortProperties) -> Int
+    {
+        return forVar == VehicleSortProperties.series ? seriesList.count : variantList.count
+    }
+    
+    // Returns a tuple of statistic values for a given vehicle, including the yearToYear,consumption and engineSize
+    func getVehicleStatistics() throws -> (yearToYear: String, consumption: String, engineSize: String)
+    {
+        var yearVal: String = ""
+        var consump: String = ""
+        var engine: String = ""
+        
+        // Set the vehicle given by the current series and variant, may fail if an error setting these values has somehow occured, if so an exception is thrown
+        if let vehicleToUse = modelVehicleList.lazy.first(where: {($0.series! == currentSeriesName) && ($0.variant! == currentVariantName)})
+        {
+            let yearFrom = vehicleToUse.yearStart
+            let yearToRaw = vehicleToUse.yearEnd
+            var yearToFinal = ""
+            
+            // If our year to final is the special value '1' then we need to set the value as "Present" to represent the series has not ended
+            yearToFinal = yearToRaw == 1 ? "Present" : String(yearToRaw)
+
+            // Set the other values, given by the Vehicle object
+            yearVal = String(yearFrom) + " To " + String(yearToFinal)
+            consump = String(vehicleToUse.consumptionLitres) + "L/100Km"
+            engine = String(vehicleToUse.engineSizeLitres) + "L"
+        }
+        else{
+            throw VehicleError.doesNotExist
+        }
+        
+        return (yearVal,consump,engine)
+    }
+    
+    // Update the current series or variant data, based on what has been selected in the view
+    func updateVehicleSpecs(index: Int, forSection: VehicleSortProperties)
+    {
+        if forSection == VehicleSortProperties.series
+        {
+            currentSeriesName = seriesList[index]
+        }
+        else if forSection == VehicleSortProperties.variant
+        {
+            currentVariantName = variantList[index]
+        }
+        else{
+            currentSeriesName = seriesList[0]
+            currentVariantName = variantList[0]
+        }
+    }
+    
+    // Update the variant list based on the series that has now been selected
+    func changeVehicleSeries(toSeriesIndex: Int)
+    {
+        populateVariantListFromSeries(thisSeriesStr: seriesList[toSeriesIndex])
+    }
 }

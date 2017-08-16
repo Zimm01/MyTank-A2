@@ -32,6 +32,9 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
     // Number of sections in our picker
     internal let numberOfPickerSections = 2
     
+    // size of our picker font
+    internal let pickerFontSize: Float = 21.0
+    
     // On View Load..
     override func viewDidLoad()
     {
@@ -43,57 +46,86 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
 
         // We will set up the headline here, to display the current vehicle name
         setUpHeadline()
+        
+        // Update the statistics given by the initial picker positions
+        updateStatistics()
     }
     
-    
-    var test = ["Red", "Green", "Blue"]
-    
-    var redTest = ["Red Dynamic"]
-
-    var blueTest = ["Blue Dynamic"]
-    
-    var testVal = [""]
-    
+    // Number of Components in the Vehicle Picker
     internal func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return numberOfPickerSections
     }
     
+    // Number of Rows in each Component of the Vehicle Picker
     internal func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0{
-            return test.count
+            return selectorViewModel.getNumOfRows(forVar: VehicleSortProperties.series)
         }
-        return testVal.count
+        return selectorViewModel.getNumOfRows(forVar: VehicleSortProperties.variant)
     }
     
-    internal func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    // Title for each row in the Vehicle Picker, for either component
+    internal func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        let pickerLabel = UILabel()
+        
         if component == 0{
-            return test[row]
+            pickerLabel.text = selectorViewModel.getStringForRow(index: row, forVar: VehicleSortProperties.series)
         }
-        return testVal[row]
+        else{
+            pickerLabel.text = selectorViewModel.getStringForRow(index: row, forVar: VehicleSortProperties.variant)
+        }
+        
+        pickerLabel.font = pickerLabel.font.withSize(CGFloat(pickerFontSize))
+        pickerLabel.textAlignment = .center
+        
+        return pickerLabel
     }
     
+    // When a row is selected, update the view, so as to refelct the new picker options and vehicle statistics
     internal func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0{
-            let thisSelection = test[row]
-            if thisSelection == "Red"
-            {
-                testVal = redTest
-            }
-            else if thisSelection == "Blue"
-            {
-                testVal = blueTest
-            }
-
+            // Set the new series and update the variant list
+            selectorViewModel.updateVehicleSpecs(index: row, forSection: VehicleSortProperties.series)
+            selectorViewModel.changeVehicleSeries(toSeriesIndex: row)
+            
             pickerView.reloadAllComponents()
         }
+    
+        selectorViewModel.updateVehicleSpecs(index: pickerView.selectedRow(inComponent: 1), forSection: VehicleSortProperties.variant)
+        
+        // Update the statistics given by the current Series/Variant
+        updateStatistics()
     }
     
+    // Set the headline to reflect the current user Vehicle and that vhicle's make logo
     private func setUpHeadline()
     {
         currVehicleHeadline.text = selectorViewModel.getMakeModelString()
         
+        // Set the make images!
         currVehicleLogo1.image = UIImage(named: selectorViewModel.getMakeString())
         currVehicleLogo2.image = UIImage(named: selectorViewModel.getMakeString())
+    }
+    
+    // At View Load, and whenever the a new make/variant is selected, then we will reload the statistics at the bottom of the view
+    private func updateStatistics()
+    {
+        
+        // Attempt to get the selected statistics, if this fails (due to an internal selection error) we wil return to the start
+        do{
+            let vehicleStats = try selectorViewModel.getVehicleStatistics()
+            
+            // If this succedes, set the values collected into their appropriate positions
+            modelYearDisplay.text = vehicleStats.yearToYear
+            consumptionDisplay.text = vehicleStats.consumption
+            engineSizeDisplay.text = vehicleStats.engineSize
+        }
+        catch
+        {
+            print(error)
+            _ = self.navigationController?.popToRootViewController(animated: false)
+        }
     }
 
 }

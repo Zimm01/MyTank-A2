@@ -8,9 +8,11 @@
     </entity>
     <entity name="Vehicle2" representedClassName="Vehicle2" syncable="YES" codeGenerationType="class">
         <attribute name="consumptionLitres" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="engineSizeLitres" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="make" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="series" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="variant" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="yearEnd" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -20,8 +22,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Vehicle2" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="VehicleMakes" positionX="-63" positionY="45" width="128" height="60"/>
         <element name="UserData2" positionX="-63" positionY="45" width="128" height="105"/>
+        <element name="Vehicle2" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="VehicleMakes" positionX="-63" positionY="45" width="128" height="60"/>
     </elements>
 </model>

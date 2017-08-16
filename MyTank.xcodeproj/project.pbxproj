@@ -30,6 +30,7 @@
 		CEA10B851F2F7080007335FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA10B841F2F7080007335FA /* libsqlite3.tbd */; };
 		CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA494181F0277D200B132C3 /* HomeViewController.swift */; };
 		CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4941B1F02799100B132C3 /* RouteViewController.swift */; };
+		CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F3221F447B310054B8C0 /* EnumError.swift */; };
 		CEB30F361EFF47D0008033C2 /* HomeDisplayModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */; };
 		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
 		CEC110D71F0136770007A646 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D61F0136770007A646 /* VehicleData.swift */; };
@@ -98,6 +99,7 @@
 		CEA10B841F2F7080007335FA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CEA494181F0277D200B132C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEA4941B1F02799100B132C3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		CEA4F3221F447B310054B8C0 /* EnumError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
 		CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayModuleVC.swift; sourceTree = "<group>"; };
 		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
 		CEC110D61F0136770007A646 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */,
 				CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */,
+				CEA4F3221F447B310054B8C0 /* EnumError.swift */,
 				CEC110DA1F0148880007A646 /* Data Structure (TBR!) */,
 				CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */,
 				CE388A6D1F03CEEE002F9DEE /* RouteData.swift */,
@@ -492,6 +495,7 @@
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,
 				CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */,
 				CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */,
+				CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */,
 				CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */,
 				CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */,
 			);

@@ -45,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             // TODO function that removes user vehicle!
         }
+        
+        // Validate the user's Data is correctly loaded
         userDataValidate()
         
         return true
@@ -138,10 +140,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         vehicleData.setValue(dynamicId, forKey: "id")
                         vehicleData.setValue(dictionary["make"], forKey: "make")
                         vehicleData.setValue(dictionary["model"], forKey: "model")
+                        vehicleData.setValue(dictionary["series"], forKey: "series")
                         vehicleData.setValue(dictionary["variant"], forKey: "variant")
                         vehicleData.setValue(dictionary["type"], forKey: "type")
                         vehicleData.setValue(dictionary["yearStart"], forKey: "yearStart")
                         vehicleData.setValue(dictionary["yearEnd"], forKey: "yearEnd")
+                        vehicleData.setValue(dictionary["engineSizeLitres"], forKey: "engineSizeLitres")
                         vehicleData.setValue(dictionary["consumptionLitres"], forKey: "consumptionLitres")
                         
                         // We will now add the make to the list, if it is new.

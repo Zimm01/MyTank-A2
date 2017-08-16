@@ -43,7 +43,7 @@ class VehicleModelViewModel: MyTankViewModel
         
         // Our fetch was a great success, we now want to sort the models so that the list only
         // Displays individual models, rather than multiples of the same
-        super.makeVehicleListSingletons(vehList: &modelList, byModel:  true)
+        super.makeVehicleListSingletons(vehList: &modelList, sortBy: VehicleSortProperties.model)
     }
     
     // Return the number of objects in this Entity

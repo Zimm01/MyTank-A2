@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Enum used to define vehicle body types
 enum BodyTypes : String
 {
     case smallCar = "CAR-SM"
@@ -27,3 +28,14 @@ enum BodyTypes : String
     case van = "VAN"
 }
 
+// Enum used to define sort properties of a Vehicle Object
+enum VehicleSortProperties : String
+{
+    case make
+    
+    case model
+    
+    case series
+    
+    case variant
+}

@@ -28,8 +28,7 @@ class MyTankViewModel
     }
     
     // Takes a list of vehicles and sorts them to be singular occurences, based on model name only
-    // TODO fix the 'byModel' flag
-    internal func makeVehicleListSingletons(vehList: inout [Vehicle2], byModel: Bool)
+    internal func makeVehicleListSingletons(vehList: inout [Vehicle2], sortBy: VehicleSortProperties)
     {
         var newVehicleList = [Vehicle2]()
         for thisVehicle in vehList
@@ -40,17 +39,18 @@ class MyTankViewModel
                 newVehicleList.append(thisVehicle)
                 continue
             }
-            else if byModel && (newVehicleList.lazy.first(where: {$0.model == thisVehicle.model}) == nil)
+            else if (sortBy == VehicleSortProperties.model) && (newVehicleList.lazy.first(where: {$0.model == thisVehicle.model}) == nil)
             {
                 newVehicleList.append(thisVehicle)
             }
-            else if !byModel && (newVehicleList.lazy.first(where: {$0.variant == thisVehicle.variant}) == nil)
+            else if (sortBy == VehicleSortProperties.series) && (newVehicleList.lazy.first(where: {$0.series == thisVehicle.series}) == nil)
             {
                 newVehicleList.append(thisVehicle)
             }
         }
     
-        newVehicleList.sort{($0.model! + $0.variant!) < ($1.model! + $1.variant!)}
+        // This sort combines each property, so we can still sort by different properties of a 'Vehicle' and always have that peoperty in alphabetical order!
+        newVehicleList.sort{($0.model! + $0.series!) < ($1.model! + $1.series!)}
         
         // We have successfully compiled a singular list of models, now we can overwite the 'models' array so that we have a simplifed list to hand to the view
         vehList = newVehicleList
