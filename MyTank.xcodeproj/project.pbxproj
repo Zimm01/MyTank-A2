@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E25CED91F458CA8009D9A85 /* RouteChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */; };
+		3E25CEDB1F459232009D9A85 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3E25CEDA1F459232009D9A85 /* Podfile */; };
 		3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385D1F08DBDD003F3B87 /* Route.swift */; };
 		3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385F1F0902C8003F3B87 /* CalculateController.swift */; };
 		3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */; };
@@ -76,9 +78,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteChoiceController.swift; sourceTree = "<group>"; };
+		3E25CEDA1F459232009D9A85 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3EAA385D1F08DBDD003F3B87 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		3EAA385F1F0902C8003F3B87 /* CalculateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateController.swift; sourceTree = "<group>"; };
 		3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleVC.swift; sourceTree = "<group>"; };
+		71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.release.xcconfig"; sourceTree = "<group>"; };
+		9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCommon.swift; sourceTree = "<group>"; };
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -147,6 +153,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D769FD06DD3E5A524537F7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */,
+				71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3E25CED51F4578AE009D9A85 /* RouteChoiceController */ = {
+			isa = PBXGroup;
+			children = (
+				3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */,
+			);
+			name = RouteChoiceController;
+			sourceTree = "<group>";
+		};
 		CE32C6B11F30CC4100459A0D /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +228,7 @@
 		CE7018A91F3EEFF0009798BC /* View Controller (New) */ = {
 			isa = PBXGroup;
 			children = (
+				3E25CED51F4578AE009D9A85 /* RouteChoiceController */,
 				CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */,
 				CE3DD9651F41D77600F5CB95 /* VehicleTableView */,
 			);
@@ -242,6 +266,7 @@
 		CEC393231EF9CC800081687F = {
 			isa = PBXGroup;
 			children = (
+				3E25CEDA1F459232009D9A85 /* Podfile */,
 				CEC3932E1EF9CC800081687F /* MyTank */,
 				CEC393431EF9CC800081687F /* MyTankTests */,
 				CEC3934E1EF9CC800081687F /* MyTankUITests */,
@@ -249,6 +274,7 @@
 				CEE318801F2A0DFB0034147E /* MyTankTests.xctest */,
 				CEE318811F2A0DFB0034147E /* MyTankUITests.xctest */,
 				CEA10B831F2F7080007335FA /* Frameworks */,
+				0D769FD06DD3E5A524537F7A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -339,10 +365,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEC393541EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank" */;
 			buildPhases = (
+				4FE625115EE74E0B620E236E /* [CP] Check Pods Manifest.lock */,
 				CEC393281EF9CC800081687F /* Sources */,
 				CEC393291EF9CC800081687F /* Frameworks */,
 				CEC3932A1EF9CC800081687F /* Resources */,
 				CE32C66C1F30B03000459A0D /* CopyFiles */,
+				B1D677F910941BED61F03D0F /* [CP] Embed Pods Frameworks */,
+				D162E146E60D95279233C309 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -396,7 +425,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CPT224;
 				TargetAttributes = {
 					CEC3932B1EF9CC800081687F = {
@@ -440,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E25CEDB1F459232009D9A85 /* Podfile in Resources */,
 				CE32C6B31F30CC8B00459A0D /* VehicleList.json in Resources */,
 				CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */,
 				CEEC3CCE1F2E3BCF005180BC /* Assets.xcassets in Resources */,
@@ -462,6 +492,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FE625115EE74E0B620E236E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1D677F910941BED61F03D0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D162E146E60D95279233C309 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEC393281EF9CC800081687F /* Sources */ = {
@@ -497,6 +581,7 @@
 				CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */,
 				CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */,
 				CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */,
+				3E25CED91F458CA8009D9A85 /* RouteChoiceController.swift in Sources */,
 				CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,8 +730,8 @@
 		};
 		CEC393551EF9CC800081687F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				ENABLE_TESTABILITY = YES;
@@ -664,8 +749,8 @@
 		};
 		CEC393561EF9CC800081687F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEPLOYMENT_POSTPROCESSING = YES;
