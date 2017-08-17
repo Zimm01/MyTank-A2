@@ -24,7 +24,6 @@ class HomeDisplayModuleVC : UIViewController
     let noVehicleMessage:String = "The Fuel Calculator"
     let hasVehicleMessage:String = "Current Vehicle"
     
-
     override func viewDidLoad()
     {
         //  IF the user has not used the app yet, display a standard message
