@@ -44,6 +44,8 @@
 		CEC393501EF9CC800081687F /* MyTankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3934F1EF9CC800081687F /* MyTankUITests.swift */; };
 		CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE318831F2A1B000034147E /* StandardViewBox.swift */; };
 		CEEC3CCE1F2E3BCF005180BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEEC3CCD1F2E3BCF005180BC /* Assets.xcassets */; };
+		CEFE84261F45E73D002558DD /* HomeModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE84251F45E73D002558DD /* HomeModuleViewController.swift */; };
+		CEFE84291F45E765002558DD /* HomeModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE84281F45E765002558DD /* HomeModuleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		CEE318811F2A0DFB0034147E /* MyTankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE318831F2A1B000034147E /* StandardViewBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardViewBox.swift; sourceTree = "<group>"; };
 		CEEC3CCD1F2E3BCF005180BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEFE84251F45E73D002558DD /* HomeModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModuleViewController.swift; sourceTree = "<group>"; };
+		CEFE84281F45E765002558DD /* HomeModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModuleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				CE80426A1F43211E000D9FF0 /* MyTankViewModel.swift */,
+				CEFE84271F45E748002558DD /* Home */,
 				CE3DD9681F41D7DC00F5CB95 /* VehicleCustomiser */,
 				CE3DD9661F41D78D00F5CB95 /* VehicleTableView */,
 			);
@@ -205,6 +210,7 @@
 		CE7018A91F3EEFF0009798BC /* View Controller (New) */ = {
 			isa = PBXGroup;
 			children = (
+				CEFE84241F45E631002558DD /* Home */,
 				CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */,
 				CE3DD9651F41D77600F5CB95 /* VehicleTableView */,
 			);
@@ -314,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				CEA4941A1F02794400B132C3 /* Module View Controllers */,
-				CEA494181F0277D200B132C3 /* HomeViewController.swift */,
 				3EAA385F1F0902C8003F3B87 /* CalculateController.swift */,
 				CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */,
 				CEA4941B1F02799100B132C3 /* RouteViewController.swift */,
@@ -330,6 +335,23 @@
 				CEE318831F2A1B000034147E /* StandardViewBox.swift */,
 			);
 			name = CustomUI;
+			sourceTree = "<group>";
+		};
+		CEFE84241F45E631002558DD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEA494181F0277D200B132C3 /* HomeViewController.swift */,
+				CEFE84251F45E73D002558DD /* HomeModuleViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		CEFE84271F45E748002558DD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE84281F45E765002558DD /* HomeModuleViewModel.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,9 +505,11 @@
 				CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */,
+				CEFE84291F45E765002558DD /* HomeModuleViewModel.swift in Sources */,
 				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
+				CEFE84261F45E73D002558DD /* HomeModuleViewController.swift in Sources */,
 				CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CE80426B1F43211E000D9FF0 /* MyTankViewModel.swift in Sources */,

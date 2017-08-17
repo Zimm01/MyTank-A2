@@ -59,7 +59,7 @@ class VehicleMakeViewModel: MyTankViewModel
         
         do
         {
-            let userDataObject = try objectContext.fetch(userDataFetchRequest)
+            let userDataObject = try objectContext.fetch(userDataFetchReq)
             
             if let userData = userDataObject.first
             {

@@ -174,7 +174,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="d6Z-AY-iq1"/>
+                                    <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="TBr-EA-jEl"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLj-0m-4jM" userLabel="Customise Container">
@@ -394,10 +394,10 @@
             </objects>
             <point key="canvasLocation" x="1791" y="33"/>
         </scene>
-        <!--Home Display ModuleVC-->
+        <!--Home Module View Controller-->
         <scene sceneID="fGM-cp-9D3">
             <objects>
-                <viewController id="QXM-UI-bO0" customClass="HomeDisplayModuleVC" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QXM-UI-bO0" customClass="HomeModuleViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BYE-ng-aw6"/>
                         <viewControllerLayoutGuide type="bottom" id="tYO-8E-SlN"/>
@@ -524,11 +524,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="displayImage" destination="0mX-DP-YJB" id="aOe-ns-RJW"/>
-                        <outlet property="iconLabel" destination="HRZ-V5-To8" id="7Iz-oE-4tp"/>
-                        <outlet property="vehicleConsumption" destination="qZe-c9-KPU" id="wW5-rX-19W"/>
-                        <outlet property="vehicleHeadline" destination="fd7-ZP-URw" id="EId-bL-8fF"/>
-                        <outlet property="vehicleName" destination="Kwh-gS-obB" id="bwi-K9-87b"/>
+                        <outlet property="appTagLine" destination="fd7-ZP-URw" id="heB-NB-G2H"/>
+                        <outlet property="bottomTextDisplay" destination="qZe-c9-KPU" id="WEa-JE-eNs"/>
+                        <outlet property="imageDisplay" destination="Wrr-LT-UQG" id="2Gm-Ae-cjM"/>
+                        <outlet property="topTextDisplay" destination="Kwh-gS-obB" id="1Dv-gd-CLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccV-n5-DY4" userLabel="First Responder" sceneMemberID="firstResponder"/>

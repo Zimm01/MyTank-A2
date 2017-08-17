@@ -8,10 +8,7 @@
 import CoreData
 
 class CustomSelectorModuleViewModel: MyTankViewModel
-{
-    // Our Request to fetch the Models from Object Context
-    private var fetchThisModelRequest : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
-    
+{    
     // Our unconfrimed make and model string from the CoreData Object
     private var unconfirmedMake:String = ""
     private var unconfirmedModel:String = ""
@@ -44,8 +41,8 @@ class CustomSelectorModuleViewModel: MyTankViewModel
             unconfirmedModel = try super.getUncommitedModel(context: &objectContext)
             
             // We will fetch all vehicles that have this make and model from Core Data
-            fetchThisModelRequest.predicate = NSPredicate(format: "make == %@ AND model == %@", unconfirmedMake, unconfirmedModel)
-            try modelVehicleList = objectContext.fetch(fetchThisModelRequest) as [Vehicle2]
+            vehicleFetchReq.predicate = NSPredicate(format: "make == %@ AND model == %@", unconfirmedMake, unconfirmedModel)
+            try modelVehicleList = objectContext.fetch(vehicleFetchReq) as [Vehicle2]
         }
         catch
         {
@@ -57,7 +54,6 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         
         // We want to populate the series and variant list here
         populateInitialLists()
-
     }
     
     // Setup the Vehicle list and the subsequent variant list, which changes from series to series

@@ -14,8 +14,11 @@ class MyTankViewModel
     internal var persistentContainer = NSPersistentContainer(name: "Model")
     
     // Our Fetch Request for the 'UserData' CoreData Container
-    internal var userDataFetchRequest : NSFetchRequest<UserData2> = NSFetchRequest(entityName: "UserData2")
+    internal var userDataFetchReq : NSFetchRequest<UserData2> = NSFetchRequest(entityName: "UserData2")
 
+    // Our Request to fetch the Models from Object Context
+    internal var vehicleFetchReq : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
+    
     // Initialize the class, load the persistant store!
     init()
     {
@@ -59,14 +62,14 @@ class MyTankViewModel
     // Returns the VEHICLE MAKE the User Has Selected at the Vehicle Selection Stage, but not yet committed to the database
     internal func getUncommitedMake(context: inout NSManagedObjectContext) throws -> String
     {
-        let userData = try context.fetch(userDataFetchRequest)
+        let userData = try context.fetch(userDataFetchReq)
         return (userData.first?.selectMake)!
     }
     
     // Returns the VEHICLE MODEL name the User Has Selected at the Vehicle Selection Stage, but not yet committed to the database
     internal func getUncommitedModel(context: inout NSManagedObjectContext) throws -> String
     {
-        let userData = try context.fetch(userDataFetchRequest)
+        let userData = try context.fetch(userDataFetchReq)
         return (userData.first?.selectModel)!
     }
 }

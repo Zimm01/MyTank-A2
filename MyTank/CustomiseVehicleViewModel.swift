@@ -9,12 +9,9 @@ import CoreData
 
 class CustomiseVehicleViewModel: MyTankViewModel
 {
+    // Our selected vehicles DB index
     private var vehicleSelected:Int32 = -1
- 
-    // Our Request to fetch a Vehicle from Object Context
-    private var fetchVehicleRequest : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
     
-    // We want to place the values in an array to be used by displayed as in the view
     override init()
     {
         super.init()
@@ -31,7 +28,7 @@ class CustomiseVehicleViewModel: MyTankViewModel
             if try performReverseLookup(context: &objectContext, tupleIn: tuple)
             {
                 // Next we will load the userData object
-                let userDataObject = try objectContext.fetch(userDataFetchRequest)
+                let userDataObject = try objectContext.fetch(userDataFetchReq)
                 if let userData = userDataObject.first
                 {
                     // Attempt to set the vehicleID in user data for persistent reference
@@ -52,7 +49,6 @@ class CustomiseVehicleViewModel: MyTankViewModel
             print("Unable to Perform Fetch Request")
             print("\(fetchError), \(fetchError.localizedDescription)")
         }
-
         return false
     }
     
@@ -64,10 +60,10 @@ class CustomiseVehicleViewModel: MyTankViewModel
         let thisModel = try super.getUncommitedModel(context: &context)
         
         // Next, set up our predicate for the search
-        fetchVehicleRequest.predicate = NSPredicate(format: "make == %@ AND model == %@ AND series == %@ AND variant == %@", thisMake, thisModel, tupleIn.series, tupleIn.variant)
+        vehicleFetchReq.predicate = NSPredicate(format: "make == %@ AND model == %@ AND series == %@ AND variant == %@", thisMake, thisModel, tupleIn.series, tupleIn.variant)
         
         // Attempt to fetch the context, if the result contains ONLY ONE entry, it has worked correctly so we can commit that data to the userData object!
-        let vehicleResult = try context.fetch(fetchVehicleRequest) as [Vehicle2]
+        let vehicleResult = try context.fetch(vehicleFetchReq) as [Vehicle2]
         if vehicleResult.count == 1
         {
             let theVehicle = vehicleResult.first
@@ -75,7 +71,6 @@ class CustomiseVehicleViewModel: MyTankViewModel
             
             return true
         }
-
         return false
     }
     
