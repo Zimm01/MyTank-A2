@@ -28,8 +28,7 @@ class CustomSelectorModuleViewModel: MyTankViewModel
     
     // The special year values
     private var specialYearVal: Int16 = 1
-    
-    
+
     // We want to place the values in an array to be used by displayed as in the view
     override init()
     {

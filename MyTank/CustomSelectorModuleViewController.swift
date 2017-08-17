@@ -8,10 +8,15 @@
 import UIKit
 import CoreData
 
+protocol CommitDetailsToDBDelegate{
+    func commitToDBSignal(sendCommit: Bool)
+}
+
 // Contains Common Functions for all Vehicle Table View Components of MYTank!!
 class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
-    //var changeDetailsDelegate: ChangeVehicleDetailsDelegate?
+    // Our Delegate Protocol from the Parent View
+    var commitDetailsDelegate: CommitDetailsToDBDelegate?
     
     // VEHICLE HEADLINE / LOGO
     @IBOutlet weak var currVehicleHeadline: UILabel!
@@ -125,6 +130,13 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
         {
             print(error)
             _ = self.navigationController?.popToRootViewController(animated: false)
+        }
+    }
+    
+    func commitToDBSignal(sendCommit: Bool)
+    {
+        if sendCommit{
+            print("Committed!!!")
         }
     }
 
