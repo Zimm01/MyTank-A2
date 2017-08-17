@@ -174,14 +174,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fOz-8h-M0Y" kind="show" id="u0D-wj-n1a"/>
+                                    <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="d6Z-AY-iq1"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLj-0m-4jM" userLabel="Customise Container">
                                 <rect key="frame" x="44" y="108" width="326" height="506"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="4uy-ep-9Eg" kind="embed" id="o8t-dL-opr"/>
+                                    <segue destination="4uy-ep-9Eg" kind="embed" identifier="VehicleCustomiserModule" id="o8t-dL-opr"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -197,6 +197,10 @@
                             <constraint firstItem="aRB-Ry-FGf" firstAttribute="height" secondItem="JbF-Cp-O17" secondAttribute="height" id="ysz-9F-t9y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segueButton" destination="ycY-kE-9Kb" id="7iX-bb-qjo"/>
+                        <segue destination="fOz-8h-M0Y" kind="show" identifier="LocationSelectionSegue" id="7Ot-h8-ZzO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qR6-y6-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

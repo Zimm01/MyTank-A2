@@ -99,16 +99,24 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         }
     }
     
-    // Return a Combined Make and Model String to a view
-    func getMakeModelString() -> String
+    // Return a string that is either the MAKE, MODEL otherwise it is a combination of both
+    func getVehicleString(type: VehicleSortProperties) -> String
     {
+        // TODO: find a more eloquant way to express this!
+        switch type{
+        case VehicleSortProperties.make:
+            return unconfirmedMake
+        case VehicleSortProperties.model:
+            return unconfirmedModel
+        case VehicleSortProperties.series:
+            return currentSeriesName
+        case VehicleSortProperties.variant:
+            return currentVariantName
+        default:
+            break
+        }
+        
         return unconfirmedMake + " " + unconfirmedModel
-    }
-    
-    // Return a Combined Make and Model String to a view
-    func getMakeString() -> String
-    {
-        return unconfirmedMake
     }
     
     // Return the string for a row given by the Index

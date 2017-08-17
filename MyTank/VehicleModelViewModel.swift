@@ -96,7 +96,6 @@ class VehicleModelViewModel: MyTankViewModel
         do
         {
             let userDataObject = try objectContext.fetch(userDataFetchRequest)
-            //let makeDataObject = try objectContext.fetch(makeFetchRequest)
             
             if let userData = userDataObject.first
             {
@@ -105,7 +104,7 @@ class VehicleModelViewModel: MyTankViewModel
             }
             else
             {
-                throw NSError()
+                throw VehicleError.invalidVehicle
             }
             
             try objectContext.save()

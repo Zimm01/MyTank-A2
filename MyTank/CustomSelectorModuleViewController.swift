@@ -9,12 +9,15 @@ import UIKit
 import CoreData
 
 protocol CommitDetailsToDBDelegate{
-    func commitToDBSignal(sendCommit: Bool)
+    func retrieveVehicleSpecifics() -> (series: String, variant: String)
 }
 
 // Contains Common Functions for all Vehicle Table View Components of MYTank!!
 class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
+    // Our View Model for this moduel
+    internal let selectorViewModel = CustomSelectorModuleViewModel()
+    
     // Our Delegate Protocol from the Parent View
     var commitDetailsDelegate: CommitDetailsToDBDelegate?
     
@@ -30,9 +33,6 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
     @IBOutlet weak var modelYearDisplay: UILabel!
     @IBOutlet weak var consumptionDisplay: UILabel!
     @IBOutlet weak var engineSizeDisplay: UILabel!
-    
-    // Our View Model for this moduel
-    internal let selectorViewModel = CustomSelectorModuleViewModel()
     
     // Number of sections in our picker
     internal let numberOfPickerSections = 2
@@ -106,11 +106,11 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
     // Set the headline to reflect the current user Vehicle and that vhicle's make logo
     private func setUpHeadline()
     {
-        currVehicleHeadline.text = selectorViewModel.getMakeModelString()
+        currVehicleHeadline.text = selectorViewModel.getVehicleString(type: VehicleSortProperties.none)
         
         // Set the make images!
-        currVehicleLogo1.image = UIImage(named: selectorViewModel.getMakeString())
-        currVehicleLogo2.image = UIImage(named: selectorViewModel.getMakeString())
+        currVehicleLogo1.image = UIImage(named: selectorViewModel.getVehicleString(type: VehicleSortProperties.make))
+        currVehicleLogo2.image = UIImage(named: selectorViewModel.getVehicleString(type: VehicleSortProperties.make))
     }
     
     // At View Load, and whenever the a new make/variant is selected, then we will reload the statistics at the bottom of the view
@@ -133,11 +133,12 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
         }
     }
     
-    func commitToDBSignal(sendCommit: Bool)
+    func retrieveVehicleSpecifics() -> (series: String, variant: String)
     {
-        if sendCommit{
-            print("Committed!!!")
-        }
+        let series = selectorViewModel.getVehicleString(type: VehicleSortProperties.series)
+        let variant = selectorViewModel.getVehicleString(type: VehicleSortProperties.variant)
+        
+        return (series, variant)
     }
 
 }

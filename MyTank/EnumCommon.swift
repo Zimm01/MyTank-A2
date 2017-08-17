@@ -38,4 +38,6 @@ enum VehicleSortProperties : String
     case series
     
     case variant
+    
+    case none
 }
