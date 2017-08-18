@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A8BA827AB352D4A7E8E1C3 /* Pods_MyTank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */; };
 		3E25CED91F458CA8009D9A85 /* RouteChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */; };
 		3E25CEDB1F459232009D9A85 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3E25CEDA1F459232009D9A85 /* Podfile */; };
 		3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385D1F08DBDD003F3B87 /* Route.swift */; };
@@ -85,6 +86,7 @@
 		3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleVC.swift; sourceTree = "<group>"; };
 		71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.release.xcconfig"; sourceTree = "<group>"; };
 		9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.debug.xcconfig"; sourceTree = "<group>"; };
+		BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCommon.swift; sourceTree = "<group>"; };
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA10B851F2F7080007335FA /* libsqlite3.tbd in Frameworks */,
+				05A8BA827AB352D4A7E8E1C3 /* Pods_MyTank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA10B841F2F7080007335FA /* libsqlite3.tbd */,
+				BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -518,9 +522,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GooglePlacesAPI/GooglePlacesAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -535,6 +548,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -738,7 +752,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = MyTank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cpt224.MyTank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
