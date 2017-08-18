@@ -30,13 +30,8 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
     var locationStart = CLLocation()
     var locationEnd = CLLocation()
     
-    var googleAPIKey = "AIzaSyDn4HbeG-30easqT4dwhVaqPWZ1gSEk_T4"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        GMSServices.provideAPIKey(googleAPIKey)
-        GMSPlacesClient.provideAPIKey(googleAPIKey)
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -161,7 +156,7 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
     @IBAction func openStartLocation(_ sender: UIButton) {
         
         let autoCompleteController = GMSAutocompleteViewController()
-        autoCompleteController.delegate = self
+        autoCompleteController.delegate = self as! GMSAutocompleteViewControllerDelegate
         
         // selected location
         locationSelected = .startLocation
@@ -177,7 +172,7 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
     @IBAction func openDestinationLocation(_ sender: UIButton) {
         
         let autoCompleteController = GMSAutocompleteViewController()
-        autoCompleteController.delegate = self
+        autoCompleteController.delegate = self as! GMSAutocompleteViewControllerDelegate
         
         // selected location
         locationSelected = .destinationLocation
@@ -199,7 +194,7 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
 }
 
 // MARK: - GMS Auto Complete Delegate, for autocomplete search location
-extension ViewController: GMSAutocompleteViewControllerDelegate {
+extension RouteChoiceController: GMSAutocompleteViewControllerDelegate {
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         print("Error \(error)")
