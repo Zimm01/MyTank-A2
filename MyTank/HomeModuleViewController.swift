@@ -13,13 +13,16 @@ class HomeModuleViewController: UIViewController
     // Our View Model for this moduel
     internal let homeModuleViewModel = HomeModuleViewModel()
     
+    // Headline
     @IBOutlet weak var appTagLine: UILabel!
     
+    // Top and bottom variable text
     @IBOutlet weak var topTextDisplay: UILabel!
-    
     @IBOutlet weak var bottomTextDisplay: UILabel!
     
-    @IBOutlet weak var imageDisplay: UIView!
+    // Image dsiplay view
+    @IBOutlet weak var imageDisplay: UIImageView!
+    
     
     
     
@@ -27,10 +30,29 @@ class HomeModuleViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-    }
-    
-    @IBAction func unwindToHomeViewController(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController)
-    {
-        //
+        
+        var textDataTuple: (headLine: String, topStr: String, bottomStr: String, imageStr: String)
+
+        do
+        {
+            // First, check the user has data loaded at all
+            if homeModuleViewModel.userHasVehicle()
+            {
+                textDataTuple = try homeModuleViewModel.getVehicleData()
+            }
+            else
+            {
+                textDataTuple = try homeModuleViewModel.getDefaultData()
+            }
+        
+            appTagLine.text = textDataTuple.headLine
+            topTextDisplay.text = textDataTuple.topStr
+            bottomTextDisplay.text = textDataTuple.bottomStr
+            imageDisplay.image = UIImage(named: textDataTuple.imageStr)
+        }
+        catch
+        {
+            topTextDisplay.text = "Error"
+        }
     }
 }

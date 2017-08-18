@@ -526,7 +526,7 @@
                     <connections>
                         <outlet property="appTagLine" destination="fd7-ZP-URw" id="heB-NB-G2H"/>
                         <outlet property="bottomTextDisplay" destination="qZe-c9-KPU" id="WEa-JE-eNs"/>
-                        <outlet property="imageDisplay" destination="Wrr-LT-UQG" id="2Gm-Ae-cjM"/>
+                        <outlet property="imageDisplay" destination="0mX-DP-YJB" id="26x-KI-xZu"/>
                         <outlet property="topTextDisplay" destination="Kwh-gS-obB" id="1Dv-gd-CLe"/>
                     </connections>
                 </viewController>

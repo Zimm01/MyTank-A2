@@ -12,11 +12,6 @@ class CustomiseVehicleViewModel: MyTankViewModel
     // Our selected vehicles DB index
     private var vehicleSelected:Int32 = -1
     
-    override init()
-    {
-        super.init()
-    }
-    
     // Commit Vehicle with a given series and Variant to the Database, by first perforing a 'reverse lookup' on the values, to confirm their existence and then commit that vehicles ID to the UserData Object
     func commitSeriesVairantToDB(tuple: (series: String, variant: String)) -> Bool
     {
