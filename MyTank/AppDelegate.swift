@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // The UI window placeholder
     var window: UIWindow?
     
-    var googleAPIKey = "AIzaSyDn4HbeG-30easqT4dwhVaqPWZ1gSEk_T4"
+    var googleAPIKey = "AIzaSyDNW6sQwxniUrt5CWIsPBrnlRFuygL4WY0"
     
     // User defaults constant
     let defaults = UserDefaults.standard
