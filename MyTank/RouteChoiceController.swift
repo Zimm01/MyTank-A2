@@ -22,6 +22,7 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
     @IBOutlet weak var googleMaps: GMSMapView!
     @IBOutlet weak var startLocation: UITextField!
     @IBOutlet weak var destinationLocation: UITextField!
+    @IBOutlet weak var distance: UITextField!
     
     
     var locationManager = CLLocationManager()
@@ -148,15 +149,53 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
                 polyline.strokeColor = UIColor.red
                 polyline.map = self.googleMaps
             }
-            
+            print(routes)
         }
+        
     }
+    
+    // This functions calculates the distance between the origin and destination
+    
+    func getDistance(startLocation: CLLocation, endLocation: CLLocation)
+    {
+        let origin = "\(startLocation.coordinate.latitude),\(startLocation.coordinate.longitude)"
+        let destination = "\(endLocation.coordinate.latitude),\(endLocation.coordinate.longitude)"
+        
+        
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving"
+        
+        Alamofire.request(url).responseJSON { response in
+            
+            print(response.request as Any)  // original URL request
+            print(response.response as Any) // HTTP URL response
+            print(response.data as Any)     // server data
+            print(response.result as Any)   // result of response serialization
+            
+            let json = JSON(data: response.data!)
+            let routes = json["routes"].arrayValue
+            
+            // print route using Polyline
+            for route in routes
+            {
+                let routeOverviewPolyline = route["overview_polyline"].dictionary
+                let points = routeOverviewPolyline?["points"]?.stringValue
+                let path = GMSPath.init(fromEncodedPath: points!)
+                let polyline = GMSPolyline.init(path: path)
+                polyline.strokeWidth = 4
+                polyline.strokeColor = UIColor.red
+                polyline.map = self.googleMaps
+            }
+            print(routes)
+        }
+        
+    }
+    
     
     // MARK: when start location tap, this will open the search location
     @IBAction func openStartLocation(_ sender: UIButton) {
         
         let autoCompleteController = GMSAutocompleteViewController()
-        autoCompleteController.delegate = self as! GMSAutocompleteViewControllerDelegate
+        autoCompleteController.delegate = self as GMSAutocompleteViewControllerDelegate
         
         // selected location
         locationSelected = .startLocation
@@ -172,7 +211,7 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
     @IBAction func openDestinationLocation(_ sender: UIButton) {
         
         let autoCompleteController = GMSAutocompleteViewController()
-        autoCompleteController.delegate = self as! GMSAutocompleteViewControllerDelegate
+        autoCompleteController.delegate = self as GMSAutocompleteViewControllerDelegate
         
         // selected location
         locationSelected = .destinationLocation
@@ -189,6 +228,8 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
     @IBAction func showDirection(_ sender: UIButton) {
         // when button direction tapped, must call drawpath func
         self.drawPath(startLocation: locationStart, endLocation: locationEnd)
+        
+        
     }
     
 }
