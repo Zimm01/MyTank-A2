@@ -83,9 +83,17 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         // Create a list of variants based on the currently selected series
         for thisVehicle in modelVehicleList
         {
+            var variant:String
+            
             if thisSeriesStr == thisVehicle.series!
             {
-                variantList.append(thisVehicle.variant!)
+                // If the variant is a blank value, then we want it to be just that
+                variant = thisVehicle.variant!
+                if variant == "-"{
+                    variant = " "
+                }
+                
+                variantList.append(variant)
             }
         }
         
