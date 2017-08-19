@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05A8BA827AB352D4A7E8E1C3 /* Pods_MyTank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */; };
+		3E25CED91F458CA8009D9A85 /* RouteChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */; };
+		3E25CEDB1F459232009D9A85 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3E25CEDA1F459232009D9A85 /* Podfile */; };
 		3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385D1F08DBDD003F3B87 /* Route.swift */; };
 		3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385F1F0902C8003F3B87 /* CalculateController.swift */; };
 		3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */; };
@@ -78,9 +81,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteChoiceController.swift; sourceTree = "<group>"; };
+		3E25CEDA1F459232009D9A85 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3EAA385D1F08DBDD003F3B87 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		3EAA385F1F0902C8003F3B87 /* CalculateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateController.swift; sourceTree = "<group>"; };
 		3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleVC.swift; sourceTree = "<group>"; };
+		71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.release.xcconfig"; sourceTree = "<group>"; };
+		9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.debug.xcconfig"; sourceTree = "<group>"; };
+		BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCommon.swift; sourceTree = "<group>"; };
 		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA10B851F2F7080007335FA /* libsqlite3.tbd in Frameworks */,
+				05A8BA827AB352D4A7E8E1C3 /* Pods_MyTank.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +160,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D769FD06DD3E5A524537F7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */,
+				71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3E25CED51F4578AE009D9A85 /* RouteChoiceController */ = {
+			isa = PBXGroup;
+			children = (
+				3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */,
+			);
+			name = RouteChoiceController;
+			sourceTree = "<group>";
+		};
 		CE32C6B11F30CC4100459A0D /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA10B841F2F7080007335FA /* libsqlite3.tbd */,
+				BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -248,6 +275,7 @@
 		CEC393231EF9CC800081687F = {
 			isa = PBXGroup;
 			children = (
+				3E25CEDA1F459232009D9A85 /* Podfile */,
 				CEC3932E1EF9CC800081687F /* MyTank */,
 				CEC393431EF9CC800081687F /* MyTankTests */,
 				CEC3934E1EF9CC800081687F /* MyTankUITests */,
@@ -255,6 +283,7 @@
 				CEE318801F2A0DFB0034147E /* MyTankTests.xctest */,
 				CEE318811F2A0DFB0034147E /* MyTankUITests.xctest */,
 				CEA10B831F2F7080007335FA /* Frameworks */,
+				0D769FD06DD3E5A524537F7A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -361,10 +390,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEC393541EF9CC800081687F /* Build configuration list for PBXNativeTarget "MyTank" */;
 			buildPhases = (
+				4FE625115EE74E0B620E236E /* [CP] Check Pods Manifest.lock */,
 				CEC393281EF9CC800081687F /* Sources */,
 				CEC393291EF9CC800081687F /* Frameworks */,
 				CEC3932A1EF9CC800081687F /* Resources */,
 				CE32C66C1F30B03000459A0D /* CopyFiles */,
+				B1D677F910941BED61F03D0F /* [CP] Embed Pods Frameworks */,
+				D162E146E60D95279233C309 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -418,7 +450,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CPT224;
 				TargetAttributes = {
 					CEC3932B1EF9CC800081687F = {
@@ -462,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E25CEDB1F459232009D9A85 /* Podfile in Resources */,
 				CE32C6B31F30CC8B00459A0D /* VehicleList.json in Resources */,
 				CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */,
 				CEEC3CCE1F2E3BCF005180BC /* Assets.xcassets in Resources */,
@@ -484,6 +517,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FE625115EE74E0B620E236E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1D677F910941BED61F03D0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GooglePlacesAPI/GooglePlacesAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GooglePlacesAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D162E146E60D95279233C309 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTank/Pods-MyTank-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEC393281EF9CC800081687F /* Sources */ = {
@@ -669,15 +766,15 @@
 		};
 		CEC393551EF9CC800081687F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				ENABLE_TESTABILITY = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = MyTank/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cpt224.MyTank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -688,8 +785,8 @@
 		};
 		CEC393561EF9CC800081687F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEPLOYMENT_POSTPROCESSING = YES;
