@@ -63,7 +63,6 @@ class VehicleMakeViewModel: MyTankViewModel
             
             if let userData = userDataObject.first
             {
-                print(makeList[index].name!)
                 userData.setValue(makeList[index].name, forKey: "selectMake")
             }
             else

@@ -96,7 +96,6 @@ class VehicleModelViewModel: MyTankViewModel
             
             if let userData = userDataObject.first
             {
-                print(modelList[index].model!)
                 userData.setValue(modelList[index].model, forKey: "selectModel")
             }
             else
