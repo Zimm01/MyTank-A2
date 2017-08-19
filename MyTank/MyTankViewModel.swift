@@ -19,15 +19,22 @@ class MyTankViewModel
     // Our Request to fetch the Models from Object Context
     internal var vehicleFetchReq : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
     
+    // Our selected vehicles DB index
+    internal var vehicleSelected:Int32
+    
     // Initialize the class, load the persistant store!
     init()
     {
+        // Load our persistent container from coreData
         persistentContainer.loadPersistentStores { (persistentStoreDescription, error) in
             if let error = error {
                 print("Unable to Load Persistent Store")
                 print("\(error), \(error.localizedDescription)")
             }
         }
+        
+        // Set our vehicle selected index to the "invalid" property
+        vehicleSelected = MyTankConstants.invalidID
     }
     
     // Takes a list of vehicles and sorts them to be singular occurences, based on model name only

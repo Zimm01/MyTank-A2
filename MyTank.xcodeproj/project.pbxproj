@@ -23,6 +23,7 @@
 		CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */; };
 		CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */; };
 		CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */; };
+		CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CC61F47D0E7001B0107 /* Constants.swift */; };
 		CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A51F3EB73A009798BC /* DropdownCell.swift */; };
 		CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */; };
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
@@ -34,7 +35,6 @@
 		CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA494181F0277D200B132C3 /* HomeViewController.swift */; };
 		CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4941B1F02799100B132C3 /* RouteViewController.swift */; };
 		CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F3221F447B310054B8C0 /* EnumError.swift */; };
-		CEB30F361EFF47D0008033C2 /* HomeDisplayModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */; };
 		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
 		CEC110D71F0136770007A646 /* VehicleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D61F0136770007A646 /* VehicleData.swift */; };
 		CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D81F0137080007A646 /* VehicleViewController.swift */; };
@@ -99,6 +99,7 @@
 		CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewController.swift; sourceTree = "<group>"; };
 		CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomiseVehicleViewModel.swift; sourceTree = "<group>"; };
 		CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewModel.swift; sourceTree = "<group>"; };
+		CE491CC61F47D0E7001B0107 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE7018A51F3EB73A009798BC /* DropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
 		CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewController.swift; sourceTree = "<group>"; };
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +111,6 @@
 		CEA494181F0277D200B132C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEA4941B1F02799100B132C3 /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
 		CEA4F3221F447B310054B8C0 /* EnumError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
-		CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayModuleVC.swift; sourceTree = "<group>"; };
 		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
 		CEC110D61F0136770007A646 /* VehicleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleData.swift; sourceTree = "<group>"; };
 		CEC110D81F0137080007A646 /* VehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
@@ -257,7 +257,6 @@
 			isa = PBXGroup;
 			children = (
 				CE7018A51F3EB73A009798BC /* DropdownCell.swift */,
-				CEB30F351EFF47D0008033C2 /* HomeDisplayModuleVC.swift */,
 				CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */,
 				3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */,
 			);
@@ -326,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */,
+				CE491CC61F47D0E7001B0107 /* Constants.swift */,
 				CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */,
 				CEA4F3221F447B310054B8C0 /* EnumError.swift */,
 				CEC110DA1F0148880007A646 /* Data Structure (TBR!) */,
@@ -595,7 +595,6 @@
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
 				CE3DBE721F374E7000C60A3C /* VehicleMakeViewModel.swift in Sources */,
 				CE7018AF1F3EF2A2009798BC /* VehicleModelViewModel.swift in Sources */,
-				CEB30F361EFF47D0008033C2 /* HomeDisplayModuleVC.swift in Sources */,
 				3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */,
 				CE7018AD1F3EF166009798BC /* VehicleTableViewController.swift in Sources */,
 				CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */,
@@ -611,6 +610,7 @@
 				CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CE80426B1F43211E000D9FF0 /* MyTankViewModel.swift in Sources */,
+				CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */,
 				CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */,
 				CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,

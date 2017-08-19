@@ -14,7 +14,7 @@ class CustomiseVehicleViewController: UIViewController, CommitDetailsToDBDelegat
     // Our View Model for this moduel
     internal let customiserViewModel = CustomiseVehicleViewModel()
     
-    // The container which handles vehicle customisation
+    // A reference to the container which handles vehicle customisation
     var customSelectorContainer: CustomSelectorModuleViewController?
     
     // Button to segue to the next view, after commiting a vehicle to the Database
@@ -29,7 +29,7 @@ class CustomiseVehicleViewController: UIViewController, CommitDetailsToDBDelegat
     // Setup Segue, either for our Delegate or just in general
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "VehicleCustomiserModule"
+        if segue.identifier == "VehicleCustomiserSegue"
         {
             customSelectorContainer = segue.destination as? CustomSelectorModuleViewController
             customSelectorContainer!.commitDetailsDelegate = self
