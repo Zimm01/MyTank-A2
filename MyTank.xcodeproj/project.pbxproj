@@ -165,14 +165,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3E25CED51F4578AE009D9A85 /* RouteChoiceController */ = {
-			isa = PBXGroup;
-			children = (
-				3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */,
-			);
-			name = RouteChoiceController;
-			sourceTree = "<group>";
-		};
 		CE32C6B11F30CC4100459A0D /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +223,7 @@
 		CE7018A91F3EEFF0009798BC /* View Controller (New) */ = {
 			isa = PBXGroup;
 			children = (
-				3E25CED51F4578AE009D9A85 /* RouteChoiceController */,
+				3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */,
 				CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */,
 				CE3DD9651F41D77600F5CB95 /* VehicleTableView */,
 			);
