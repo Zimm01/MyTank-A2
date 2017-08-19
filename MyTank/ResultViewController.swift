@@ -21,14 +21,24 @@ class ResultViewController: UIViewController, ResultsQueryDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        //let finalCost:String = resultViewModel.CalculateFinalCost()
+
+        let calculationTuple: (total: String, perUnit: String) = resultDisplayContainer!.retrieveCalculations()
         
         //  Finally, set the labels to show total cost and price per unit
-        //resultTotalPrice.text = finalCost
+        resultTotalPrice.text = calculationTuple.total
         //resultPricePerUnit.text = CurrentUserData.GetCostPerUnit()
     }
     
+    // Setup Segue, either for our Delegate or just in general
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "ResultDisplaySegue"
+        {
+            resultDisplayContainer = segue.destination as? ResultModuleViewController
+            resultDisplayContainer!.resultQueryDelegate = self
+        }
+    }
+    
     // Placeholder function for delegate conformity, not to be used.
-    func retrieveCalculations() -> (total: String, perUnit: String){ return ("hi","bye") }
+    func retrieveCalculations() -> (total: String, perUnit: String){ return (" "," ") }
 }

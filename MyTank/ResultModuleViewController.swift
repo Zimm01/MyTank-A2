@@ -19,17 +19,10 @@ class ResultModuleViewController: UIViewController
     // Our Delegate Protocol from the Parent View
     var resultQueryDelegate: ResultsQueryDelegate?
     
-    // This is our TOTAL COST label
-    @IBOutlet weak var resultTotalPrice: UILabel!
-    
-    // This is our PRICE PER (L/G) label
-    @IBOutlet weak var resultPricePerUnit: UILabel!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-       // let finalCost:String = resultViewModel.CalculateFinalCost()
         
         //  Finally, set the labels to show total cost and price per unit
        // resultTotalPrice.text = finalCost
@@ -38,9 +31,17 @@ class ResultModuleViewController: UIViewController
     
     func retrieveCalculations() -> (total: String, perUnit: String)
     {
-       
+        var finalCostString:String = ""
         
-        return ("hi","bye")
+        do{
+            finalCostString = try resultViewModel.calculateFinalCost()
+        }
+        catch
+        {
+            finalCostString = "Error"
+        }
+        
+        return (finalCostString,"bye")
     }
     
 }

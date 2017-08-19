@@ -12,4 +12,6 @@ struct MyTankConstants
 {
     static let invalidID:Int32 = -1
     
+    // The currency being used for this implementation
+    static let currencyUnit:String = "$"
 }

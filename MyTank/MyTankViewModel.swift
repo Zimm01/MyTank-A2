@@ -37,6 +37,37 @@ class MyTankViewModel
         vehicleSelected = MyTankConstants.invalidID
     }
     
+    // Check to see if a vehicle in the database
+    func userHasVehicle() -> Bool
+    {
+        // Our persistant container from the CoreData Model
+        let objectContext = persistentContainer.viewContext
+        
+        do
+        {
+            let userDataObject = try objectContext.fetch(userDataFetchReq)
+            
+            // We will attempt to find a valid vehicle ID in the database
+            if let userData = userDataObject.first
+            {
+                vehicleSelected = userData.vehicleID
+                
+                if vehicleSelected != MyTankConstants.invalidID
+                {
+                    return true
+                }
+            }
+        }
+        catch{
+            let fetchError = error as NSError
+            print("Unable to Perform Fetch Request")
+            print("\(fetchError), \(fetchError.localizedDescription)")
+        }
+        
+        // If no vehicle is found we will return false
+        return false
+    }
+    
     // Takes a list of vehicles and sorts them to be singular occurences, based on model name only
     internal func makeVehicleListSingletons(vehList: inout [Vehicle2], sortBy: VehicleSortProperties)
     {

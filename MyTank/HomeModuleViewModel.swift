@@ -15,37 +15,6 @@ class HomeModuleViewModel: MyTankViewModel
         super.init()
     }
     
-    // Check to see if a vehicle in the database
-    func userHasVehicle() -> Bool
-    {
-        // Our persistant container from the CoreData Model
-        let objectContext = persistentContainer.viewContext
-        
-        do
-        {
-            let userDataObject = try objectContext.fetch(userDataFetchReq)
-            
-            // We will attempt to find a valid vehicle ID in the database
-            if let userData = userDataObject.first
-            {
-                vehicleSelected = userData.vehicleID
-                
-                if vehicleSelected != MyTankConstants.invalidID
-                {
-                    return true
-                }
-            }
-        }
-        catch{
-            let fetchError = error as NSError
-            print("Unable to Perform Fetch Request")
-            print("\(fetchError), \(fetchError.localizedDescription)")
-        }
-        
-        // If no vehicle is found we will return false
-        return false
-    }
-    
     // Return the vehicle data as a tuple
     func getVehicleData() throws -> (headLine: String, topStr: String, bottomStr: String, imageStr: String)
     {
@@ -53,7 +22,6 @@ class HomeModuleViewModel: MyTankViewModel
         var specificVehicleString = ""
         var consumptionString = ""
         var vehicleTypeString = ""
-        
         
         // Our persistant container from the CoreData Model, and our user object
         let objectContext = persistentContainer.viewContext
