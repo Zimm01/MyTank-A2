@@ -24,10 +24,11 @@
 		CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */; };
 		CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CC61F47D0E7001B0107 /* Constants.swift */; };
 		CE491CCE1F486332001B0107 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */; };
-		CE491CD01F486342001B0107 /* ConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */; };
+		CE491CD01F486342001B0107 /* ConfirmationModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CCF1F486342001B0107 /* ConfirmationModuleViewModel.swift */; };
 		CE491CD41F486382001B0107 /* ResultModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD31F486382001B0107 /* ResultModuleViewModel.swift */; };
 		CE491CD61F486399001B0107 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD51F486399001B0107 /* ResultViewController.swift */; };
 		CE491CD81F486AE7001B0107 /* ResultModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD71F486AE7001B0107 /* ResultModuleViewController.swift */; };
+		CE491CDA1F48742A001B0107 /* ConfirmationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD91F48742A001B0107 /* ConfirmationModuleViewController.swift */; };
 		CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A51F3EB73A009798BC /* DropdownCell.swift */; };
 		CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */; };
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
@@ -104,10 +105,11 @@
 		CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewModel.swift; sourceTree = "<group>"; };
 		CE491CC61F47D0E7001B0107 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
-		CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewModel.swift; sourceTree = "<group>"; };
+		CE491CCF1F486342001B0107 /* ConfirmationModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleViewModel.swift; sourceTree = "<group>"; };
 		CE491CD31F486382001B0107 /* ResultModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModuleViewModel.swift; sourceTree = "<group>"; };
 		CE491CD51F486399001B0107 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CE491CD71F486AE7001B0107 /* ResultModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModuleViewController.swift; sourceTree = "<group>"; };
+		CE491CD91F48742A001B0107 /* ConfirmationModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleViewController.swift; sourceTree = "<group>"; };
 		CE7018A51F3EB73A009798BC /* DropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
 		CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewController.swift; sourceTree = "<group>"; };
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */,
+				CE491CD91F48742A001B0107 /* ConfirmationModuleViewController.swift */,
 			);
 			name = ConfirmationScreen;
 			sourceTree = "<group>";
@@ -262,7 +265,7 @@
 		CE491CCC1F4862FD001B0107 /* ConfirmationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */,
+				CE491CCF1F486342001B0107 /* ConfirmationModuleViewModel.swift */,
 			);
 			name = ConfirmationScreen;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				CE491CCE1F486332001B0107 /* ConfirmationViewController.swift in Sources */,
 				CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */,
 				CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */,
+				CE491CDA1F48742A001B0107 /* ConfirmationModuleViewController.swift in Sources */,
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
 				CE3DBE721F374E7000C60A3C /* VehicleMakeViewModel.swift in Sources */,
 				CE7018AF1F3EF2A2009798BC /* VehicleModelViewModel.swift in Sources */,
@@ -655,7 +659,7 @@
 				CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */,
-				CE491CD01F486342001B0107 /* ConfirmationViewModel.swift in Sources */,
+				CE491CD01F486342001B0107 /* ConfirmationModuleViewModel.swift in Sources */,
 				CEFE84291F45E765002558DD /* HomeModuleViewModel.swift in Sources */,
 				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,

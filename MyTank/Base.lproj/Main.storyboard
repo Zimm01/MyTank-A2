@@ -956,10 +956,10 @@
             </objects>
             <point key="canvasLocation" x="2477" y="832"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirmation Module View Controller-->
         <scene sceneID="lFi-Ha-DQa">
             <objects>
-                <viewController id="8cl-Rd-gtB" sceneMemberID="viewController">
+                <viewController id="8cl-Rd-gtB" customClass="ConfirmationModuleViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8rj-aI-4E1"/>
                         <viewControllerLayoutGuide type="bottom" id="Umr-Tb-OPF"/>
@@ -1004,8 +1004,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000Km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jh-OR-B8k">
-                                                <rect key="frame" x="168" y="14" width="136" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000Km" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jh-OR-B8k">
+                                                <rect key="frame" x="168" y="0.0" width="136" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1018,7 +1018,7 @@
                                             <constraint firstItem="9jh-OR-B8k" firstAttribute="centerY" secondItem="JO2-iO-cJA" secondAttribute="centerY" id="WeQ-Ht-Mib"/>
                                             <constraint firstItem="sGU-gz-xyI" firstAttribute="height" secondItem="JO2-iO-cJA" secondAttribute="height" multiplier="0.45" id="ZYo-hd-UVs"/>
                                             <constraint firstItem="sGU-gz-xyI" firstAttribute="width" secondItem="JO2-iO-cJA" secondAttribute="width" multiplier="0.38" id="dwE-vl-0pG"/>
-                                            <constraint firstItem="9jh-OR-B8k" firstAttribute="height" secondItem="JO2-iO-cJA" secondAttribute="height" multiplier="0.45" id="uEK-Ft-Jtw"/>
+                                            <constraint firstItem="9jh-OR-B8k" firstAttribute="height" secondItem="JO2-iO-cJA" secondAttribute="height" id="uEK-Ft-Jtw"/>
                                             <constraint firstItem="sGU-gz-xyI" firstAttribute="centerX" secondItem="JO2-iO-cJA" secondAttribute="centerX" multiplier="0.58" id="upR-WN-n3e"/>
                                             <constraint firstItem="9jh-OR-B8k" firstAttribute="centerX" secondItem="JO2-iO-cJA" secondAttribute="centerX" multiplier="1.55" id="yMY-pe-uhI"/>
                                         </constraints>
@@ -1035,8 +1035,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUh-NK-OZP">
-                                                <rect key="frame" x="168" y="14" width="136" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUh-NK-OZP">
+                                                <rect key="frame" x="168" y="0.0" width="136" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1051,7 +1051,7 @@
                                             <constraint firstItem="7TZ-1o-px4" firstAttribute="height" secondItem="MtY-Qd-ezT" secondAttribute="height" multiplier="0.45" id="eZV-Uw-qFF"/>
                                             <constraint firstItem="uUh-NK-OZP" firstAttribute="width" secondItem="MtY-Qd-ezT" secondAttribute="width" multiplier="0.45" id="h52-ts-0jy"/>
                                             <constraint firstItem="uUh-NK-OZP" firstAttribute="centerX" secondItem="MtY-Qd-ezT" secondAttribute="centerX" multiplier="1.55" id="i9Z-49-beD"/>
-                                            <constraint firstItem="uUh-NK-OZP" firstAttribute="height" secondItem="MtY-Qd-ezT" secondAttribute="height" multiplier="0.45" id="xMF-rN-D8u"/>
+                                            <constraint firstItem="uUh-NK-OZP" firstAttribute="height" secondItem="MtY-Qd-ezT" secondAttribute="height" id="xMF-rN-D8u"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
@@ -1066,8 +1066,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROM-1W-QQ3">
-                                                <rect key="frame" x="168" y="13" width="136" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROM-1W-QQ3">
+                                                <rect key="frame" x="168" y="0.0" width="136" height="48"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1082,7 +1082,7 @@
                                             <constraint firstItem="ROM-1W-QQ3" firstAttribute="width" secondItem="HbK-81-vmj" secondAttribute="width" multiplier="0.45" id="WkN-A2-EJO"/>
                                             <constraint firstItem="iDt-Cq-Jcq" firstAttribute="width" secondItem="HbK-81-vmj" secondAttribute="width" multiplier="0.38" id="iHe-jb-gsW"/>
                                             <constraint firstItem="ROM-1W-QQ3" firstAttribute="centerY" secondItem="HbK-81-vmj" secondAttribute="centerY" id="pPj-TP-bNA"/>
-                                            <constraint firstItem="ROM-1W-QQ3" firstAttribute="height" secondItem="HbK-81-vmj" secondAttribute="height" multiplier="0.45" id="rY3-9K-ZCw"/>
+                                            <constraint firstItem="ROM-1W-QQ3" firstAttribute="height" secondItem="HbK-81-vmj" secondAttribute="height" id="rY3-9K-ZCw"/>
                                             <constraint firstItem="iDt-Cq-Jcq" firstAttribute="centerX" secondItem="HbK-81-vmj" secondAttribute="centerX" multiplier="0.58" id="zgX-mp-CG2"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -1210,8 +1210,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YYYY to YYYY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvL-Km-B8C">
-                                                <rect key="frame" x="168" y="13.666666666666664" width="136" height="21.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YYYY to YYYY" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvL-Km-B8C">
+                                                <rect key="frame" x="168" y="0.0" width="136" height="47.999999999999993"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1222,7 +1222,7 @@
                                             <constraint firstItem="yvL-Km-B8C" firstAttribute="centerX" secondItem="A0A-88-FS8" secondAttribute="centerX" multiplier="1.55" id="PCy-hO-Ya3"/>
                                             <constraint firstAttribute="width" constant="304" id="SdF-4p-CL5"/>
                                             <constraint firstItem="yvL-Km-B8C" firstAttribute="width" secondItem="A0A-88-FS8" secondAttribute="width" multiplier="0.45" id="ZSg-9f-9zC"/>
-                                            <constraint firstItem="yvL-Km-B8C" firstAttribute="height" secondItem="A0A-88-FS8" secondAttribute="height" multiplier="0.45" id="aqT-Wa-knE"/>
+                                            <constraint firstItem="yvL-Km-B8C" firstAttribute="height" secondItem="A0A-88-FS8" secondAttribute="height" id="aqT-Wa-knE"/>
                                             <constraint firstItem="dnY-hS-fRL" firstAttribute="width" secondItem="A0A-88-FS8" secondAttribute="width" multiplier="0.38" id="bxF-B1-fSM"/>
                                             <constraint firstItem="yvL-Km-B8C" firstAttribute="centerY" secondItem="A0A-88-FS8" secondAttribute="centerY" id="cEM-bB-oom"/>
                                             <constraint firstItem="dnY-hS-fRL" firstAttribute="centerY" secondItem="A0A-88-FS8" secondAttribute="centerY" id="cqg-Am-uyp"/>
@@ -1268,10 +1268,18 @@
                             <constraint firstItem="MhN-ik-lSr" firstAttribute="width" secondItem="HtO-OG-Mqh" secondAttribute="width" id="yAt-HI-INP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="consumptionLabel" destination="gnD-20-N0d" id="153-ti-JAE"/>
+                        <outlet property="costPerUnitLabel" destination="if6-82-fep" id="1ip-Hm-x7y"/>
+                        <outlet property="distanceLabel" destination="9jh-OR-B8k" id="ax8-e4-LJT"/>
+                        <outlet property="fromLabel" destination="ROM-1W-QQ3" id="tf2-xE-q6Y"/>
+                        <outlet property="toLabel" destination="uUh-NK-OZP" id="0lc-Kf-xz9"/>
+                        <outlet property="vehicleDetailsLabel" destination="yvL-Km-B8C" id="v8Q-5S-hHu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6z-Qg-Kf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3993" y="832"/>
+            <point key="canvasLocation" x="3992.753623188406" y="831.52173913043487"/>
         </scene>
     </scenes>
     <resources>

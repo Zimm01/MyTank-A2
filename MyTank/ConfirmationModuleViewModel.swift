@@ -7,7 +7,7 @@
 //
 import CoreData
 
-class ConfirmationViewModel: MyTankViewModel
+class ConfirmationModuleViewModel: MyTankViewModel
 {
     
 }

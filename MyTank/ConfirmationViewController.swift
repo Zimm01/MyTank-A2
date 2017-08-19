@@ -9,6 +9,5 @@ import UIKit
 
 class ConfirmationViewController: UIViewController
 {
-    // Our View Model for this moduel
-    internal let confirmationViewModel = ConfirmationViewModel()
+
 }
