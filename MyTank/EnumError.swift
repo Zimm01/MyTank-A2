@@ -15,3 +15,9 @@ enum VehicleError : Error
     case invalidVehicle
     
 }
+
+// Enum to represent User data lookup errors
+enum UserDataError: Error
+{
+    case userDataLookupError
+}

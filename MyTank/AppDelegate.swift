@@ -5,18 +5,8 @@
 //  Created by Daniel Zimmerman on 21/06/2017.
 //  Copyright © 2017 CPT224. All rights reserved.
 //
-
 import UIKit
 import CoreData
-
-enum UserKeys : String
-{
-    case preLoaded = "isPreloaded"
-    
-    case vehicleFileSize = "vehicFileSize"
-    
-}
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -208,6 +198,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 let userData = UserData2(entity: makeListDesc! , insertInto: context)
                 userData.setValue(1, forKey: "userID")
+                userData.setValue(MyTankConstants.invalidID, forKey: "vehicleID")
             }
             
             try context.save()

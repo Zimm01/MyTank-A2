@@ -20,6 +20,7 @@
 		CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */; };
 		CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */; };
 		CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */; };
+		CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CC61F47D0E7001B0107 /* Constants.swift */; };
 		CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A51F3EB73A009798BC /* DropdownCell.swift */; };
 		CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */; };
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
@@ -91,6 +92,7 @@
 		CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewController.swift; sourceTree = "<group>"; };
 		CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomiseVehicleViewModel.swift; sourceTree = "<group>"; };
 		CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewModel.swift; sourceTree = "<group>"; };
+		CE491CC61F47D0E7001B0107 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE7018A51F3EB73A009798BC /* DropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
 		CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewController.swift; sourceTree = "<group>"; };
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */,
+				CE491CC61F47D0E7001B0107 /* Constants.swift */,
 				CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */,
 				CEA4F3221F447B310054B8C0 /* EnumError.swift */,
 				CEC110DA1F0148880007A646 /* Data Structure (TBR!) */,
@@ -513,6 +516,7 @@
 				CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CE80426B1F43211E000D9FF0 /* MyTankViewModel.swift in Sources */,
+				CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */,
 				CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */,
 				CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,

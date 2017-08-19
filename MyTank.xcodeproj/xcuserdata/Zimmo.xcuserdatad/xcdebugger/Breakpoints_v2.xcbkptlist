@@ -116,11 +116,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyTank/AppDelegate.swift"
-            timestampString = "524574030.638617"
+            timestampString = "524803630.401242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "userDataValidate()"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,7 +132,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyTank/AppDelegate.swift"
-            timestampString = "524574030.638617"
+            timestampString = "524803630.401242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "userDataValidate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTank/AppDelegate.swift"
+            timestampString = "524803630.401242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "userDataValidate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTank/AppDelegate.swift"
+            timestampString = "524803630.401242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "209"
@@ -147,30 +179,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyTank/AppDelegate.swift"
-            timestampString = "524574030.638617"
+            filePath = "MyTank/HomeModuleViewController.swift"
+            timestampString = "524807961.337886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "userDataValidate()"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "deleteTapped()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyTank/AppDelegate.swift"
-            timestampString = "524574030.638617"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
-            landmarkName = "userDataValidate()"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTank.HomeModuleViewController.(deleteTapped in _326D87B4609EB4CD3271B72D9FB7A65D) () -&gt; ()"
+                  moduleName = "MyTank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zimmo/Documents/MyTank/MyTank/HomeModuleViewController.swift"
+                  timestampString = "524807962.250964"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "354">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTank.HomeModuleViewController.((deleteTapped in _326D87B4609EB4CD3271B72D9FB7A65D) () -&gt; ()).(closure #1)"
+                  moduleName = "MyTank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zimmo/Documents/MyTank/MyTank/HomeModuleViewController.swift"
+                  timestampString = "524807962.258598"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
