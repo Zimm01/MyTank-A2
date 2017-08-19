@@ -24,6 +24,10 @@
 		CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */; };
 		CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */; };
 		CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CC61F47D0E7001B0107 /* Constants.swift */; };
+		CE491CCE1F486332001B0107 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */; };
+		CE491CD01F486342001B0107 /* ConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */; };
+		CE491CD41F486382001B0107 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD31F486382001B0107 /* ResultViewModel.swift */; };
+		CE491CD61F486399001B0107 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD51F486399001B0107 /* ResultViewController.swift */; };
 		CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A51F3EB73A009798BC /* DropdownCell.swift */; };
 		CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */; };
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
@@ -100,6 +104,10 @@
 		CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomiseVehicleViewModel.swift; sourceTree = "<group>"; };
 		CE3DD96F1F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewModel.swift; sourceTree = "<group>"; };
 		CE491CC61F47D0E7001B0107 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewModel.swift; sourceTree = "<group>"; };
+		CE491CD31F486382001B0107 /* ResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		CE491CD51F486399001B0107 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CE7018A51F3EB73A009798BC /* DropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
 		CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewController.swift; sourceTree = "<group>"; };
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
@@ -169,12 +177,12 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3E25CED51F4578AE009D9A85 /* RouteChoiceController */ = {
+		3E25CED51F4578AE009D9A85 /* RouteChoice */ = {
 			isa = PBXGroup;
 			children = (
 				3E25CED81F458CA8009D9A85 /* RouteChoiceController.swift */,
 			);
-			name = RouteChoiceController;
+			name = RouteChoice;
 			sourceTree = "<group>";
 		};
 		CE32C6B11F30CC4100459A0D /* JSON */ = {
@@ -190,6 +198,9 @@
 			children = (
 				CE80426A1F43211E000D9FF0 /* MyTankViewModel.swift */,
 				CEFE84271F45E748002558DD /* Home */,
+				CE491CCA1F48624A001B0107 /* RouteChoice */,
+				CE491CCC1F4862FD001B0107 /* ConfirmationScreen */,
+				CE491CD21F48636D001B0107 /* ReulstsView */,
 				CE3DD9681F41D7DC00F5CB95 /* VehicleCustomiser */,
 				CE3DD9661F41D78D00F5CB95 /* VehicleTableView */,
 			);
@@ -233,11 +244,52 @@
 			name = VehicleCustomiser;
 			sourceTree = "<group>";
 		};
+		CE491CCA1F48624A001B0107 /* RouteChoice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RouteChoice;
+			sourceTree = "<group>";
+		};
+		CE491CCB1F4862BD001B0107 /* ConfirmationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */,
+			);
+			name = ConfirmationScreen;
+			sourceTree = "<group>";
+		};
+		CE491CCC1F4862FD001B0107 /* ConfirmationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */,
+			);
+			name = ConfirmationScreen;
+			sourceTree = "<group>";
+		};
+		CE491CD11F486360001B0107 /* ResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				CE491CD51F486399001B0107 /* ResultViewController.swift */,
+			);
+			name = ResultsView;
+			sourceTree = "<group>";
+		};
+		CE491CD21F48636D001B0107 /* ReulstsView */ = {
+			isa = PBXGroup;
+			children = (
+				CE491CD31F486382001B0107 /* ResultViewModel.swift */,
+			);
+			name = ReulstsView;
+			sourceTree = "<group>";
+		};
 		CE7018A91F3EEFF0009798BC /* View Controller (New) */ = {
 			isa = PBXGroup;
 			children = (
 				CEFE84241F45E631002558DD /* Home */,
-				3E25CED51F4578AE009D9A85 /* RouteChoiceController */,
+				3E25CED51F4578AE009D9A85 /* RouteChoice */,
+				CE491CCB1F4862BD001B0107 /* ConfirmationScreen */,
+				CE491CD11F486360001B0107 /* ResultsView */,
 				CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */,
 				CE3DD9651F41D77600F5CB95 /* VehicleTableView */,
 			);
@@ -590,6 +642,7 @@
 			files = (
 				3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */,
 				CE2DE8431F3FEC2B00DDE20A /* EnumCommon.swift in Sources */,
+				CE491CCE1F486332001B0107 /* ConfirmationViewController.swift in Sources */,
 				CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */,
 				CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */,
 				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
@@ -602,9 +655,11 @@
 				CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */,
 				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */,
+				CE491CD01F486342001B0107 /* ConfirmationViewModel.swift in Sources */,
 				CEFE84291F45E765002558DD /* HomeModuleViewModel.swift in Sources */,
 				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,
+				CE491CD41F486382001B0107 /* ResultViewModel.swift in Sources */,
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
 				CEFE84261F45E73D002558DD /* HomeModuleViewController.swift in Sources */,
 				CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */,
@@ -621,6 +676,7 @@
 				CE8081E51F45CA3600ACEC61 /* CustomiseVehicleViewController.swift in Sources */,
 				3E25CED91F458CA8009D9A85 /* RouteChoiceController.swift in Sources */,
 				CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */,
+				CE491CD61F486399001B0107 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

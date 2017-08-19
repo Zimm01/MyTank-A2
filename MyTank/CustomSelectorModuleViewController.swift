@@ -6,7 +6,6 @@
 //  Copyright © 2017 CPT224. All rights reserved.
 //
 import UIKit
-import CoreData
 
 protocol CommitDetailsToDBDelegate{
     func retrieveVehicleSpecifics() -> (series: String, variant: String)

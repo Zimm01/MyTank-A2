@@ -6,7 +6,6 @@
 //  Copyright © 2017 CPT224. All rights reserved.
 //
 import UIKit
-import CoreData
 
 // Contains Functions to handle the vehicle customisation delegation and db commital controls
 class CustomiseVehicleViewController: UIViewController, CommitDetailsToDBDelegate

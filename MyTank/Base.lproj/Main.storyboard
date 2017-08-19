@@ -235,7 +235,7 @@
         <!--Calculate-->
         <scene sceneID="IrB-dI-jrb">
             <objects>
-                <viewController title="Calculation" id="gEt-ji-QeJ" userLabel="Calculate" customClass="CalculateController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Confirmation" id="gEt-ji-QeJ" userLabel="Calculate" customClass="ConfirmationViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oBF-8l-gG2"/>
                         <viewControllerLayoutGuide type="bottom" id="rhl-KE-SyQ"/>
@@ -244,18 +244,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q2-YI-JEd">
-                                <rect key="frame" x="53" y="508" width="308" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <state key="normal" title="Calculate!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jc0-U6-jFW" kind="show" id="RPE-f2-fzY"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUi-av-Cu2">
                                 <rect key="frame" x="186" y="456" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -264,24 +252,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-MP-55a">
-                                <rect key="frame" x="53" y="252" width="308" height="196"/>
+                                <rect key="frame" x="-39" y="570" width="308" height="196"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="uPb-Sj-gMb" kind="embed" id="KKL-Wn-R0s"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyG-Iy-LsJ">
+                                <rect key="frame" x="47" y="642" width="320" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.058823529409999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Calculate!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="OTA-be-B7L"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jI3-PT-vcs">
+                                <rect key="frame" x="47" y="108" width="320" height="506"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="8cl-Rd-gtB" kind="embed" id="xYs-dP-h04"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="jc0-U6-jFW" kind="show" identifier="ResultViewSegue" id="NBR-1c-Xty"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvR-s3-Awk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4187" y="33"/>
+            <point key="canvasLocation" x="3992.753623188406" y="32.608695652173914"/>
         </scene>
         <!--Your Trip-->
         <scene sceneID="vNK-Va-adF">
             <objects>
-                <viewController title="Your Trip" id="jc0-U6-jFW" customClass="ResultsViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Your Trip" id="jc0-U6-jFW" customClass="ResultViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F0Z-bf-3qU"/>
                         <viewControllerLayoutGuide type="bottom" id="N0x-9f-Pyu"/>
@@ -366,6 +379,8 @@
         <scene sceneID="5tM-Uj-O6O">
             <objects>
                 <navigationController id="we1-qO-C8o" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iLT-7I-X3H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -617,7 +632,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJd-6G-1Ay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3993" y="655"/>
+            <point key="canvasLocation" x="4584" y="524"/>
         </scene>
         <!--Trip Stats ModuleVC-->
         <scene sceneID="UOO-ks-pv3">
@@ -1026,6 +1041,20 @@
             </objects>
             <point key="canvasLocation" x="2542" y="810"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lFi-Ha-DQa">
+            <objects>
+                <viewController id="8cl-Rd-gtB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HtO-OG-Mqh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="506"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6z-Qg-Kf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3958" y="810"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BMW" width="40" height="40"/>
@@ -1037,6 +1066,6 @@
         <image name="Logo-Text" width="218" height="288"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SBn-NT-OUd"/>
+        <segue reference="7Ot-h8-ZzO"/>
     </inferredMetricsTieBreakers>
 </document>
