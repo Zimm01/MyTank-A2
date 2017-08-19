@@ -7,7 +7,7 @@
 //
 import CoreData
 
-class ResultViewModel: MyTankViewModel
+class ResultModuleViewModel: MyTankViewModel
 {
     
 }

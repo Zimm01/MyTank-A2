@@ -14,7 +14,6 @@
 		3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385F1F0902C8003F3B87 /* CalculateController.swift */; };
 		3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */; };
 		CE2DE8431F3FEC2B00DDE20A /* EnumCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */; };
-		CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */; };
 		CE32C6711F30B8CB00459A0D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */; };
 		CE32C6B31F30CC8B00459A0D /* VehicleList.json in Resources */ = {isa = PBXBuildFile; fileRef = CE32C6B21F30CC8B00459A0D /* VehicleList.json */; };
 		CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A6D1F03CEEE002F9DEE /* RouteData.swift */; };
@@ -26,8 +25,9 @@
 		CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CC61F47D0E7001B0107 /* Constants.swift */; };
 		CE491CCE1F486332001B0107 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */; };
 		CE491CD01F486342001B0107 /* ConfirmationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */; };
-		CE491CD41F486382001B0107 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD31F486382001B0107 /* ResultViewModel.swift */; };
+		CE491CD41F486382001B0107 /* ResultModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD31F486382001B0107 /* ResultModuleViewModel.swift */; };
 		CE491CD61F486399001B0107 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD51F486399001B0107 /* ResultViewController.swift */; };
+		CE491CD81F486AE7001B0107 /* ResultModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD71F486AE7001B0107 /* ResultModuleViewController.swift */; };
 		CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A51F3EB73A009798BC /* DropdownCell.swift */; };
 		CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */; };
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
@@ -94,7 +94,6 @@
 		9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.debug.xcconfig"; sourceTree = "<group>"; };
 		BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCommon.swift; sourceTree = "<group>"; };
-		CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CE32C6B21F30CC8B00459A0D /* VehicleList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VehicleList.json; sourceTree = "<group>"; };
 		CE388A6D1F03CEEE002F9DEE /* RouteData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteData.swift; sourceTree = "<group>"; };
@@ -106,8 +105,9 @@
 		CE491CC61F47D0E7001B0107 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE491CCD1F486332001B0107 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		CE491CCF1F486342001B0107 /* ConfirmationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewModel.swift; sourceTree = "<group>"; };
-		CE491CD31F486382001B0107 /* ResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		CE491CD31F486382001B0107 /* ResultModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModuleViewModel.swift; sourceTree = "<group>"; };
 		CE491CD51F486399001B0107 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CE491CD71F486AE7001B0107 /* ResultModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModuleViewController.swift; sourceTree = "<group>"; };
 		CE7018A51F3EB73A009798BC /* DropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
 		CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewController.swift; sourceTree = "<group>"; };
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
@@ -271,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				CE491CD51F486399001B0107 /* ResultViewController.swift */,
+				CE491CD71F486AE7001B0107 /* ResultModuleViewController.swift */,
 			);
 			name = ResultsView;
 			sourceTree = "<group>";
@@ -278,7 +279,7 @@
 		CE491CD21F48636D001B0107 /* ReulstsView */ = {
 			isa = PBXGroup;
 			children = (
-				CE491CD31F486382001B0107 /* ResultViewModel.swift */,
+				CE491CD31F486382001B0107 /* ResultModuleViewModel.swift */,
 			);
 			name = ReulstsView;
 			sourceTree = "<group>";
@@ -403,7 +404,6 @@
 			children = (
 				CEA4941A1F02794400B132C3 /* Module View Controllers */,
 				3EAA385F1F0902C8003F3B87 /* CalculateController.swift */,
-				CE2E1D941F023D8E002DE4FA /* ResultsViewController.swift */,
 				CEA4941B1F02799100B132C3 /* RouteViewController.swift */,
 				CEC393311EF9CC800081687F /* ViewController.swift */,
 				CEC110D81F0137080007A646 /* VehicleViewController.swift */,
@@ -659,12 +659,13 @@
 				CEFE84291F45E765002558DD /* HomeModuleViewModel.swift in Sources */,
 				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CEC110D71F0136770007A646 /* VehicleData.swift in Sources */,
-				CE491CD41F486382001B0107 /* ResultViewModel.swift in Sources */,
+				CE491CD41F486382001B0107 /* ResultModuleViewModel.swift in Sources */,
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
 				CEFE84261F45E73D002558DD /* HomeModuleViewController.swift in Sources */,
 				CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */,
 				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CE80426B1F43211E000D9FF0 /* MyTankViewModel.swift in Sources */,
+				CE491CD81F486AE7001B0107 /* ResultModuleViewController.swift in Sources */,
 				CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */,
 				CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */,
 				CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */,
@@ -672,7 +673,6 @@
 				CE388A6E1F03CEEE002F9DEE /* RouteData.swift in Sources */,
 				CEA4941C1F02799100B132C3 /* RouteViewController.swift in Sources */,
 				CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */,
-				CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */,
 				CE8081E51F45CA3600ACEC61 /* CustomiseVehicleViewController.swift in Sources */,
 				3E25CED91F458CA8009D9A85 /* RouteChoiceController.swift in Sources */,
 				CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */,

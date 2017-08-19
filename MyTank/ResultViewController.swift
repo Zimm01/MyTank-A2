@@ -7,11 +7,10 @@
 //
 import UIKit
 
-class ResultViewController: UIViewController
+class ResultViewController: UIViewController, ResultsQueryDelegate
 {
-    
-    // Our View Model for this moduel
-    internal let resultViewModel = ResultViewModel()
+    // A reference to the container that handles reuslt display
+    var resultDisplayContainer: ResultModuleViewController?
     
     // This is our TOTAL COST label
     @IBOutlet weak var resultTotalPrice: UILabel!
@@ -19,22 +18,17 @@ class ResultViewController: UIViewController
     // This is our PRICE PER (L/G) label
     @IBOutlet weak var resultPricePerUnit: UILabel!
     
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        let finalCost:String = CurrentUserData.CalculateFinalCost()
+        //let finalCost:String = resultViewModel.CalculateFinalCost()
         
         //  Finally, set the labels to show total cost and price per unit
-        resultTotalPrice.text = finalCost
-        resultPricePerUnit.text = CurrentUserData.GetCostPerUnit()
+        //resultTotalPrice.text = finalCost
+        //resultPricePerUnit.text = CurrentUserData.GetCostPerUnit()
     }
     
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    // Placeholder function for delegate conformity, not to be used.
+    func retrieveCalculations() -> (total: String, perUnit: String){ return ("hi","bye") }
 }
