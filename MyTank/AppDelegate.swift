@@ -7,12 +7,16 @@
 //
 import UIKit
 import CoreData
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // The UI window placeholder
     var window: UIWindow?
+    
+    var googleAPIKey = "AIzaSyDNW6sQwxniUrt5CWIsPBrnlRFuygL4WY0"
     
     // User defaults constant
     let defaults = UserDefaults.standard
@@ -22,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        GMSServices.provideAPIKey(googleAPIKey)
+        GMSPlacesClient.provideAPIKey(googleAPIKey)
         
         // First, check the CURRENT JSON data has not previously been loaded into the database
         // if it has we can skip preloading this information
