@@ -20,7 +20,7 @@ class VehicleTableViewController: UITableViewController
 {
     let greyBackground = UIColor(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)
     
-    let cellRecolor = UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0.9)
+    let cellRecolor = UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0.95)
     
     override func viewDidLoad()
     {

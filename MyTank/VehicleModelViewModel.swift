@@ -9,6 +9,9 @@ import CoreData
 
 class VehicleModelViewModel: MyTankViewModel
 {
+    // Our Request to fetch the Models from Object Context
+    private var fetchModelsRequest : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
+    
     // Our array of Vehicle Makes
     private var modelList = [Vehicle2]()
     
@@ -28,8 +31,8 @@ class VehicleModelViewModel: MyTankViewModel
             self.makeName = try super.getUncommitedMake(context: &objectContext)
 
             // This is where we perform the predicate fetch and assign the results to 'models'
-            vehicleFetchReq.predicate = NSPredicate(format: "make == %@", makeName)
-            try modelList = objectContext.fetch(vehicleFetchReq) as [Vehicle2]
+            fetchModelsRequest.predicate = NSPredicate(format: "make == %@", makeName)
+            try modelList = objectContext.fetch(fetchModelsRequest) as [Vehicle2]
         }
         catch
         {
@@ -92,7 +95,8 @@ class VehicleModelViewModel: MyTankViewModel
         
         do
         {
-            let userDataObject = try objectContext.fetch(userDataFetchReq)
+            let userDataObject = try objectContext.fetch(userDataFetchRequest)
+            //let makeDataObject = try objectContext.fetch(makeFetchRequest)
             
             if let userData = userDataObject.first
             {
@@ -101,7 +105,7 @@ class VehicleModelViewModel: MyTankViewModel
             }
             else
             {
-                throw VehicleError.invalidVehicle
+                throw NSError()
             }
             
             try objectContext.save()
