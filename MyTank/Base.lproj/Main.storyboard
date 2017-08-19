@@ -57,6 +57,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="vehicleDependantTransitionWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pf-Bf-Lul"/>
+                                    <segue destination="5F7-i2-V36" kind="show" identifier="LocationSelectionSegue" id="MMx-zZ-6o4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -179,6 +180,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="TBr-EA-jEl"/>
+                                    <segue destination="5F7-i2-V36" kind="show" identifier="LocationSelectionSegue" id="m3h-dZ-L9o"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLj-0m-4jM" userLabel="Customise Container">
@@ -243,6 +245,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YH-6Y-myC">
                                 <rect key="frame" x="47" y="450" width="321" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="openStartLocation:" destination="5F7-i2-V36" eventType="touchUpInside" id="C6o-Fw-2V1"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End of Trip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7bH-Xs-d4L" userLabel="TripEnd">
                                 <rect key="frame" x="47" y="502" width="321" height="30"/>
@@ -254,6 +259,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-UG-fBy">
                                 <rect key="frame" x="47" y="502" width="321" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="openDestinationLocation:" destination="5F7-i2-V36" eventType="touchUpInside" id="u4R-J2-CGD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH6-Ov-LQE">
                                 <rect key="frame" x="218" y="605" width="150" height="54"/>
@@ -283,11 +291,17 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="Oel-zY-oFz"/>
+                                    <action selector="showDirection:" destination="5F7-i2-V36" eventType="touchUpInside" id="jCY-v4-6ZI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="destinationLocation" destination="7bH-Xs-d4L" id="p77-dp-yQO"/>
+                        <outlet property="googleMaps" destination="b8T-rj-NzP" id="3uG-BU-JD1"/>
+                        <outlet property="startLocation" destination="s5B-Gv-R5t" id="dzL-t9-YeL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KC-sk-dda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -370,7 +384,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-NoText" translatesAutoresizingMaskIntoConstraints="NO" id="YyY-f9-ocW">
-                                <rect key="frame" x="145" y="139" width="124" height="124"/>
+                                <rect key="frame" x="145" y="95" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YyY-f9-ocW" secondAttribute="height" multiplier="185:185" id="lci-oh-NUQ"/>
                                 </constraints>
@@ -435,7 +449,7 @@
                 <navigationController id="we1-qO-C8o" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iLT-7I-X3H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iLT-7I-X3H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1352,4 +1366,7 @@
         <image name="Logo-NoText" width="218" height="218"/>
         <image name="Logo-Text" width="218" height="288"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="m3h-dZ-L9o"/>
+    </inferredMetricsTieBreakers>
 </document>
