@@ -56,6 +56,15 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
         updateStatistics()
     }
     
+    // Returns the series and variant, used as part of a delegate method call from the parent view
+    func retrieveVehicleSpecifics() -> (series: String, variant: String)
+    {
+        let series = selectorViewModel.getVehicleString(type: VehicleSortProperties.series)
+        let variant = selectorViewModel.getVehicleString(type: VehicleSortProperties.variant)
+        
+        return (series, variant)
+    }
+    
     // Number of Components in the Vehicle Picker
     internal func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return numberOfPickerSections
@@ -132,13 +141,4 @@ class CustomSelectorModuleViewController: UIViewController, UIPickerViewDelegate
             _ = self.navigationController?.popToRootViewController(animated: false)
         }
     }
-    
-    func retrieveVehicleSpecifics() -> (series: String, variant: String)
-    {
-        let series = selectorViewModel.getVehicleString(type: VehicleSortProperties.series)
-        let variant = selectorViewModel.getVehicleString(type: VehicleSortProperties.variant)
-        
-        return (series, variant)
-    }
-
 }

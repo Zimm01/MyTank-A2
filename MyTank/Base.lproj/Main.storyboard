@@ -42,7 +42,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="QXM-UI-bO0" kind="embed" id="ODf-Lh-PRB"/>
+                                    <segue destination="QXM-UI-bO0" kind="embed" identifier="HomeVehicleDisplaySegue" id="ODf-Lh-PRB"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31e-SZ-lM3">
@@ -56,7 +56,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="02Z-UA-Xy2" kind="show" identifier="MakeSelectSegue" id="i6Q-3f-HJO"/>
+                                    <action selector="vehicleDependantTransitionWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pf-Bf-Lul"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,6 +112,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uoj-sf-g2V"/>
+                    <connections>
+                        <outlet property="segueButton" destination="31e-SZ-lM3" id="O6z-g8-dDj"/>
+                        <segue destination="02Z-UA-Xy2" kind="show" identifier="VehicleMakeSelectionSegue" id="Nu2-hh-4vf"/>
+                        <segue destination="fOz-8h-M0Y" kind="show" identifier="LocationSelectionSegue" id="SBn-NT-OUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,7 +151,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByB-Ep-HRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="33"/>
+            <point key="canvasLocation" x="20" y="811"/>
         </scene>
         <!--Customise This Vehicle-->
         <scene sceneID="Har-WL-YUV">
@@ -181,7 +186,7 @@
                                 <rect key="frame" x="44" y="108" width="326" height="506"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="4uy-ep-9Eg" kind="embed" identifier="VehicleCustomiserModule" id="o8t-dL-opr"/>
+                                    <segue destination="4uy-ep-9Eg" kind="embed" identifier="VehicleCustomiserSegue" id="o8t-dL-opr"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -204,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qR6-y6-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2698.5507246376815" y="32.608695652173914"/>
+            <point key="canvasLocation" x="1732" y="810"/>
         </scene>
         <!--Route Selection -->
         <scene sceneID="lWZ-Aq-Ofb">
@@ -225,7 +230,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCj-pH-BXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3526" y="33"/>
+            <point key="canvasLocation" x="2606" y="33"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="IrB-dI-jrb">
@@ -392,7 +397,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cou-Ca-JBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="33"/>
+            <point key="canvasLocation" x="864" y="810"/>
         </scene>
         <!--Home Module View Controller-->
         <scene sceneID="fGM-cp-9D3">
@@ -534,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccV-n5-DY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="559.64673913043487"/>
+            <point key="canvasLocation" x="796" y="159"/>
         </scene>
         <!--Confirmation-->
         <scene sceneID="AMc-Cb-Pkz">
@@ -1019,7 +1024,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EX-uj-4BW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2698.5507246376815" y="680.70652173913049"/>
+            <point key="canvasLocation" x="2542" y="810"/>
         </scene>
     </scenes>
     <resources>
@@ -1031,4 +1036,7 @@
         <image name="Logo-NoText" width="218" height="218"/>
         <image name="Logo-Text" width="218" height="288"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SBn-NT-OUd"/>
+    </inferredMetricsTieBreakers>
 </document>

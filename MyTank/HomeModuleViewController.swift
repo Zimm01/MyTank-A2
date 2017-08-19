@@ -8,14 +8,17 @@
 import UIKit
 import CoreData
 
-protocol ReloadVehicleDetailsDelegate{
-    func retrieveVehicleSpecifics() -> (series: String, variant: String)
+protocol HomeVehicleQueryDelegate{
+    func retriveIfUserHasVehicle() -> Bool
 }
 
 class HomeModuleViewController: UIViewController
 {
     // Our View Model for this moduel
     internal let homeModuleViewModel = HomeModuleViewModel()
+    
+    // Our Delegate Protocol from the Parent View
+    var vehicleQueryDelegate: HomeVehicleQueryDelegate?
     
     // Headline
     @IBOutlet weak var appTagLine: UILabel!
@@ -95,10 +98,16 @@ class HomeModuleViewController: UIViewController
         }
     }
     
+    // Returns if a vehicle exists, used as part of a delegate method call from the parent view
+    func retriveIfUserHasVehicle() -> Bool
+    {
+        return homeModuleViewModel.userHasVehicle()
+    }
+    
     // Function used to delete a vehicle reference from the UserData Object
     @objc private func deleteTapped()
     {
-        let deleteAlert:UIAlertController = UIAlertController(title: "Delete Vehicle?", message: "Remove the current Vehicle, this cannot be undone!", preferredStyle: UIAlertControllerStyle.alert)
+        let deleteAlert:UIAlertController = UIAlertController(title: "Delete Vehicle?", message: "Remove the current vehicle? This cannot be undone!", preferredStyle: UIAlertControllerStyle.alert)
 
         // Add the 'Cancel' Option to the alert view
         deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:
@@ -106,9 +115,26 @@ class HomeModuleViewController: UIViewController
         
         // Add the 'Delete' Option to the alert view
         deleteAlert.addAction(UIAlertAction(title: "Delete", style: .default, handler:
-            {(alert: UIAlertAction) in print("foo")}))
+            {(alert: UIAlertAction) in self.deleteVehicleActions()}))
 
         self.present(deleteAlert, animated: true, completion: nil)
         
+    }
+    
+    // Delete the vehicle from the userData object, and update the view to reflect the vehicle no longer existing.
+    private func deleteVehicleActions()
+    {
+        do
+        {
+            // First, delete the vehicle entry in the userData object
+            try homeModuleViewModel.deleteCurrentVehicle()
+            
+            // Now, update the view to reflect
+            displayInformationVariableValues()
+        }
+        catch
+        {
+            bottomTextDisplay.text = "Vehicle ref not removed!!"
+        }
     }
 }
