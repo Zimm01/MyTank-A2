@@ -130,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W2S-8i-WjE" id="eHl-rG-XBn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -199,7 +199,6 @@
                     </view>
                     <connections>
                         <outlet property="segueButton" destination="ycY-kE-9Kb" id="7iX-bb-qjo"/>
-                        <segue destination="fOz-8h-M0Y" kind="show" identifier="LocationSelectionSegue" id="7Ot-h8-ZzO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qR6-y6-iPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -368,7 +367,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-NoText" translatesAutoresizingMaskIntoConstraints="NO" id="YyY-f9-ocW">
-                                <rect key="frame" x="145" y="139" width="124" height="124"/>
+                                <rect key="frame" x="145" y="95" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YyY-f9-ocW" secondAttribute="height" multiplier="185:185" id="lci-oh-NUQ"/>
                                 </constraints>
@@ -431,7 +430,7 @@
         <scene sceneID="5tM-Uj-O6O">
             <objects>
                 <navigationController id="we1-qO-C8o" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iLT-7I-X3H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iLT-7I-X3H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

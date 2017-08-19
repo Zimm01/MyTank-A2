@@ -237,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				CEFE84241F45E631002558DD /* Home */,
+				3E25CED51F4578AE009D9A85 /* RouteChoiceController */,
 				CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */,
 				CE3DD9651F41D77600F5CB95 /* VehicleTableView */,
 			);
@@ -618,6 +619,7 @@
 				CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */,
 				CE2E1D951F023D8E002DE4FA /* ResultsViewController.swift in Sources */,
 				CE8081E51F45CA3600ACEC61 /* CustomiseVehicleViewController.swift in Sources */,
+				3E25CED91F458CA8009D9A85 /* RouteChoiceController.swift in Sources */,
 				CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
