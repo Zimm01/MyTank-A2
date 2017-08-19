@@ -72,7 +72,7 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         currentSeriesName = seriesList[0]
         
         // Finally we will populate the list of variants
-        populateVariantListFromSeries(thisSeriesStr: modelVehicleList[0].series!, firstRun: true)
+        populateVariantListFromSeries(thisSeriesStr: currentSeriesName, firstRun: true)
     }
     
     //
@@ -91,7 +91,7 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         
         // IF this our first run, we want to set our selected variant to the first entry on the list
         if (firstRun){
-        currentVariantName = variantList[0]
+            currentVariantName = variantList[0]
         }
     }
     
