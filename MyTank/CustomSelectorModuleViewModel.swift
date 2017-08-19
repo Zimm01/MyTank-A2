@@ -97,6 +97,8 @@ class CustomSelectorModuleViewModel: MyTankViewModel
             }
         }
         
+        variantList.sort()
+        
         // IF this our first run, we want to set our selected variant to the first entry on the list
         if (firstRun){
             currentVariantName = variantList[0]

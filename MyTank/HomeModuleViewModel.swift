@@ -46,7 +46,7 @@ class HomeModuleViewModel: MyTankViewModel
         return false
     }
     
-    
+    // Return the vehicle data as a tuple
     func getVehicleData() throws -> (headLine: String, topStr: String, bottomStr: String, imageStr: String)
     {
         let headLineString = "CurrentVehicle"
