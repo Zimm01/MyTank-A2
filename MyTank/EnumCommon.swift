@@ -5,17 +5,10 @@
 //  Created by Daniel Zimmerman on 13/08/2017.
 //  Copyright © 2017 CPT224. All rights reserved.
 //
+
 import Foundation
 
-// Represents user key data present names
-enum UserKeys : String
-{
-    case preLoaded = "isPreloaded"
-    
-    case vehicleFileSize = "vehicFileSize"
-}
-
-// Represents vehicle body types
+// Enum used to define vehicle body types
 enum BodyTypes : String
 {
     case smallCar = "CAR-SM"
@@ -35,7 +28,7 @@ enum BodyTypes : String
     case van = "VAN"
 }
 
-// Represents sort properties of a Vehicle Object
+// Enum used to define sort properties of a Vehicle Object
 enum VehicleSortProperties : String
 {
     case make
@@ -45,6 +38,4 @@ enum VehicleSortProperties : String
     case series
     
     case variant
-    
-    case none
 }

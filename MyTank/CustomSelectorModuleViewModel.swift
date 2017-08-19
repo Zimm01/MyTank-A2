@@ -8,7 +8,10 @@
 import CoreData
 
 class CustomSelectorModuleViewModel: MyTankViewModel
-{    
+{
+    // Our Request to fetch the Models from Object Context
+    private var fetchThisModelRequest : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
+    
     // Our unconfrimed make and model string from the CoreData Object
     private var unconfirmedMake:String = ""
     private var unconfirmedModel:String = ""
@@ -25,7 +28,8 @@ class CustomSelectorModuleViewModel: MyTankViewModel
     
     // The special year values
     private var specialYearVal: Int16 = 1
-
+    
+    
     // We want to place the values in an array to be used by displayed as in the view
     override init()
     {
@@ -41,8 +45,8 @@ class CustomSelectorModuleViewModel: MyTankViewModel
             unconfirmedModel = try super.getUncommitedModel(context: &objectContext)
             
             // We will fetch all vehicles that have this make and model from Core Data
-            vehicleFetchReq.predicate = NSPredicate(format: "make == %@ AND model == %@", unconfirmedMake, unconfirmedModel)
-            try modelVehicleList = objectContext.fetch(vehicleFetchReq) as [Vehicle2]
+            fetchThisModelRequest.predicate = NSPredicate(format: "make == %@ AND model == %@", unconfirmedMake, unconfirmedModel)
+            try modelVehicleList = objectContext.fetch(fetchThisModelRequest) as [Vehicle2]
         }
         catch
         {
@@ -54,6 +58,7 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         
         // We want to populate the series and variant list here
         populateInitialLists()
+
     }
     
     // Setup the Vehicle list and the subsequent variant list, which changes from series to series
@@ -95,24 +100,16 @@ class CustomSelectorModuleViewModel: MyTankViewModel
         }
     }
     
-    // Return a string that is either the MAKE, MODEL otherwise it is a combination of both
-    func getVehicleString(type: VehicleSortProperties) -> String
+    // Return a Combined Make and Model String to a view
+    func getMakeModelString() -> String
     {
-        // TODO: find a more eloquant way to express this!
-        switch type{
-        case VehicleSortProperties.make:
-            return unconfirmedMake
-        case VehicleSortProperties.model:
-            return unconfirmedModel
-        case VehicleSortProperties.series:
-            return currentSeriesName
-        case VehicleSortProperties.variant:
-            return currentVariantName
-        default:
-            break
-        }
-        
         return unconfirmedMake + " " + unconfirmedModel
+    }
+    
+    // Return a Combined Make and Model String to a view
+    func getMakeString() -> String
+    {
+        return unconfirmedMake
     }
     
     // Return the string for a row given by the Index

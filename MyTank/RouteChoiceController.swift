@@ -164,26 +164,16 @@ class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocation
         
         let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving"
         
-        Alamofire.request(url).responseJSON { response in
-            
-            print(response.request as Any)  // original URL request
-            print(response.response as Any) // HTTP URL response
-            print(response.data as Any)     // server data
-            print(response.result as Any)   // result of response serialization
+        Alamofire.request(url).responseJSON
+        { response in
             
             let json = JSON(data: response.data!)
             let routes = json["routes"].arrayValue
             
             // print route using Polyline
-            for route in routes
+            for distance in routes
             {
-                let routeOverviewPolyline = route["overview_polyline"].dictionary
-                let points = routeOverviewPolyline?["points"]?.stringValue
-                let path = GMSPath.init(fromEncodedPath: points!)
-                let polyline = GMSPolyline.init(path: path)
-                polyline.strokeWidth = 4
-                polyline.strokeColor = UIColor.red
-                polyline.map = self.googleMaps
+               
             }
             print(routes)
         }

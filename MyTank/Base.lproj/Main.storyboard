@@ -42,7 +42,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="QXM-UI-bO0" kind="embed" identifier="HomeVehicleDisplaySegue" id="ODf-Lh-PRB"/>
+                                    <segue destination="QXM-UI-bO0" kind="embed" id="ODf-Lh-PRB"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31e-SZ-lM3">
@@ -56,7 +56,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="vehicleDependantTransitionWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pf-Bf-Lul"/>
+                                    <segue destination="02Z-UA-Xy2" kind="show" identifier="MakeSelectSegue" id="i6Q-3f-HJO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,11 +112,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uoj-sf-g2V"/>
-                    <connections>
-                        <outlet property="segueButton" destination="31e-SZ-lM3" id="O6z-g8-dDj"/>
-                        <segue destination="02Z-UA-Xy2" kind="show" identifier="VehicleMakeSelectionSegue" id="Nu2-hh-4vf"/>
-                        <segue destination="fOz-8h-M0Y" kind="show" identifier="LocationSelectionSegue" id="SBn-NT-OUd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +146,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByB-Ep-HRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="811"/>
+            <point key="canvasLocation" x="865" y="33"/>
         </scene>
         <!--Customise This Vehicle-->
         <scene sceneID="Har-WL-YUV">
@@ -179,14 +174,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="TBr-EA-jEl"/>
+                                    <segue destination="hKF-HO-Yvb" kind="show" id="0OM-zT-EPh"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RLj-0m-4jM" userLabel="Customise Container">
                                 <rect key="frame" x="44" y="108" width="326" height="506"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="4uy-ep-9Eg" kind="embed" identifier="VehicleCustomiserSegue" id="o8t-dL-opr"/>
+                                    <segue destination="4uy-ep-9Eg" kind="embed" id="o8t-dL-opr"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -366,7 +361,7 @@
         <scene sceneID="5tM-Uj-O6O">
             <objects>
                 <navigationController id="we1-qO-C8o" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iLT-7I-X3H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iLT-7I-X3H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -397,12 +392,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cou-Ca-JBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="810"/>
+            <point key="canvasLocation" x="1791" y="33"/>
         </scene>
-        <!--Home Module View Controller-->
+        <!--Home Display ModuleVC-->
         <scene sceneID="fGM-cp-9D3">
             <objects>
-                <viewController id="QXM-UI-bO0" customClass="HomeModuleViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QXM-UI-bO0" customClass="HomeDisplayModuleVC" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BYE-ng-aw6"/>
                         <viewControllerLayoutGuide type="bottom" id="tYO-8E-SlN"/>
@@ -414,11 +409,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBb-tA-zJt">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Delete-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="HRZ-V5-To8">
-                                        <rect key="frame" x="269" y="0.0" width="51" height="48"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Vehicle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fd7-ZP-URw">
-                                        <rect key="frame" x="49" y="0.0" width="223" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" red="0.058823529411764705" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -426,18 +418,20 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRZ-V5-To8">
+                                        <rect key="frame" x="269" y="0.0" width="51" height="48"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="centerX" secondItem="nBb-tA-zJt" secondAttribute="centerX" multiplier="1.84" id="825-OF-2wd"/>
+                                    <constraint firstItem="fd7-ZP-URw" firstAttribute="height" secondItem="nBb-tA-zJt" secondAttribute="height" id="3FR-dU-sS0"/>
                                     <constraint firstAttribute="bottom" secondItem="fd7-ZP-URw" secondAttribute="bottom" id="9W8-BQ-fu2"/>
-                                    <constraint firstItem="fd7-ZP-URw" firstAttribute="centerX" secondItem="nBb-tA-zJt" secondAttribute="centerX" id="O8F-Hx-Yeh"/>
-                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="width" secondItem="nBb-tA-zJt" secondAttribute="width" multiplier="0.16" id="V5L-mr-XtZ"/>
-                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="height" secondItem="nBb-tA-zJt" secondAttribute="height" id="YpF-HB-51S"/>
-                                    <constraint firstItem="fd7-ZP-URw" firstAttribute="centerY" secondItem="nBb-tA-zJt" secondAttribute="centerY" id="jtr-hI-0ac"/>
-                                    <constraint firstItem="fd7-ZP-URw" firstAttribute="width" secondItem="nBb-tA-zJt" secondAttribute="width" multiplier="0.695" id="ju3-ea-V9T"/>
-                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="centerY" secondItem="nBb-tA-zJt" secondAttribute="centerY" id="rRW-1Z-lN9"/>
-                                    <constraint firstItem="fd7-ZP-URw" firstAttribute="height" secondItem="nBb-tA-zJt" secondAttribute="height" id="ysQ-uw-rLd"/>
+                                    <constraint firstItem="fd7-ZP-URw" firstAttribute="width" secondItem="nBb-tA-zJt" secondAttribute="width" id="DjR-j8-M6b"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="width" secondItem="fd7-ZP-URw" secondAttribute="width" multiplier="0.16" id="Jbc-bg-a5J"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="centerY" secondItem="fd7-ZP-URw" secondAttribute="centerY" id="KWz-QZ-dhT"/>
+                                    <constraint firstAttribute="trailing" secondItem="fd7-ZP-URw" secondAttribute="trailing" id="R95-EX-dVm"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="height" secondItem="fd7-ZP-URw" secondAttribute="height" id="d30-1p-bcx"/>
+                                    <constraint firstItem="HRZ-V5-To8" firstAttribute="trailing" secondItem="fd7-ZP-URw" secondAttribute="trailing" id="eNd-cG-0VU"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
@@ -448,7 +442,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwh-gS-obB">
                                         <rect key="frame" x="0.0" y="0.0" width="147" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -472,7 +466,7 @@
                             <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wrr-LT-UQG">
                                 <rect key="frame" x="7" y="60" width="149" height="133"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeThumbDEF" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-DP-YJB">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-DP-YJB">
                                         <rect key="frame" x="12" y="5" width="125" height="124"/>
                                     </imageView>
                                 </subviews>
@@ -490,9 +484,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNW-cs-ujS">
                                 <rect key="frame" x="167" y="134" width="147" height="61"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZe-c9-KPU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZe-c9-KPU">
                                         <rect key="frame" x="0.0" y="0.0" width="147" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -530,16 +524,16 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="appTagLine" destination="fd7-ZP-URw" id="heB-NB-G2H"/>
-                        <outlet property="bottomTextDisplay" destination="qZe-c9-KPU" id="WEa-JE-eNs"/>
-                        <outlet property="deleteIcon" destination="HRZ-V5-To8" id="7fa-79-ABi"/>
-                        <outlet property="imageDisplay" destination="0mX-DP-YJB" id="26x-KI-xZu"/>
-                        <outlet property="topTextDisplay" destination="Kwh-gS-obB" id="1Dv-gd-CLe"/>
+                        <outlet property="displayImage" destination="0mX-DP-YJB" id="aOe-ns-RJW"/>
+                        <outlet property="iconLabel" destination="HRZ-V5-To8" id="7Iz-oE-4tp"/>
+                        <outlet property="vehicleConsumption" destination="qZe-c9-KPU" id="wW5-rX-19W"/>
+                        <outlet property="vehicleHeadline" destination="fd7-ZP-URw" id="EId-bL-8fF"/>
+                        <outlet property="vehicleName" destination="Kwh-gS-obB" id="bwi-K9-87b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccV-n5-DY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="159"/>
+            <point key="canvasLocation" x="20" y="560"/>
         </scene>
         <!--Confirmation-->
         <scene sceneID="AMc-Cb-Pkz">
@@ -1024,19 +1018,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EX-uj-4BW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2542" y="810"/>
+            <point key="canvasLocation" x="2698.5507246376815" y="680.70652173913049"/>
         </scene>
     </scenes>
     <resources>
         <image name="BMW" width="40" height="40"/>
         <image name="Background-Texture" width="533" height="906"/>
-        <image name="Delete-Icon" width="66" height="66"/>
         <image name="Home-Image" width="933" height="400"/>
-        <image name="HomeThumbDEF" width="266" height="266"/>
         <image name="Logo-NoText" width="218" height="218"/>
         <image name="Logo-Text" width="218" height="288"/>
+        <image name="default" width="266" height="266"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="SBn-NT-OUd"/>
-    </inferredMetricsTieBreakers>
 </document>
