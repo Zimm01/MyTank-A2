@@ -15,5 +15,10 @@ struct MyTankConstants
     // The currency being used for this implementation
     static let currencyUnit:String = "$"
     
+    // The default fuel cost
     static let defaultCostPerLitre:Float = 1.35
+    
+    // The default distance unit (Kilometers)
+    static let defaultDistanceValue:String = " Km"
+    
 }

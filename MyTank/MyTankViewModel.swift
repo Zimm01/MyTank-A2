@@ -110,4 +110,20 @@ class MyTankViewModel
         let userData = try context.fetch(userDataFetchReq)
         return (userData.first?.selectModel)!
     }
+    
+    // This function takes a double value and returns it as a formatted currecny value, with 2 decimal places and a currency designator
+    internal func formatAsCurrencyVal(inputValue: Float)->String
+    {
+        let totalAsString = String(format: "%.2f", inputValue)
+        
+        return MyTankConstants.currencyUnit + " " + totalAsString
+    }
+    
+    // This function takes a double value and returns it as a formatted distance value
+    internal func formatAsDistanceVal(inputValue: Int32)->String
+    {
+        let distanceAsString = String(inputValue) + MyTankConstants.defaultDistanceValue
+        
+        return distanceAsString
+    }
 }
