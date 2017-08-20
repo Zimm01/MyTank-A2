@@ -55,7 +55,7 @@ class CustomiseVehicleViewModel: MyTankViewModel
         vehicleFetchReq.predicate = NSPredicate(format: "make == %@ AND model == %@ AND series == %@ AND variant == %@", thisMake, thisModel, tupleIn.series, tupleIn.variant)
         
         // Attempt to fetch the context, if the result contains ONLY ONE entry, it has worked correctly so we can commit that data to the userData object!
-        let vehicleResult = try context.fetch(vehicleFetchReq) as [Vehicle2]
+        let vehicleResult = try context.fetch(vehicleFetchReq) as [Vehicle]
         if vehicleResult.count == 1
         {
             let theVehicle = vehicleResult.first

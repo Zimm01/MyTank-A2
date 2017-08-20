@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="UserData2" representedClassName="UserData2" syncable="YES" codeGenerationType="class">
+    <entity name="UserData" representedClassName="UserData" syncable="YES" codeGenerationType="class">
         <attribute name="costPerUnit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selectMake" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="selectModel" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,7 +10,7 @@
         <attribute name="userRouteStart" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vehicleID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="Vehicle2" representedClassName="Vehicle2" syncable="YES" codeGenerationType="class">
+    <entity name="Vehicle" representedClassName="Vehicle" syncable="YES" codeGenerationType="class">
         <attribute name="consumptionLitres" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="engineSizeLitres" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -26,8 +26,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UserData2" positionX="-63" positionY="45" width="128" height="165"/>
-        <element name="Vehicle2" positionX="-63" positionY="-18" width="128" height="195"/>
-        <element name="VehicleMakes" positionX="-63" positionY="45" width="128" height="60"/>
+        <element name="UserData" positionX="-63" positionY="45" width="128" height="165"/>
+        <element name="Vehicle" positionX="-254" positionY="18" width="128" height="193"/>
+        <element name="VehicleMakes" positionX="-108" positionY="-42" width="128" height="60"/>
     </elements>
 </model>

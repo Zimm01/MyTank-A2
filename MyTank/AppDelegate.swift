@@ -35,9 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !startupLoadCheck()
         {
             // Our tests have failed, so we will wipe and re-load the vehicle database and user data!
-            wipeData(fetchRequest: NSFetchRequest<Vehicle2>(entityName: "Vehicle2") as! NSFetchRequest<NSFetchRequestResult>)
+            wipeData(fetchRequest: NSFetchRequest<Vehicle>(entityName: "Vehicle") as! NSFetchRequest<NSFetchRequestResult>)
             wipeData(fetchRequest: NSFetchRequest<VehicleMakes>(entityName: "VehicleMakes") as! NSFetchRequest<NSFetchRequestResult>)
-            wipeData(fetchRequest: NSFetchRequest<UserData2>(entityName: "UserData2") as! NSFetchRequest<NSFetchRequestResult>)
+            wipeData(fetchRequest: NSFetchRequest<UserData>(entityName: "UserData") as! NSFetchRequest<NSFetchRequestResult>)
             preloadVehicleData()
 
             // TODO function that removes user vehicle!
@@ -109,7 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         // Open the object context and prepare a path to insert data
         let managedObjectContex = persistentContainer.viewContext
-        let vehicleEntityDesc = NSEntityDescription.entity(forEntityName: "Vehicle2", in: managedObjectContex)
+        let vehicleEntityDesc = NSEntityDescription.entity(forEntityName: "Vehicle", in: managedObjectContex)
         let makeListDesc = NSEntityDescription.entity(forEntityName: "VehicleMakes", in: managedObjectContex)
         
         // Our dynamic ID will be used as a "key" for DB interaction
@@ -132,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // FOR EACH entry in the file, we will parse it into a Vehicle Entity
                     for dictionary in serializedData
                     {
-                        let vehicleData = Vehicle2(entity: vehicleEntityDesc! , insertInto: managedObjectContex)
+                        let vehicleData = Vehicle(entity: vehicleEntityDesc! , insertInto: managedObjectContex)
                         
                         vehicleData.setValue(dynamicId, forKey: "id")
                         vehicleData.setValue(dictionary["make"], forKey: "make")
@@ -191,11 +191,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Validate the user data to ensure we have a user data object at all, and only one
     private func userDataValidate()
     {
-        let fetchRequest = NSFetchRequest<UserData2>(entityName: "UserData2")
+        let fetchRequest = NSFetchRequest<UserData>(entityName: "UserData")
         
         let context = persistentContainer.viewContext
         
-        let makeListDesc = NSEntityDescription.entity(forEntityName: "UserData2", in: context)
+        let makeListDesc = NSEntityDescription.entity(forEntityName: "UserData", in: context)
         
         do
         {
@@ -203,7 +203,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if userDataObject.first == nil {
                 
-                let userData = UserData2(entity: makeListDesc! , insertInto: context)
+                let userData = UserData(entity: makeListDesc! , insertInto: context)
                 userData.setValue(1, forKey: "userID")
                 userData.setValue(MyTankConstants.invalidID, forKey: "vehicleID")
                 userData.setValue(MyTankConstants.defaultCostPerLitre, forKey: "costPerUnit")

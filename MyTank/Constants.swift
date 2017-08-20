@@ -21,4 +21,10 @@ struct MyTankConstants
     // The default distance unit (Kilometers)
     static let defaultDistanceValue:String = " Km"
     
+    // The desault consumption string
+    static let consumptionValue:String = "L/100Km"
+    
+    // The desault consumption string
+    static let volumeValue:String = "L"
+    
 }

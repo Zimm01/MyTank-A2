@@ -19,29 +19,50 @@ class ResultModuleViewController: UIViewController
     // Our Delegate Protocol from the Parent View
     var resultQueryDelegate: ResultsQueryDelegate?
     
+    // Our Output Labels
+    @IBOutlet weak var fromToLabel: UILabel!
+    @IBOutlet weak var totalDistanceLabel: UILabel!
+    @IBOutlet weak var vehicleSimpleLabel: UILabel!
+    @IBOutlet weak var consumptionLabel: UILabel!
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        
-        //  Finally, set the labels to show total cost and price per unit
-       // resultTotalPrice.text = finalCost
-        //resultPricePerUnit.text = CurrentUserData.GetCostPerUnit()
-    }
-    
-    func retrieveCalculations() -> (total: String, perUnit: String)
-    {
-        var finalCostString:String = ""
-        
-        do{
-            finalCostString = try resultViewModel.calculateFinalCost()
+        do
+        {
+            // First retrieve the tuples with out user data
+            let displayDetailsTuple : (vehicleStr: String, consumptionStr: String, routeStr: String, distanceStr:String) = try resultViewModel.getDisplayData()
+            
+            // Set the values into the vehicle label objects
+            fromToLabel.text = displayDetailsTuple.routeStr
+            totalDistanceLabel.text = displayDetailsTuple.distanceStr
+            vehicleSimpleLabel.text = displayDetailsTuple.vehicleStr
+            consumptionLabel.text = displayDetailsTuple.consumptionStr
+
         }
         catch
         {
-            finalCostString = "Error"
+            _ = self.navigationController?.popToRootViewController(animated: false)
+        }
+    }
+    
+    // Delegate method to return values to the parent view
+    func retrieveCalculations() -> (total: String, perUnit: String)
+    {
+        var finalCostString:String = ""
+        var perUnit = ""
+        
+
+        if resultViewModel.calulateFinalCosts()
+        {
+                finalCostString = resultViewModel.getFinalCost
+                perUnit = resultViewModel.getCostPerUnit
+
         }
         
-        return (finalCostString,"bye")
+        return (finalCostString, perUnit)
     }
     
 }

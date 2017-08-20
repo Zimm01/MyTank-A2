@@ -135,7 +135,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W2S-8i-WjE" id="eHl-rG-XBn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -239,13 +239,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="101-UG-gio" userLabel="Distance">
-                                <rect key="frame" x="47" y="570" width="321" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YH-6Y-myC">
                                 <rect key="frame" x="47" y="450" width="321" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -267,6 +260,13 @@
                                     <action selector="openDestinationLocation:" destination="5F7-i2-V36" eventType="touchUpInside" id="u4R-J2-CGD"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="101-UG-gio" userLabel="Distance">
+                                <rect key="frame" x="47" y="570" width="321" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbt-EH-gHZ">
                                 <rect key="frame" x="46" y="642" width="321" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -289,6 +289,7 @@
                     <connections>
                         <outlet property="confirmationButton" destination="gbt-EH-gHZ" id="0xM-Ch-Ygw"/>
                         <outlet property="destinationLocation" destination="7bH-Xs-d4L" id="p77-dp-yQO"/>
+                        <outlet property="distanceLabel" destination="101-UG-gio" id="wIE-Rn-9Vh"/>
                         <outlet property="googleMaps" destination="b8T-rj-NzP" id="3uG-BU-JD1"/>
                         <outlet property="startLocation" destination="s5B-Gv-R5t" id="dzL-t9-YeL"/>
                         <segue destination="gEt-ji-QeJ" kind="show" identifier="ConfirmationSegue" id="64R-rm-aIW"/>
@@ -334,6 +335,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="commitVehicleAndTransitionWithButton:" destination="mYE-rX-Jer" eventType="touchUpInside" id="OTA-be-B7L"/>
+                                    <action selector="vehicleDependantTransitionWithButton:" destination="gEt-ji-QeJ" eventType="touchUpInside" id="3lo-EH-Zpu"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jI3-PT-vcs">
@@ -628,10 +630,10 @@
             </objects>
             <point key="canvasLocation" x="796" y="159"/>
         </scene>
-        <!--Trip Stats ModuleVC-->
+        <!--Result Module View Controller-->
         <scene sceneID="UOO-ks-pv3">
             <objects>
-                <viewController id="EG8-GQ-wJG" customClass="TripStatsModuleVC" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EG8-GQ-wJG" customClass="ResultModuleViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BkQ-dX-bu2"/>
                         <viewControllerLayoutGuide type="bottom" id="V5g-Wo-t5K"/>
@@ -742,10 +744,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="destinationSelected" destination="CJY-al-rv3" id="H4b-XE-i96"/>
-                        <outlet property="kilometersTravelled" destination="VlM-Jf-5ON" id="REo-xS-tcl"/>
-                        <outlet property="statsConsumptionOutput" destination="5wt-dn-aw4" id="KsE-fQ-cmC"/>
-                        <outlet property="statsVehicleOutput" destination="C3g-n9-ebO" id="pcd-Co-8z6"/>
+                        <outlet property="consumptionLabel" destination="5wt-dn-aw4" id="5jM-Uu-pFP"/>
+                        <outlet property="fromToLabel" destination="CJY-al-rv3" id="7Kn-xG-z1W"/>
+                        <outlet property="totalDistanceLabel" destination="VlM-Jf-5ON" id="Dnr-oh-BRo"/>
+                        <outlet property="vehicleSimpleLabel" destination="C3g-n9-ebO" id="en2-aP-N9N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOs-Yg-Vyd" userLabel="First Responder" sceneMemberID="firstResponder"/>

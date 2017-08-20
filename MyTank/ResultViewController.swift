@@ -26,7 +26,7 @@ class ResultViewController: UIViewController, ResultsQueryDelegate
         
         //  Finally, set the labels to show total cost and price per unit
         resultTotalPrice.text = calculationTuple.total
-        //resultPricePerUnit.text = CurrentUserData.GetCostPerUnit()
+        resultPricePerUnit.text = calculationTuple.perUnit
     }
     
     // Setup Segue, either for our Delegate or just in general

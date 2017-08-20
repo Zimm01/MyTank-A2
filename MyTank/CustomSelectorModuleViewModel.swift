@@ -13,7 +13,7 @@ class CustomSelectorModuleViewModel: MyTankViewModel
     private var unconfirmedMake:String = ""
     private var unconfirmedModel:String = ""
     
-    private var modelVehicleList = [Vehicle2]()
+    private var modelVehicleList = [Vehicle]()
     
     // Our variant container
     private var seriesList = [String]()
@@ -42,7 +42,7 @@ class CustomSelectorModuleViewModel: MyTankViewModel
             
             // We will fetch all vehicles that have this make and model from Core Data
             vehicleFetchReq.predicate = NSPredicate(format: "make == %@ AND model == %@", unconfirmedMake, unconfirmedModel)
-            try modelVehicleList = objectContext.fetch(vehicleFetchReq) as [Vehicle2]
+            try modelVehicleList = objectContext.fetch(vehicleFetchReq) as [Vehicle]
         }
         catch
         {
@@ -148,8 +148,8 @@ class CustomSelectorModuleViewModel: MyTankViewModel
 
             // Set the other values, given by the Vehicle object
             yearVal = String(yearFrom) + " To " + String(yearToFinal)
-            consump = String(vehicleToUse.consumptionLitres) + "L/100Km"
-            engine = String(vehicleToUse.engineSizeLitres) + "L"
+            consump = String(vehicleToUse.consumptionLitres) + MyTankConstants.consumptionValue
+            engine = String(vehicleToUse.engineSizeLitres) + MyTankConstants.volumeValue
         }
         else{
             throw VehicleError.doesNotExist

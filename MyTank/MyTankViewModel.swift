@@ -14,10 +14,10 @@ class MyTankViewModel
     internal var persistentContainer = NSPersistentContainer(name: "Model")
     
     // Our Fetch Request for the 'UserData' CoreData Container
-    internal var userDataFetchReq : NSFetchRequest<UserData2> = NSFetchRequest(entityName: "UserData2")
+    internal var userDataFetchReq : NSFetchRequest<UserData> = NSFetchRequest(entityName: "UserData")
 
     // Our Request to fetch the Models from Object Context
-    internal var vehicleFetchReq : NSFetchRequest<Vehicle2> = NSFetchRequest(entityName: "Vehicle2")
+    internal var vehicleFetchReq : NSFetchRequest<Vehicle> = NSFetchRequest(entityName: "Vehicle")
     
     // Our selected vehicles DB index
     internal var vehicleSelected:Int32
@@ -69,9 +69,9 @@ class MyTankViewModel
     }
     
     // Takes a list of vehicles and sorts them to be singular occurences, based on model name only
-    internal func makeVehicleListSingletons(vehList: inout [Vehicle2], sortBy: VehicleSortProperties)
+    internal func makeVehicleListSingletons(vehList: inout [Vehicle], sortBy: VehicleSortProperties)
     {
-        var newVehicleList = [Vehicle2]()
+        var newVehicleList = [Vehicle]()
         for thisVehicle in vehList
         {
             //Firstly, if this is our initial run, we will automatically add the first model

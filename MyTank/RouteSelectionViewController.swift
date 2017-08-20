@@ -20,7 +20,7 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
     @IBOutlet weak var googleMaps: GMSMapView!
     @IBOutlet weak var startLocation: UITextField!
     @IBOutlet weak var destinationLocation: UITextField!
-    @IBOutlet weak var distance: UITextField!
+    @IBOutlet weak var distanceLabel: UITextField!
     
     // Confirmation Button
     @IBOutlet weak var confirmationButton: UIButton!
@@ -146,7 +146,9 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
             // when button direction tapped, must call drawpath func
             googleMaps = mapsViewModel.drawPath(mapsIn: googleMaps)
             
+            // Set the button to the Accept Route status and change the distance display field to reflect
             confirmationButton.setTitle("Accept Route", for: .normal)
+            distanceLabel.text = mapsViewModel.theRouteDistanceStr
         }
     }
 }

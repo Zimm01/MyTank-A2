@@ -9,13 +9,9 @@
 /* Begin PBXBuildFile section */
 		05A8BA827AB352D4A7E8E1C3 /* Pods_MyTank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */; };
 		3E25CEDB1F459232009D9A85 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3E25CEDA1F459232009D9A85 /* Podfile */; };
-		3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385D1F08DBDD003F3B87 /* Route.swift */; };
-		3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA385F1F0902C8003F3B87 /* CalculateController.swift */; };
-		3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */; };
 		CE2DE8431F3FEC2B00DDE20A /* EnumCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */; };
 		CE32C6711F30B8CB00459A0D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE32C66F1F30B8CB00459A0D /* Model.xcdatamodeld */; };
 		CE32C6B31F30CC8B00459A0D /* VehicleList.json in Resources */ = {isa = PBXBuildFile; fileRef = CE32C6B21F30CC8B00459A0D /* VehicleList.json */; };
-		CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */; };
 		CE3DBE721F374E7000C60A3C /* VehicleMakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DBE711F374E7000C60A3C /* VehicleMakeViewModel.swift */; };
 		CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */; };
 		CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */; };
@@ -27,7 +23,6 @@
 		CE491CD61F486399001B0107 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD51F486399001B0107 /* ResultViewController.swift */; };
 		CE491CD81F486AE7001B0107 /* ResultModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD71F486AE7001B0107 /* ResultModuleViewController.swift */; };
 		CE491CDA1F48742A001B0107 /* ConfirmationModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE491CD91F48742A001B0107 /* ConfirmationModuleViewController.swift */; };
-		CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A51F3EB73A009798BC /* DropdownCell.swift */; };
 		CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */; };
 		CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */; };
 		CE7018AD1F3EF166009798BC /* VehicleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7018AC1F3EF166009798BC /* VehicleTableViewController.swift */; };
@@ -39,13 +34,9 @@
 		CEA10B851F2F7080007335FA /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA10B841F2F7080007335FA /* libsqlite3.tbd */; };
 		CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA494181F0277D200B132C3 /* HomeViewController.swift */; };
 		CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4F3221F447B310054B8C0 /* EnumError.swift */; };
-		CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */; };
-		CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110D81F0137080007A646 /* VehicleViewController.swift */; };
-		CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC110DB1F0148D30007A646 /* Vehicle.swift */; };
 		CEC293A11F28CA900096C382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC2939F1F28CA900096C382 /* Main.storyboard */; };
 		CEC293A41F28CAA10096C382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC293A21F28CAA10096C382 /* LaunchScreen.storyboard */; };
 		CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3932F1EF9CC800081687F /* AppDelegate.swift */; };
-		CEC393321EF9CC800081687F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393311EF9CC800081687F /* ViewController.swift */; };
 		CEC393451EF9CC800081687F /* MyTankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC393441EF9CC800081687F /* MyTankTests.swift */; };
 		CEC393501EF9CC800081687F /* MyTankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3934F1EF9CC800081687F /* MyTankUITests.swift */; };
 		CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE318831F2A1B000034147E /* StandardViewBox.swift */; };
@@ -85,16 +76,12 @@
 
 /* Begin PBXFileReference section */
 		3E25CEDA1F459232009D9A85 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3EAA385D1F08DBDD003F3B87 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		3EAA385F1F0902C8003F3B87 /* CalculateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateController.swift; sourceTree = "<group>"; };
-		3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleVC.swift; sourceTree = "<group>"; };
 		71C6A4588B4E634EF59BE9CF /* Pods-MyTank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.release.xcconfig"; sourceTree = "<group>"; };
 		9D7CF002A5CD0BC78E4A6BE4 /* Pods-MyTank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTank.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTank/Pods-MyTank.debug.xcconfig"; sourceTree = "<group>"; };
 		BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCommon.swift; sourceTree = "<group>"; };
 		CE32C6701F30B8CB00459A0D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CE32C6B21F30CC8B00459A0D /* VehicleList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VehicleList.json; sourceTree = "<group>"; };
-		CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripStatsModuleVC.swift; sourceTree = "<group>"; };
 		CE3DBE711F374E7000C60A3C /* VehicleMakeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewModel.swift; sourceTree = "<group>"; };
 		CE3DD9691F41D81000F5CB95 /* CustomSelectorModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSelectorModuleViewController.swift; sourceTree = "<group>"; };
 		CE3DD96D1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomiseVehicleViewModel.swift; sourceTree = "<group>"; };
@@ -106,7 +93,6 @@
 		CE491CD51F486399001B0107 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CE491CD71F486AE7001B0107 /* ResultModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultModuleViewController.swift; sourceTree = "<group>"; };
 		CE491CD91F48742A001B0107 /* ConfirmationModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationModuleViewController.swift; sourceTree = "<group>"; };
-		CE7018A51F3EB73A009798BC /* DropdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownCell.swift; sourceTree = "<group>"; };
 		CE7018A71F3EC06A009798BC /* VehicleMakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleMakeViewController.swift; sourceTree = "<group>"; };
 		CE7018AA1F3EF131009798BC /* VehicleModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleModelViewController.swift; sourceTree = "<group>"; };
 		CE7018AC1F3EF166009798BC /* VehicleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewController.swift; sourceTree = "<group>"; };
@@ -118,14 +104,10 @@
 		CEA10B841F2F7080007335FA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CEA494181F0277D200B132C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CEA4F3221F447B310054B8C0 /* EnumError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumError.swift; sourceTree = "<group>"; };
-		CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserData.swift; sourceTree = "<group>"; };
-		CEC110D81F0137080007A646 /* VehicleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
-		CEC110DB1F0148D30007A646 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		CEC293A01F28CA900096C382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEC293A31F28CAA10096C382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC293A51F28CCF10096C382 /* MyTank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC3932F1EF9CC800081687F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEC393311EF9CC800081687F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEC3933B1EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC393441EF9CC800081687F /* MyTankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTankTests.swift; sourceTree = "<group>"; };
 		CEC393461EF9CC800081687F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -284,7 +266,7 @@
 			name = ResultsView;
 			sourceTree = "<group>";
 		};
-		CE7018A91F3EEFF0009798BC /* View Controller (New) */ = {
+		CE7018A91F3EEFF0009798BC /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CEFE84241F45E631002558DD /* Home */,
@@ -294,7 +276,7 @@
 				CE3DD9671F41D7CB00F5CB95 /* VehicleCustomiser */,
 				CE3DD9651F41D77600F5CB95 /* VehicleTableView */,
 			);
-			name = "View Controller (New)";
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 		CEA10B831F2F7080007335FA /* Frameworks */ = {
@@ -304,25 +286,6 @@
 				BD9E17183DDF3E9E62B6515E /* Pods_MyTank.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CEA4941A1F02794400B132C3 /* Module View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CE7018A51F3EB73A009798BC /* DropdownCell.swift */,
-				CE388A711F03DA45002F9DEE /* TripStatsModuleVC.swift */,
-				3ED2D4171F09400B00CAAAFD /* ConfirmationModuleVC.swift */,
-			);
-			name = "Module View Controllers";
-			sourceTree = "<group>";
-		};
-		CEC110DA1F0148880007A646 /* Data Structure (TBR!) */ = {
-			isa = PBXGroup;
-			children = (
-				CEC110DB1F0148D30007A646 /* Vehicle.swift */,
-				3EAA385D1F08DBDD003F3B87 /* Route.swift */,
-			);
-			name = "Data Structure (TBR!)";
 			sourceTree = "<group>";
 		};
 		CEC393231EF9CC800081687F = {
@@ -348,8 +311,7 @@
 				CEC3933B1EF9CC800081687F /* Info.plist */,
 				CEC3935F1EF9CC8B0081687F /* Model */,
 				CE3DBE701F374D4A00C60A3C /* View Model */,
-				CE7018A91F3EEFF0009798BC /* View Controller (New) */,
-				CEC393611EF9CCAD0081687F /* View Controller (TO Remove) */,
+				CE7018A91F3EEFF0009798BC /* View Controller */,
 				CEC393601EF9CCA70081687F /* View */,
 				CE32C6B11F30CC4100459A0D /* JSON */,
 			);
@@ -381,8 +343,6 @@
 				CE491CC61F47D0E7001B0107 /* Constants.swift */,
 				CE2DE8421F3FEC2B00DDE20A /* EnumCommon.swift */,
 				CEA4F3221F447B310054B8C0 /* EnumError.swift */,
-				CEC110DA1F0148880007A646 /* Data Structure (TBR!) */,
-				CEB30F371EFF4C8D008033C2 /* CurrentUserData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -395,17 +355,6 @@
 				CEC2939F1F28CA900096C382 /* Main.storyboard */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		CEC393611EF9CCAD0081687F /* View Controller (TO Remove) */ = {
-			isa = PBXGroup;
-			children = (
-				CEA4941A1F02794400B132C3 /* Module View Controllers */,
-				3EAA385F1F0902C8003F3B87 /* CalculateController.swift */,
-				CEC393311EF9CC800081687F /* ViewController.swift */,
-				CEC110D81F0137080007A646 /* VehicleViewController.swift */,
-			);
-			name = "View Controller (TO Remove)";
 			sourceTree = "<group>";
 		};
 		CEE318821F2A1AD40034147E /* CustomUI */ = {
@@ -637,41 +586,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EAA38601F0902C8003F3B87 /* CalculateController.swift in Sources */,
 				CE2DE8431F3FEC2B00DDE20A /* EnumCommon.swift in Sources */,
 				CE491CCE1F486332001B0107 /* ConfirmationViewController.swift in Sources */,
 				CE3DD96E1F41D8E100F5CB95 /* CustomiseVehicleViewModel.swift in Sources */,
 				CE3DD96A1F41D81000F5CB95 /* CustomSelectorModuleViewController.swift in Sources */,
 				CE491CDA1F48742A001B0107 /* ConfirmationModuleViewController.swift in Sources */,
-				CEC110DC1F0148D30007A646 /* Vehicle.swift in Sources */,
 				CE3DBE721F374E7000C60A3C /* VehicleMakeViewModel.swift in Sources */,
 				CE7018AF1F3EF2A2009798BC /* VehicleModelViewModel.swift in Sources */,
-				3ED2D4181F09400B00CAAAFD /* ConfirmationModuleVC.swift in Sources */,
 				CE7018AD1F3EF166009798BC /* VehicleTableViewController.swift in Sources */,
-				CEC110D91F0137080007A646 /* VehicleViewController.swift in Sources */,
 				CE96EE741F490AD2008971D3 /* RouteSelectionViewController.swift in Sources */,
 				CE32C6711F30B8CB00459A0D /* Model.xcdatamodeld in Sources */,
 				CEE318841F2A1B000034147E /* StandardViewBox.swift in Sources */,
-				CEC393321EF9CC800081687F /* ViewController.swift in Sources */,
 				CE3DD9701F41D98300F5CB95 /* CustomSelectorModuleViewModel.swift in Sources */,
 				CE491CD01F486342001B0107 /* ConfirmationModuleViewModel.swift in Sources */,
 				CEFE84291F45E765002558DD /* HomeModuleViewModel.swift in Sources */,
-				3EAA385E1F08DBDD003F3B87 /* Route.swift in Sources */,
 				CE491CD41F486382001B0107 /* ResultModuleViewModel.swift in Sources */,
 				CEA494191F0277D200B132C3 /* HomeViewController.swift in Sources */,
 				CEFE84261F45E73D002558DD /* HomeModuleViewController.swift in Sources */,
 				CE7018AB1F3EF131009798BC /* VehicleModelViewController.swift in Sources */,
 				CE96EE761F490AE2008971D3 /* RouteSelectionViewModel.swift in Sources */,
-				CEB30F381EFF4C8D008033C2 /* CurrentUserData.swift in Sources */,
 				CE80426B1F43211E000D9FF0 /* MyTankViewModel.swift in Sources */,
 				CE491CD81F486AE7001B0107 /* ResultModuleViewController.swift in Sources */,
 				CE491CC71F47D0E7001B0107 /* Constants.swift in Sources */,
 				CE7018A81F3EC06A009798BC /* VehicleMakeViewController.swift in Sources */,
-				CE7018A61F3EB73A009798BC /* DropdownCell.swift in Sources */,
 				CEC393301EF9CC800081687F /* AppDelegate.swift in Sources */,
 				CEA4F3231F447B310054B8C0 /* EnumError.swift in Sources */,
 				CE8081E51F45CA3600ACEC61 /* CustomiseVehicleViewController.swift in Sources */,
-				CE388A721F03DA45002F9DEE /* TripStatsModuleVC.swift in Sources */,
 				CE491CD61F486399001B0107 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

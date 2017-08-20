@@ -37,7 +37,7 @@ class ConfirmationModuleViewModel: MyTankViewModel
             vehicleFetchReq.predicate = NSPredicate(format: "id == \(userVehicleID)")
             
             // Attempt to fetch the context, if the result contains ONLY ONE entry, it has worked correctly so we can commit that data to the userData object!
-            let vehicleResult = try objectContext.fetch(vehicleFetchReq) as [Vehicle2]
+            let vehicleResult = try objectContext.fetch(vehicleFetchReq) as [Vehicle]
             if vehicleResult.count == 1
             {
                 let theVehicle = vehicleResult.first
@@ -48,7 +48,7 @@ class ConfirmationModuleViewModel: MyTankViewModel
                 
                 // Set the specific vehicle consumption and image values
                 specificVehicleString = makeModel + seriesVariant
-                consumptionString = String(theVehicle!.consumptionLitres) + "L/100Km"
+                consumptionString = String(theVehicle!.consumptionLitres) +  MyTankConstants.consumptionValue
             }
             else{
                 throw VehicleError.doesNotExist

@@ -44,11 +44,16 @@ class RouteSelectionViewModel: MyTankViewModel
     private var destinationName: String = "Err"
     
     // Distance Value !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    private var routeDistance: Int = 1
+    private var routeDistance: Int32 = 1
     
-    // Getter for the Distance Value
-    var theRouteDistanceVal:Int{
+    // Getter for the Distance Value AS A RAW VAL
+    var theRouteDistanceVal:Int32{
         get{return routeDistance}
+    }
+    
+    // Getter for the Distance Value AS A STRING
+    var theRouteDistanceStr:String{
+        get{return formatAsDistanceVal(inputValue: routeDistance)}
     }
     
     // Initialiser

@@ -10,7 +10,7 @@ import CoreData
 class VehicleModelViewModel: MyTankViewModel
 {
     // Our array of Vehicle Makes
-    private var modelList = [Vehicle2]()
+    private var modelList = [Vehicle]()
     
     private var makeName:String = ""
     
@@ -29,7 +29,7 @@ class VehicleModelViewModel: MyTankViewModel
 
             // This is where we perform the predicate fetch and assign the results to 'models'
             vehicleFetchReq.predicate = NSPredicate(format: "make == %@", makeName)
-            try modelList = objectContext.fetch(vehicleFetchReq) as [Vehicle2]
+            try modelList = objectContext.fetch(vehicleFetchReq) as [Vehicle]
         }
         catch
         {
