@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="we1-qO-C8o">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="we1-qO-C8o">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -57,7 +57,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="vehicleDependantTransitionWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pf-Bf-Lul"/>
-                                    <segue destination="5F7-i2-V36" kind="show" identifier="LocationSelectionSegue" id="MMx-zZ-6o4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,6 +115,7 @@
                     <connections>
                         <outlet property="segueButton" destination="31e-SZ-lM3" id="O6z-g8-dDj"/>
                         <segue destination="02Z-UA-Xy2" kind="show" identifier="VehicleMakeSelectionSegue" id="Nu2-hh-4vf"/>
+                        <segue destination="5F7-i2-V36" kind="show" identifier="LocationSelectionSegue" id="7v4-Rn-dlg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,7 +135,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W2S-8i-WjE" id="eHl-rG-XBn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -211,10 +211,10 @@
             </objects>
             <point key="canvasLocation" x="1732" y="810"/>
         </scene>
-        <!--Route Choice Controller-->
+        <!--Route Selection View Controller-->
         <scene sceneID="bAW-dq-mJn">
             <objects>
-                <viewController id="5F7-i2-V36" customClass="RouteChoiceController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5F7-i2-V36" customClass="RouteSelectionViewController" customModule="MyTank" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pot-jC-yNC"/>
                         <viewControllerLayoutGuide type="bottom" id="RAI-qf-GdU"/>
@@ -236,7 +236,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="101-UG-gio" userLabel="Distance">
-                                <rect key="frame" x="47" y="551" width="321" height="30"/>
+                                <rect key="frame" x="47" y="570" width="321" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -264,7 +264,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH6-Ov-LQE">
-                                <rect key="frame" x="218" y="605" width="150" height="54"/>
+                                <rect key="frame" x="218" y="642" width="150" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -279,7 +279,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbt-EH-gHZ">
-                                <rect key="frame" x="46" y="605" width="150" height="54"/>
+                                <rect key="frame" x="46" y="642" width="150" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -301,6 +301,7 @@
                         <outlet property="destinationLocation" destination="7bH-Xs-d4L" id="p77-dp-yQO"/>
                         <outlet property="googleMaps" destination="b8T-rj-NzP" id="3uG-BU-JD1"/>
                         <outlet property="startLocation" destination="s5B-Gv-R5t" id="dzL-t9-YeL"/>
+                        <segue destination="gEt-ji-QeJ" kind="show" identifier="ConfirmationSegue" id="64R-rm-aIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KC-sk-dda" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +385,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-NoText" translatesAutoresizingMaskIntoConstraints="NO" id="YyY-f9-ocW">
-                                <rect key="frame" x="145" y="95" width="124" height="124"/>
+                                <rect key="frame" x="145" y="139" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YyY-f9-ocW" secondAttribute="height" multiplier="185:185" id="lci-oh-NUQ"/>
                                 </constraints>
@@ -1367,6 +1368,6 @@
         <image name="Logo-Text" width="218" height="288"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m3h-dZ-L9o"/>
+        <segue reference="7v4-Rn-dlg"/>
     </inferredMetricsTieBreakers>
 </document>

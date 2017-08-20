@@ -12,11 +12,6 @@ import GooglePlaces
 import SwiftyJSON
 import Alamofire
 
-enum Location {
-    case startLocation
-    case destinationLocation
-}
-
 class RouteChoiceController: UIViewController , GMSMapViewDelegate ,  CLLocationManagerDelegate {
     
     @IBOutlet weak var googleMaps: GMSMapView!
@@ -274,16 +269,6 @@ extension RouteChoiceController: GMSAutocompleteViewControllerDelegate {
     
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    }
-    
-}
-
-public extension UISearchBar {
-    
-    public func setTextColor(color: UIColor) {
-        let svs = subviews.flatMap { $0.subviews }
-        guard let tf = (svs.filter { $0 is UITextField }).first as? UITextField else { return }
-        tf.textColor = color
     }
     
 }

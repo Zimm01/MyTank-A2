@@ -48,3 +48,10 @@ enum VehicleSortProperties : String
     
     case none
 }
+
+enum Location {
+    
+    case startLocation
+    
+    case destinationLocation
+}
