@@ -2,4 +2,70 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTank/RouteSelectionViewModel.swift"
+            timestampString = "524905419.734518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "drawPath(mapsIn:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTank.RouteSelectionViewModel.drawPath (mapsIn : __ObjC.GMSMapView) -&gt; __ObjC.GMSMapView"
+                  moduleName = "MyTank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zimmo/Documents/MyTank/MyTank/RouteSelectionViewModel.swift"
+                  timestampString = "524905548.347587"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "763">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyTank.RouteSelectionViewModel.(drawPath (mapsIn : __ObjC.GMSMapView) -&gt; __ObjC.GMSMapView).(closure #1)"
+                  moduleName = "MyTank"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Zimmo/Documents/MyTank/MyTank/RouteSelectionViewModel.swift"
+                  timestampString = "524905548.360388"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "9004">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyTank/RouteSelectionViewModel.swift"
+            timestampString = "524905311.352691"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "drawPath(mapsIn:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

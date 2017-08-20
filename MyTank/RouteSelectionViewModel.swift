@@ -21,6 +21,84 @@ import Alamofire
 
 class RouteSelectionViewModel: MyTankViewModel
 {
+    // The 'route has been calculated' flag
+    private var routeDoesExist: Bool = false
+    
+    // Setter/Getter for the routeDoes exist
+    var routeFlagSet:Bool
+        {
+        set{routeDoesExist = routeFlagSet}
+        get{return routeDoesExist}
+    }
+    
+    // Objects which hold our location start and end
+    private var locationStart = CLLocation()
+    private var locationEnd = CLLocation()
+    
+    // Our Raw Lat and long co-ords of the origin and destination
+    private var originCoOrd: String = "@"
+    private var destinationCoOrd: String = "@"
+    
+    // Objects which hold our location start and end
+    private var originName: String = "Err"
+    private var destinationName: String = "Err"
+    
+    // Initialiser
+    override init()
+    {
+        super.init()
+    }
+    
+    // Set the location object value
+    func setLocation(locationIn: CLLocation, setFor: Location)
+    {
+        if setFor == Location.startLocation{
+            locationStart = locationIn
+        }
+        else if setFor == Location.destinationLocation{
+            locationEnd = locationIn
+        }
+    }
+
+    // Set the name of the start/destination locations
+    func setPlaceName(placeIn: String, getFor: Location)
+    {
+        if getFor == Location.startLocation{
+           originName  = placeIn
+        }
+        else if getFor == Location.destinationLocation{
+           destinationName = placeIn
+        }
+    }
+    
+    // Return the  name of the start/destination locations
+    func getPlaceName(getFor: Location) -> String
+    {
+        if getFor == Location.startLocation{
+            return originName
+        }
+        else if getFor == Location.destinationLocation{
+            return destinationName
+        }
+        return "Error"
+    }
+    
+    // Function to control the setting of co-ordinates
+    func setCoords(setFor: Location)
+    {
+        if setFor == Location.startLocation{
+            originCoOrd = "\(locationStart.coordinate.latitude),\(locationStart.coordinate.longitude)"
+        }
+        else if setFor == Location.destinationLocation{
+            destinationCoOrd = "\(locationEnd.coordinate.latitude),\(locationEnd.coordinate.longitude)"
+        }
+    }
+    
+    // Are both co-ordinates set?
+    func bothCoordsSet() -> Bool
+    {
+        return ((originCoOrd != "@") && (destinationCoOrd != "@"))
+    }
     
     // MARK: function for create a marker pin on map
     func createMarker(titleMarker: String, iconMarker: UIImage, latitude: CLLocationDegrees, longitude: CLLocationDegrees, mapsIn: GMSMapView) -> GMSMapView
@@ -36,14 +114,11 @@ class RouteSelectionViewModel: MyTankViewModel
     
 
     //MARK: - this is function for create direction path, from start location to desination location
-    func drawPath(startLocation: CLLocation, endLocation: CLLocation, mapsIn: GMSMapView) -> GMSMapView
+    func drawPath(mapsIn: GMSMapView) -> GMSMapView
     {
-        let origin = "\(startLocation.coordinate.latitude),\(startLocation.coordinate.longitude)"
-        let destination = "\(endLocation.coordinate.latitude),\(endLocation.coordinate.longitude)"
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(originCoOrd)&destination=\(destinationCoOrd)&mode=driving"
         
-        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving"
-        
-        Alamofire.request(url).responseJSON { response in
+            Alamofire.request(url).responseJSON { response in
             
             print(response.request as Any)  // original URL request
             print(response.response as Any) // HTTP URL response
@@ -52,7 +127,7 @@ class RouteSelectionViewModel: MyTankViewModel
             
             let json = JSON(data: response.data!)
             let routes = json["routes"].arrayValue
-            
+                
             // print route using Polyline
             for route in routes
             {
@@ -64,11 +139,23 @@ class RouteSelectionViewModel: MyTankViewModel
                 polyline.strokeColor = UIColor.red
                 polyline.map = mapsIn
             }
-            print(routes)
+                print
         }
         
         return mapsIn
     }
-    
+    /*
+    // Return the location values
+    func getLocation(getFor: Location) -> CLLocation
+    {
+        if getFor == Location.startLocation{
+            return locationStart
+        }
+        else if getFor == Location.destinationLocation{
+            return locationEnd
+        }
+        
+        return CLLocation()
+    }*/
     
 }

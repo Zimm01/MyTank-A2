@@ -25,9 +25,6 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
     internal var locationManager = CLLocationManager()
     internal var locationSelected = Location.startLocation
     
-    internal var locationStart = CLLocation()
-    internal var locationEnd = CLLocation()
-    
     // On view load...
     override func viewDidLoad()
     {
@@ -55,17 +52,16 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
         
         let location = locations.last
 
-        
+        /*
         let locationTujuan = CLLocation(latitude: 37.784023631590777, longitude: -122.40486681461333)
         
         googleMaps = mapsViewModel.createMarker(titleMarker: "Lokasi Tujuan", iconMarker: #imageLiteral(resourceName: "mapspin") , latitude: locationTujuan.coordinate.latitude, longitude: locationTujuan.coordinate.longitude, mapsIn: googleMaps)
         
        googleMaps = mapsViewModel.createMarker(titleMarker: "Lokasi Aku", iconMarker: #imageLiteral(resourceName: "mapspin") , latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, mapsIn: googleMaps)
         
-        googleMaps = mapsViewModel.drawPath(startLocation: location!, endLocation: locationTujuan, mapsIn: googleMaps)
+        googleMaps = mapsViewModel.drawPath(startLocation: location!, endLocation: locationTujuan, mapsIn: googleMaps)*/
         
         self.locationManager.stopUpdatingLocation()
-        
     }
 
     //MARK: - Location Manager delegates
@@ -140,10 +136,20 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
     }
     
     // MARK: SHOW DIRECTION WITH BUTTON
-    @IBAction func showDirection(_ sender: UIButton)
+    @IBAction func buttonWasSelected(_ sender: UIButton)
     {
-        // when button direction tapped, must call drawpath func
-        googleMaps = mapsViewModel.drawPath(startLocation: locationStart, endLocation: locationEnd, mapsIn: googleMaps)
+        // If the route has been selected, we will continue to the next view!
+        // Otherwise if we have two points selected, we can draw the route
+        // Default we will do nothing
+        if mapsViewModel.routeFlagSet
+        {
+            //SEGUE!
+        }
+        else if mapsViewModel.bothCoordsSet()
+        {
+            // when button direction tapped, must call drawpath func
+            googleMaps = mapsViewModel.drawPath(mapsIn: googleMaps)
+        }
     }
 }
 
@@ -156,38 +162,54 @@ extension RouteSelectionViewController: GMSAutocompleteViewControllerDelegate
         print("Error \(error)")
     }
     
-    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace)
+    {
+        // We want to ensure the route is not set
+        mapsViewModel.routeFlagSet = false
         
         // Change map location
         let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 16.0
         )
         
+        // Commit the Name to the view Model
+        mapsViewModel.setPlaceName(placeIn: place.name, getFor: locationSelected)
+        
+        // Set the startLocation in the view model
+        mapsViewModel.setLocation(locationIn:  CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude), setFor: locationSelected)
+        
         // set coordinate to text
-        if locationSelected == .startLocation {
-            startLocation.text = "\(place.name)"
-            locationStart = CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
-          googleMaps = mapsViewModel.createMarker(titleMarker: "Location Start", iconMarker: #imageLiteral(resourceName: "mapspin"), latitude: place.coordinate.latitude, longitude: place.coordinate.longitude, mapsIn: googleMaps)
-        } else {
-            destinationLocation.text = "\(place.name)"
-            locationEnd = CLLocation(latitude: place.coordinate.latitude, longitude: place.coordinate.longitude)
+        if locationSelected == .startLocation
+        {
+            startLocation.text = mapsViewModel.getPlaceName(getFor: locationSelected)
+            
+            googleMaps = mapsViewModel.createMarker(titleMarker: "Location Start", iconMarker: #imageLiteral(resourceName: "mapspin"), latitude: place.coordinate.latitude, longitude: place.coordinate.longitude, mapsIn: googleMaps)
+        }
+        else
+        {
+            destinationLocation.text = mapsViewModel.getPlaceName(getFor: locationSelected)
+
             googleMaps = mapsViewModel.createMarker(titleMarker: "Location End", iconMarker: #imageLiteral(resourceName: "mapspin"), latitude: place.coordinate.latitude, longitude: place.coordinate.longitude, mapsIn: googleMaps)
         }
         
+        // Set the co-ordinates here, this will ensure the setting is controlled from this point only!
+        mapsViewModel.setCoords(setFor: locationSelected)
         
         self.googleMaps.camera = camera
         self.dismiss(animated: true, completion: nil)
-        
     }
     
-    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    func wasCancelled(_ viewController: GMSAutocompleteViewController)
+    {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController)
+    {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
-    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController)
+    {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
