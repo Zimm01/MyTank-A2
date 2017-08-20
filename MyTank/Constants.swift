@@ -14,4 +14,6 @@ struct MyTankConstants
     
     // The currency being used for this implementation
     static let currencyUnit:String = "$"
+    
+    static let defaultCostPerLitre:Float = 1.35
 }

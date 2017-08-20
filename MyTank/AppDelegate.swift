@@ -206,6 +206,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let userData = UserData2(entity: makeListDesc! , insertInto: context)
                 userData.setValue(1, forKey: "userID")
                 userData.setValue(MyTankConstants.invalidID, forKey: "vehicleID")
+                userData.setValue(MyTankConstants.defaultCostPerLitre, forKey: "costPerUnit")
             }
             
             try context.save()

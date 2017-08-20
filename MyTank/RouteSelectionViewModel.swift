@@ -46,6 +46,11 @@ class RouteSelectionViewModel: MyTankViewModel
     // Distance Value
     private var routeDistance: Int = 0
     
+    // Getter for the Distance Value
+    var theRouteDistanceVal:Int{
+        get{return routeDistance}
+    }
+    
     // Initialiser
     override init()
     {
@@ -143,7 +148,7 @@ class RouteSelectionViewModel: MyTankViewModel
             }
 
         }
-        routeFlagSet = true
+        routeDoesExist = true
         return mapsIn
     }
     

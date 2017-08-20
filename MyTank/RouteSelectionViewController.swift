@@ -22,6 +22,10 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
     @IBOutlet weak var destinationLocation: UITextField!
     @IBOutlet weak var distance: UITextField!
     
+    // Confirmation Button
+    @IBOutlet weak var confirmationButton: UIButton!
+    let buttonDefaultVal = "Calculate Route"
+    
     internal var locationManager = CLLocationManager()
     internal var locationSelected = Location.startLocation
     
@@ -49,17 +53,6 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let location = locations.last
-
-        /*
-        let locationTujuan = CLLocation(latitude: 37.784023631590777, longitude: -122.40486681461333)
-        
-        googleMaps = mapsViewModel.createMarker(titleMarker: "Lokasi Tujuan", iconMarker: #imageLiteral(resourceName: "mapspin") , latitude: locationTujuan.coordinate.latitude, longitude: locationTujuan.coordinate.longitude, mapsIn: googleMaps)
-        
-       googleMaps = mapsViewModel.createMarker(titleMarker: "Lokasi Aku", iconMarker: #imageLiteral(resourceName: "mapspin") , latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!, mapsIn: googleMaps)
-        
-        googleMaps = mapsViewModel.drawPath(startLocation: location!, endLocation: locationTujuan, mapsIn: googleMaps)*/
         
         self.locationManager.stopUpdatingLocation()
     }
@@ -152,6 +145,8 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
         {
             // when button direction tapped, must call drawpath func
             googleMaps = mapsViewModel.drawPath(mapsIn: googleMaps)
+            
+            confirmationButton.setTitle("Accept Route", for: .normal)
         }
     }
 }
@@ -173,6 +168,9 @@ extension RouteSelectionViewController: GMSAutocompleteViewControllerDelegate
         // Change map location
         let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 16.0
         )
+        
+        // Set the button back to calculate
+        confirmationButton.setTitle(buttonDefaultVal, for: .normal)
         
         // Commit the Name to the view Model
         mapsViewModel.setPlaceName(placeIn: place.name, getFor: locationSelected)
