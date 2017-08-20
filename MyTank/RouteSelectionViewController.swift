@@ -143,7 +143,10 @@ class RouteSelectionViewController: UIViewController, GMSMapViewDelegate ,  CLLo
         // Default we will do nothing
         if mapsViewModel.routeFlagSet
         {
-            //SEGUE!
+            if mapsViewModel.commitValuesToDB()
+            {
+                self.performSegue(withIdentifier: "ConfirmationSegue", sender: self)
+            }
         }
         else if mapsViewModel.bothCoordsSet()
         {

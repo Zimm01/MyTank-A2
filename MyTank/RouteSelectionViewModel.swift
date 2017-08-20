@@ -43,6 +43,9 @@ class RouteSelectionViewModel: MyTankViewModel
     private var originName: String = "Err"
     private var destinationName: String = "Err"
     
+    // Distance Value
+    private var routeDistance: Int = 0
+    
     // Initialiser
     override init()
     {
@@ -111,7 +114,6 @@ class RouteSelectionViewModel: MyTankViewModel
         
         return mapsIn
     }
-    
 
     //MARK: - this is function for create direction path, from start location to desination location
     func drawPath(mapsIn: GMSMapView) -> GMSMapView
@@ -139,23 +141,46 @@ class RouteSelectionViewModel: MyTankViewModel
                 polyline.strokeColor = UIColor.red
                 polyline.map = mapsIn
             }
-                print
+
         }
-        
+        routeFlagSet = true
         return mapsIn
     }
-    /*
-    // Return the location values
-    func getLocation(getFor: Location) -> CLLocation
+    
+    // Commit Values to user Data
+    func commitValuesToDB() -> Bool
     {
-        if getFor == Location.startLocation{
-            return locationStart
+        // Our persistant container from the CoreData Model
+        let objectContext = persistentContainer.viewContext
+        
+        do
+        {
+            let userDataObject = try objectContext.fetch(userDataFetchReq)
+            
+            if let userData = userDataObject.first
+            {
+                // Set Start Point
+                userData.setValue(originName ,forKey: "userRouteStart")
+                // Set End Point 
+                userData.setValue(destinationName, forKey: "userRouteEnd")
+                // Set Distance
+                userData.setValue(routeDistance ,forKey: "userRouteDistance")
+            }
+            else
+            {
+                throw UserDataError.userDataLookupError
+            }
+            
+            try objectContext.save()
         }
-        else if getFor == Location.destinationLocation{
-            return locationEnd
+        catch
+        {
+            let fetchError = error as NSError
+            print("Unable to Perform Fetch Request")
+            print("\(fetchError), \(fetchError.localizedDescription)")
+            return false
         }
         
-        return CLLocation()
-    }*/
-    
+        return true
+    }
 }
