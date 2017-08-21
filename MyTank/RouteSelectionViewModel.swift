@@ -44,7 +44,7 @@ class RouteSelectionViewModel: MyTankViewModel
     private var destinationName: String = "Err"
     
     // Distance Value !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    private var routeDistance: Int32 = 1
+    private var routeDistance: Int32 = totalDistance
     
     // Getter for the Distance Value AS A RAW VAL
     var theRouteDistanceVal:Int32{
@@ -132,13 +132,28 @@ class RouteSelectionViewModel: MyTankViewModel
         
             Alamofire.request(url).responseJSON { response in
             
-            print(response.request as Any)  // original URL request
-            print(response.response as Any) // HTTP URL response
-            print(response.data as Any)     // server data
-            print(response.result as Any)   // result of response serialization
+//            print(response.request as Any)  // original URL request
+//            print(response.response as Any) // HTTP URL response
+//            print(response.data as Any)     // server data
+//            print(response.result as Any)   // result of response serialization
             
             let json = JSON(data: response.data!)
             let routes = json["routes"].arrayValue
+            let totalDistance = json["routes"][0]["legs"][0]["distance"]["value"]
+            //print(jspndatas)
+            
+//            do {
+//                let parsedData = try JSON(with: response.data!)
+//                
+//                //print(parsedData["geocoded_waypoints"])
+//                //print(parsedData["bounds"])
+//                //print(parsedData["routes"].stringValue)
+//                
+//            } catch {
+//                print("error")
+//                }
+            
+ 
                 
             // print route using Polyline
             for route in routes
@@ -151,10 +166,18 @@ class RouteSelectionViewModel: MyTankViewModel
                 polyline.strokeColor = UIColor.red
                 polyline.map = mapsIn
             }
-
+                
+            
+                
+//            for item in distance["data"]["destinos"].arrayValue {
+//                    print(item["idDestino"].stringValue)
+//                }
+//          print(json)
+        return totalDistance
         }
         routeDoesExist = true
         return mapsIn
+        
     }
     
     // Commit Values to user Data
