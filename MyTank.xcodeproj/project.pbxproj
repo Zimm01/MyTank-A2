@@ -181,7 +181,6 @@
 				CE491CCA1F48624A001B0107 /* RouteSelection */,
 				CE491CCC1F4862FD001B0107 /* ConfirmationScreen */,
 				CE491CD21F48636D001B0107 /* ResultsView */,
-				CE3DD9681F41D7DC00F5CB95 /* VehicleCustomiser */,
 				CE3DD9661F41D78D00F5CB95 /* VehicleTableView */,
 			);
 			name = "View Model";
@@ -261,6 +260,7 @@
 		CE491CD21F48636D001B0107 /* ResultsView */ = {
 			isa = PBXGroup;
 			children = (
+				CE3DD9681F41D7DC00F5CB95 /* VehicleCustomiser */,
 				CE491CD31F486382001B0107 /* ResultModuleViewModel.swift */,
 			);
 			name = ResultsView;

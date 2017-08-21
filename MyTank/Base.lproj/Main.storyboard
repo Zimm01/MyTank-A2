@@ -510,7 +510,7 @@
                 <navigationController id="we1-qO-C8o" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iLT-7I-X3H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="iLT-7I-X3H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
